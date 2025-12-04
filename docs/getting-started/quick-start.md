@@ -69,14 +69,12 @@ To create your own environmental project:
 
 1. Click **Create Project** button
 2. Fill in the project details:
-   ```
    - Project Name
    - Description
    - Location (use the map picker)
    - Date and Time
    - Category (tree planting, cleanup, etc.)
    - Maximum Participants
-   ```
 3. Add photos or documents (optional)
 4. Click **Publish Project**
 
@@ -97,11 +95,7 @@ GreenMap supports various project types:
 
 ### Searching for Projects
 
-Use the search bar to find specific projects:
-
-```
-Search by: Name, Location, Category, Date
-```
+Use the search bar to find specific projects by name, location, category, or date.
 
 **Example searches:**
 - "Tree planting in Austin"

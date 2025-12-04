@@ -101,15 +101,13 @@ Keep participants informed:
 
 Monitor project outcomes:
 
-```
-Metrics Available:
+**Metrics Available:**
 - Number of participants
 - Hours contributed
 - Resources collected/planted
 - Carbon offset achieved
 - Area covered
 - Before/after photos
-```
 
 ## Community Features
 
@@ -187,16 +185,14 @@ Personalize your profile:
 
 Your personal environmental impact:
 
-```
-Statistics Tracked:
-✓ Total projects participated
-✓ Hours volunteered
-✓ Trees planted
-✓ Waste collected (kg)
-✓ CO₂ offset (kg)
-✓ Water saved (liters)
-✓ Distance traveled green
-```
+**Statistics Tracked:**
+- ✓ Total projects participated
+- ✓ Hours volunteered
+- ✓ Trees planted
+- ✓ Waste collected (kg)
+- ✓ CO₂ offset (kg)
+- ✓ Water saved (liters)
+- ✓ Distance traveled green
 
 ### Portfolio
 
@@ -214,8 +210,7 @@ Showcase your work:
 
 Find exactly what you're looking for:
 
-```
-Search Filters:
+**Search Filters:**
 - Keywords
 - Location (radius search)
 - Date range
@@ -224,7 +219,6 @@ Search Filters:
 - Duration
 - Participant count
 - Language
-```
 
 ### Recommendations
 
