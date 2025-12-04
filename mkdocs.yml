@@ -1,0 +1,68 @@
+site_name: GreenMap Documentation
+site_description: Documentation for the GreenMap project
+site_author: HouHackathon-CQP Team
+site_url: https://houhackathon-cqp.github.io/GreenMap-Documents/
+
+theme:
+  name: material
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: green
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: green
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+
+plugins:
+  - search
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  - tables
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Introduction: getting-started/introduction.md
+      - Installation: getting-started/installation.md
+      - Quick Start: getting-started/quick-start.md
+  - User Guide:
+      - Overview: user-guide/overview.md
+      - Features: user-guide/features.md
+  - API Reference:
+      - Overview: api-reference/overview.md
+      - Endpoints: api-reference/endpoints.md
+  - Contributing:
+      - Guidelines: contributing/guidelines.md
+      - Code of Conduct: contributing/code-of-conduct.md
+  - About: about.md
