@@ -1,5 +1,7 @@
 # GreenMap Documentation
 
+**[Tiếng Việt](README.vi.md)** | English
+
 Welcome to the official documentation repository for the GreenMap project!
 
 ## 📚 About
