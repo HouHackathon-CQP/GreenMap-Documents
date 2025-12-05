@@ -1,121 +1,119 @@
-# GreenMap Documentation
+# Tài liệu GreenMap
 
-**[Tiếng Việt](README.vi.md)** | English
+Chào mừng đến với kho tài liệu chính thức cho dự án GreenMap!
 
-Welcome to the official documentation repository for the GreenMap project!
+## 📚 Giới thiệu
 
-## 📚 About
+Kho lưu trữ này chứa tài liệu đầy đủ cho GreenMap, một nền tảng sáng tạo được thiết kế để kết nối mọi người với các sáng kiến môi trường và thúc đẩy các hành động bền vững trong cộng đồng trên toàn thế giới.
 
-This repository contains the complete documentation for GreenMap, an innovative platform designed to connect people with environmental initiatives and promote sustainable actions in communities worldwide.
+## 🚀 Bắt đầu nhanh
 
-## 🚀 Quick Start
+### Yêu cầu
 
-### Prerequisites
-
-- Python 3.8 or higher
+- Python 3.8 trở lên
 - pip
 
-### Installation
+### Cài đặt
 
-1. Clone this repository:
+1. Sao chép kho lưu trữ này:
    ```bash
    git clone https://github.com/HouHackathon-CQP/GreenMap-Documents.git
    cd GreenMap-Documents
    ```
 
-2. Install dependencies:
+2. Cài đặt các phụ thuộc:
    ```bash
    pip install -r requirements.txt
    ```
 
-### Building the Documentation
+### Xây dựng tài liệu
 
-Build the static site:
+Xây dựng trang web tĩnh:
 ```bash
 mkdocs build
 ```
 
-The built site will be in the `site/` directory.
+Trang web đã xây dựng sẽ nằm trong thư mục `site/`.
 
-### Development Server
+### Máy chủ phát triển
 
-Run a local development server with live reloading:
+Chạy máy chủ phát triển cục bộ với tính năng tải lại trực tiếp:
 ```bash
 mkdocs serve
 ```
 
-Then open your browser to `http://localhost:8000`
+Sau đó mở trình duyệt của bạn tại `http://localhost:8000`
 
-## 📖 Documentation Structure
+## 📖 Cấu trúc tài liệu
 
 ```
 docs/
-├── index.md                    # Home page
+├── index.md                    # Trang chủ
 ├── getting-started/
-│   ├── introduction.md         # Introduction to GreenMap
-│   ├── installation.md         # Installation guide
-│   └── quick-start.md          # Quick start guide
+│   ├── introduction.md         # Giới thiệu về GreenMap
+│   ├── installation.md         # Hướng dẫn cài đặt
+│   └── quick-start.md          # Hướng dẫn bắt đầu nhanh
 ├── user-guide/
-│   ├── overview.md             # User guide overview
-│   └── features.md             # Detailed features
+│   ├── overview.md             # Tổng quan hướng dẫn người dùng
+│   └── features.md             # Tính năng chi tiết
 ├── api-reference/
-│   ├── overview.md             # API overview
-│   └── endpoints.md            # API endpoints reference
+│   ├── overview.md             # Tổng quan API
+│   └── endpoints.md            # Tài liệu tham khảo điểm cuối API
 ├── contributing/
-│   ├── guidelines.md           # Contributing guidelines
-│   └── code-of-conduct.md      # Code of conduct
-└── about.md                    # About GreenMap
+│   ├── guidelines.md           # Hướng dẫn đóng góp
+│   └── code-of-conduct.md      # Quy tắc ứng xử
+└── about.md                    # Về GreenMap
 ```
 
-## 🛠️ Technologies
+## 🛠️ Công nghệ
 
-- **[MkDocs](https://www.mkdocs.org/)** - Static site generator
-- **[Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)** - Material Design theme
-- **[PyMdown Extensions](https://facelessuser.github.io/pymdown-extensions/)** - Markdown extensions
+- **[MkDocs](https://www.mkdocs.org/)** - Trình tạo trang web tĩnh
+- **[Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)** - Chủ đề Material Design
+- **[PyMdown Extensions](https://facelessuser.github.io/pymdown-extensions/)** - Tiện ích mở rộng Markdown
 
-## 🤝 Contributing
+## 🤝 Đóng góp
 
-We welcome contributions to the documentation! Please read our [Contributing Guidelines](docs/contributing/guidelines.md) before submitting a pull request.
+Chúng tôi hoan nghênh các đóng góp cho tài liệu! Vui lòng đọc [Hướng dẫn đóng góp](docs/contributing/guidelines.md) của chúng tôi trước khi gửi pull request.
 
-### How to Contribute
+### Cách đóng góp
 
-1. Fork this repository
-2. Create a new branch (`git checkout -b docs/your-feature`)
-3. Make your changes
-4. Test locally with `mkdocs serve`
-5. Commit your changes (`git commit -m 'Add some documentation'`)
-6. Push to the branch (`git push origin docs/your-feature`)
-7. Open a Pull Request
+1. Fork kho lưu trữ này
+2. Tạo một nhánh mới (`git checkout -b docs/your-feature`)
+3. Thực hiện các thay đổi của bạn
+4. Kiểm tra cục bộ với `mkdocs serve`
+5. Commit các thay đổi của bạn (`git commit -m 'Add some documentation'`)
+6. Push lên nhánh (`git push origin docs/your-feature`)
+7. Mở một Pull Request
 
-## 📝 Documentation Guidelines
+## 📝 Hướng dẫn tài liệu
 
-When contributing to documentation:
+Khi đóng góp vào tài liệu:
 
-- Use clear, concise language
-- Include code examples where appropriate
-- Add screenshots for UI-related documentation
-- Test all links and code snippets
-- Follow the existing structure and style
-- Run `mkdocs build --strict` to check for errors
+- Sử dụng ngôn ngữ rõ ràng, súc tích
+- Bao gồm các ví dụ mã khi thích hợp
+- Thêm ảnh chụp màn hình cho tài liệu liên quan đến giao diện người dùng
+- Kiểm tra tất cả các liên kết và đoạn mã
+- Tuân theo cấu trúc và phong cách hiện có
+- Chạy `mkdocs build --strict` để kiểm tra lỗi
 
-## 📄 License
+## 📄 Giấy phép
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Dự án này được cấp phép theo Giấy phép MIT - xem tệp [LICENSE](LICENSE) để biết chi tiết.
 
-## 🌍 Links
+## 🌍 Liên kết
 
-- **Main Project**: [GreenMap](https://github.com/HouHackathon-CQP/GreenMap)
-- **Documentation Site**: [GreenMap Docs](https://houhackathon-cqp.github.io/GreenMap-Documents/)
-- **Community**: [Discord](https://discord.gg/greenmap)
+- **Dự án chính**: [GreenMap](https://github.com/HouHackathon-CQP/GreenMap)
+- **Trang tài liệu**: [GreenMap Docs](https://houhackathon-cqp.github.io/GreenMap-Documents/)
+- **Cộng đồng**: [Discord](https://discord.gg/greenmap)
 
-## 💚 Support
+## 💚 Hỗ trợ
 
-If you need help or have questions:
+Nếu bạn cần trợ giúp hoặc có câu hỏi:
 
-- Open an [issue](https://github.com/HouHackathon-CQP/GreenMap-Documents/issues)
-- Join our [Discord community](https://discord.gg/greenmap)
-- Email us at support@greenmap.example.com
+- Mở một [issue](https://github.com/HouHackathon-CQP/GreenMap-Documents/issues)
+- Tham gia [cộng đồng Discord](https://discord.gg/greenmap) của chúng tôi
+- Gửi email cho chúng tôi tại support@greenmap.example.com
 
 ---
 
-*Making environmental action accessible to everyone!* 🌍💚
+*Làm cho hành động môi trường dễ tiếp cận với mọi người!* 🌍💚
