@@ -1,0 +1,2064 @@
+
+<!doctype html>
+<html lang="vi" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Tài liệu cho dự án GreenMap - Bản Đồ Xanh Hà Nội">
+      
+      
+        <meta name="author" content="Đội HouHackathon-CQP">
+      
+      
+        <link rel="canonical" href="https://houhackathon-cqp.github.io/GreenMap-Documents/user-guide/accounts/">
+      
+      
+        <link rel="prev" href="../map-guide/">
+      
+      
+        <link rel="next" href="../reports/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Quản Lý Tài Khoản - Tài Liệu GreenMap</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#quan-ly-tai-khoan" class="md-skip">
+          Bỏ qua
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Đầu trang">
+    <a href="../.." title="Tài Liệu GreenMap" class="md-header__button md-logo" aria-label="Tài Liệu GreenMap" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tài Liệu GreenMap
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Quản Lý Tài Khoản
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="teal"  aria-label="Chuyển sang chế độ tối"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Chuyển sang chế độ tối" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="teal"  aria-label="Chuyển sang chế độ sáng"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Chuyển sang chế độ sáng" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Tìm kiếm" placeholder="Tìm kiếm" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Tìm kiếm">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Xoá" aria-label="Xoá" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Trang Chủ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Về GreenMap
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../getting-started/introduction/" class="md-tabs__link">
+          
+  
+  
+  Bắt Đầu
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../overview/" class="md-tabs__link">
+          
+  
+  
+  Hướng Dẫn Người Dùng
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../api-reference/overview/" class="md-tabs__link">
+          
+  
+  
+  Tài Liệu API
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../contributing/guidelines/" class="md-tabs__link">
+          
+  
+  
+  Đóng Góp
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Thanh điều hướng" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Tài Liệu GreenMap" class="md-nav__button md-logo" aria-label="Tài Liệu GreenMap" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Tài Liệu GreenMap
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trang Chủ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Về GreenMap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bắt Đầu
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bắt Đầu
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Giới Thiệu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hướng Dẫn Cài Đặt
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hướng Dẫn Bắt Đầu Nhanh
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hướng Dẫn Người Dùng
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hướng Dẫn Người Dùng
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tổng Quan
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Các Tính Năng
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../map-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hướng Dẫn Bản Đồ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quản Lý Tài Khoản
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quản Lý Tài Khoản
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Mục lục">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Mục lục
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tao-tai-khoan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tạo Tài Khoản
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tạo Tài Khoản">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#buoc-1-truy-cap-trang-ang-ky" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 1: Truy Cập Trang Đăng Ký
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-2-ien-thong-tin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 2: Điền Thông Tin
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-3-xac-minh-email" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 3: Xác Minh Email
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ang-nhap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Đăng Nhập
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Đăng Nhập">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#buoc-1-nhap-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 1: Nhấp Login
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-2-nhap-thong-tin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 2: Nhập Thông Tin
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-3-ang-nhap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 3: Đăng Nhập
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quan-ly-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quản Lý Profile
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quản Lý Profile">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#truy-cap-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Truy Cập Profile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cap-nhat-thong-tin-ca-nhan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cập Nhật Thông Tin Cá Nhân
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#luu-thay-oi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lưu Thay Đổi
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bao-mat-tai-khoan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bảo Mật Tài Khoản
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bảo Mật Tài Khoản">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thay-oi-mat-khau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Thay Đổi Mật Khẩu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ang-xuat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Đăng Xuất
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quen-mat-khau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quên Mật Khẩu
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quên Mật Khẩu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#at-lai-mat-khau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Đặt Lại Mật Khẩu
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#so-thich-cai-at" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sở Thích &amp; Cài Đặt
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sở Thích &amp; Cài Đặt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thong-bao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Thông Báo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on-vi-ngon-ngu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Đơn Vị &amp; Ngôn Ngữ
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quyen-rieng-tu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quyền Riêng Tư
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lich-su-hoat-ong" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lịch Sử Hoạt Động
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lịch Sử Hoạt Động">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xem-bao-cao-cua-ban" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Xem Báo Cáo Của Bạn
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theo-doi-bao-cao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theo Dõi Báo Cáo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xoa-tai-khoan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Xóa Tài Khoản
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Xóa Tài Khoản">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#luu-y-quan-trong" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lưu Ý Quan Trọng
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quy-trinh-xoa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quy Trình Xóa
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Báo Cáo Sự Cố
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cài Đặt
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Câu Hỏi Thường Gặp
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tài Liệu API
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tài Liệu API
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api-reference/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tổng Quan
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api-reference/endpoints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Các Điểm Cuối
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Đóng Góp
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Đóng Góp
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/guidelines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hướng Dẫn Đóng Góp
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/code-of-conduct/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quy Tắc Ứng Xử
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Mục lục">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Mục lục
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tao-tai-khoan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tạo Tài Khoản
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tạo Tài Khoản">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#buoc-1-truy-cap-trang-ang-ky" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 1: Truy Cập Trang Đăng Ký
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-2-ien-thong-tin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 2: Điền Thông Tin
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-3-xac-minh-email" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 3: Xác Minh Email
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ang-nhap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Đăng Nhập
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Đăng Nhập">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#buoc-1-nhap-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 1: Nhấp Login
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-2-nhap-thong-tin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 2: Nhập Thông Tin
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-3-ang-nhap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 3: Đăng Nhập
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quan-ly-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quản Lý Profile
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quản Lý Profile">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#truy-cap-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Truy Cập Profile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cap-nhat-thong-tin-ca-nhan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cập Nhật Thông Tin Cá Nhân
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#luu-thay-oi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lưu Thay Đổi
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bao-mat-tai-khoan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bảo Mật Tài Khoản
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bảo Mật Tài Khoản">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thay-oi-mat-khau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Thay Đổi Mật Khẩu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ang-xuat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Đăng Xuất
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quen-mat-khau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quên Mật Khẩu
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quên Mật Khẩu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#at-lai-mat-khau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Đặt Lại Mật Khẩu
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#so-thich-cai-at" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sở Thích &amp; Cài Đặt
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sở Thích &amp; Cài Đặt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thong-bao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Thông Báo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on-vi-ngon-ngu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Đơn Vị &amp; Ngôn Ngữ
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quyen-rieng-tu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quyền Riêng Tư
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lich-su-hoat-ong" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lịch Sử Hoạt Động
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lịch Sử Hoạt Động">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xem-bao-cao-cua-ban" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Xem Báo Cáo Của Bạn
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theo-doi-bao-cao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theo Dõi Báo Cáo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xoa-tai-khoan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Xóa Tài Khoản
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Xóa Tài Khoản">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#luu-y-quan-trong" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lưu Ý Quan Trọng
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quy-trinh-xoa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quy Trình Xóa
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="quan-ly-tai-khoan">Quản Lý Tài Khoản<a class="headerlink" href="#quan-ly-tai-khoan" title="Permanent link">&para;</a></h1>
+<h2 id="tao-tai-khoan">Tạo Tài Khoản<a class="headerlink" href="#tao-tai-khoan" title="Permanent link">&para;</a></h2>
+<h3 id="buoc-1-truy-cap-trang-ang-ky">Bước 1: Truy Cập Trang Đăng Ký<a class="headerlink" href="#buoc-1-truy-cap-trang-ang-ky" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Mở http://localhost:3000 (hoặc URL GreenMap của bạn)</li>
+<li>Nhấp <strong>Sign Up</strong> hoặc <strong>Đăng Ký</strong> ở góc trên bên phải</li>
+</ol>
+<h3 id="buoc-2-ien-thong-tin">Bước 2: Điền Thông Tin<a class="headerlink" href="#buoc-2-ien-thong-tin" title="Permanent link">&para;</a></h3>
+<p>Biểu mẫu đăng ký yêu cầu:</p>
+<ul>
+<li><strong>Email</strong>: Địa chỉ email hợp lệ</li>
+<li><strong>Password</strong>: Mật khẩu mạnh (tối thiểu 8 ký tự)</li>
+<li><strong>Confirm Password</strong>: Xác nhận mật khẩu</li>
+<li><strong>Full Name</strong> (Tùy chọn): Tên đầy đủ</li>
+<li><strong>Terms &amp; Conditions</strong>: Chấp nhận điều khoản</li>
+</ul>
+<h3 id="buoc-3-xac-minh-email">Bước 3: Xác Minh Email<a class="headerlink" href="#buoc-3-xac-minh-email" title="Permanent link">&para;</a></h3>
+<p>Sau khi đăng ký:
+1. Kiểm tra hộp thư email
+2. Nhấp link xác minh
+3. Tài khoản của bạn được kích hoạt</p>
+<h2 id="ang-nhap">Đăng Nhập<a class="headerlink" href="#ang-nhap" title="Permanent link">&para;</a></h2>
+<h3 id="buoc-1-nhap-login">Bước 1: Nhấp Login<a class="headerlink" href="#buoc-1-nhap-login" title="Permanent link">&para;</a></h3>
+<p>Nhấp <strong>Login</strong> ở góc trên bên phải</p>
+<h3 id="buoc-2-nhap-thong-tin">Bước 2: Nhập Thông Tin<a class="headerlink" href="#buoc-2-nhap-thong-tin" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Email</strong>: Email của bạn</li>
+<li><strong>Password</strong>: Mật khẩu của bạn</li>
+</ul>
+<h3 id="buoc-3-ang-nhap">Bước 3: Đăng Nhập<a class="headerlink" href="#buoc-3-ang-nhap" title="Permanent link">&para;</a></h3>
+<p>Nhấp <strong>Sign In</strong> để đăng nhập</p>
+<h2 id="quan-ly-profile">Quản Lý Profile<a class="headerlink" href="#quan-ly-profile" title="Permanent link">&para;</a></h2>
+<h3 id="truy-cap-profile">Truy Cập Profile<a class="headerlink" href="#truy-cap-profile" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Đăng nhập vào tài khoản</li>
+<li>Nhấp avatar hoặc tên ở góc trên bên phải</li>
+<li>Chọn <strong>Profile</strong> hoặc <strong>Settings</strong></li>
+</ol>
+<h3 id="cap-nhat-thong-tin-ca-nhan">Cập Nhật Thông Tin Cá Nhân<a class="headerlink" href="#cap-nhat-thong-tin-ca-nhan" title="Permanent link">&para;</a></h3>
+<p>Bạn có thể cập nhật:
+- <strong>Full Name</strong>: Tên đầy đủ
+- <strong>Email</strong>: Địa chỉ email
+- <strong>Phone</strong>: Số điện thoại (Tùy chọn)
+- <strong>Address</strong>: Địa chỉ (Tùy chọn)
+- <strong>Bio</strong>: Tiểu sử cá nhân (Tùy chọn)
+- <strong>Avatar</strong>: Ảnh đại diện</p>
+<h3 id="luu-thay-oi">Lưu Thay Đổi<a class="headerlink" href="#luu-thay-oi" title="Permanent link">&para;</a></h3>
+<p>Sau khi chỉnh sửa, nhấp <strong>Save Changes</strong> hoặc <strong>Lưu</strong></p>
+<h2 id="bao-mat-tai-khoan">Bảo Mật Tài Khoản<a class="headerlink" href="#bao-mat-tai-khoan" title="Permanent link">&para;</a></h2>
+<h3 id="thay-oi-mat-khau">Thay Đổi Mật Khẩu<a class="headerlink" href="#thay-oi-mat-khau" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Vào <strong>Settings</strong> → <strong>Security</strong></li>
+<li>Nhấp <strong>Change Password</strong></li>
+<li>Nhập:</li>
+<li><strong>Current Password</strong>: Mật khẩu hiện tại</li>
+<li><strong>New Password</strong>: Mật khẩu mới</li>
+<li><strong>Confirm Password</strong>: Xác nhận mật khẩu mới</li>
+<li>Nhấp <strong>Update Password</strong></li>
+</ol>
+<h3 id="ang-xuat">Đăng Xuất<a class="headerlink" href="#ang-xuat" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Nhấp avatar ở góc trên</li>
+<li>Chọn <strong>Logout</strong> hoặc <strong>Đăng Xuất</strong></li>
+</ol>
+<h2 id="quen-mat-khau">Quên Mật Khẩu<a class="headerlink" href="#quen-mat-khau" title="Permanent link">&para;</a></h2>
+<h3 id="at-lai-mat-khau">Đặt Lại Mật Khẩu<a class="headerlink" href="#at-lai-mat-khau" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Ở trang Login, nhấp <strong>Forgot Password?</strong></li>
+<li>Nhập email của bạn</li>
+<li>Kiểm tra hộp thư email</li>
+<li>Nhấp link "Reset Password"</li>
+<li>Nhập mật khẩu mới</li>
+<li>Xác nhận thay đổi</li>
+</ol>
+<h2 id="so-thich-cai-at">Sở Thích &amp; Cài Đặt<a class="headerlink" href="#so-thich-cai-at" title="Permanent link">&para;</a></h2>
+<h3 id="thong-bao">Thông Báo<a class="headerlink" href="#thong-bao" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Vào <strong>Settings</strong> → <strong>Notifications</strong></li>
+<li>Bật/tắt các loại thông báo:</li>
+<li><strong>AQI Alerts</strong>: Cảnh báo chất lượng không khí</li>
+<li><strong>Report Updates</strong>: Cập nhật báo cáo</li>
+<li><strong>Community News</strong>: Tin tức cộng đồng</li>
+<li><strong>System Updates</strong>: Cập nhật hệ thống</li>
+</ol>
+<h3 id="on-vi-ngon-ngu">Đơn Vị &amp; Ngôn Ngữ<a class="headerlink" href="#on-vi-ngon-ngu" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Vào <strong>Settings</strong> → <strong>Preferences</strong></li>
+<li>Chọn:</li>
+<li><strong>Language</strong>: Ngôn ngữ (Tiếng Việt, English, etc.)</li>
+<li><strong>Units</strong>: Đơn vị đo lường (Metric, Imperial)</li>
+<li><strong>Date Format</strong>: Định dạng ngày tháng</li>
+<li><strong>Timezone</strong>: Múi giờ</li>
+</ol>
+<h3 id="quyen-rieng-tu">Quyền Riêng Tư<a class="headerlink" href="#quyen-rieng-tu" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Vào <strong>Settings</strong> → <strong>Privacy</strong></li>
+<li>Điều chỉnh:</li>
+<li><strong>Profile Visibility</strong>: Ai có thể xem profile bạn</li>
+<li><strong>Location Sharing</strong>: Chia sẻ vị trí hiện tại</li>
+<li><strong>Report Attribution</strong>: Tên công khai trong báo cáo</li>
+</ol>
+<h2 id="lich-su-hoat-ong">Lịch Sử Hoạt Động<a class="headerlink" href="#lich-su-hoat-ong" title="Permanent link">&para;</a></h2>
+<h3 id="xem-bao-cao-cua-ban">Xem Báo Cáo Của Bạn<a class="headerlink" href="#xem-bao-cao-cua-ban" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Vào <strong>My Reports</strong> hoặc <strong>Profile</strong></li>
+<li>Xem danh sách báo cáo của bạn:</li>
+<li><strong>Status</strong>: Pending, Reviewed, Resolved</li>
+<li><strong>Date</strong>: Ngày tạo</li>
+<li><strong>Location</strong>: Vị trí báo cáo</li>
+</ol>
+<h3 id="theo-doi-bao-cao">Theo Dõi Báo Cáo<a class="headerlink" href="#theo-doi-bao-cao" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Nhấp vào báo cáo để xem chi tiết</li>
+<li>Xem:</li>
+<li><strong>Comments</strong>: Bình luận từ cộng đồng</li>
+<li><strong>Updates</strong>: Cập nhật từ quản lý</li>
+<li><strong>Status</strong>: Trạng thái hiện tại</li>
+</ol>
+<h2 id="xoa-tai-khoan">Xóa Tài Khoản<a class="headerlink" href="#xoa-tai-khoan" title="Permanent link">&para;</a></h2>
+<h3 id="luu-y-quan-trong">Lưu Ý Quan Trọng<a class="headerlink" href="#luu-y-quan-trong" title="Permanent link">&para;</a></h3>
+<p>Xóa tài khoản là:
+- <strong>Vĩnh viễn</strong>: Không thể khôi phục
+- <strong>Toàn Bộ</strong>: Xóa tất cả dữ liệu của bạn
+- <strong>Bất Khả Đảo</strong>: Không thể hoàn tác</p>
+<h3 id="quy-trinh-xoa">Quy Trình Xóa<a class="headerlink" href="#quy-trinh-xoa" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Vào <strong>Settings</strong> → <strong>Account</strong></li>
+<li>Cuộn xuống đến <strong>Danger Zone</strong></li>
+<li>Nhấp <strong>Delete Account</strong></li>
+<li>Xác nhận xóa</li>
+<li>Nhập mật khẩu để xác minh</li>
+</ol>
+<hr />
+<p>Cần giúp? Xem <a href="../faq/">FAQ</a> hoặc <a href="../overview/">User Guide Overview</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Trở lại mục lục
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 HouHackathon-CQP Team. All rights reserved.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/HouHackathon-CQP/GreenMap" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\u0110\u00e3 sao ch\u00e9p", "clipboard.copy": "Sao ch\u00e9p v\u00e0o b\u1ed9 nh\u1edb t\u1ea1m", "search.result.more.one": "1 t\u1eeb kh\u00e1c trong trang", "search.result.more.other": "# t\u1eeb kh\u00e1c trong trang", "search.result.none": "Kh\u00f4ng t\u00ecm th\u1ea5y t\u00e0i li\u1ec7u li\u00ean quan", "search.result.one": "1 t\u00e0i li\u1ec7u li\u00ean quan", "search.result.other": "# t\u00e0i li\u1ec7u li\u00ean quan", "search.result.placeholder": "Nh\u1eadp \u0111\u1ec3 b\u1eaft \u0111\u1ea7u t\u00ecm ki\u1ebfm", "search.result.term.missing": "Kh\u00f4ng", "select.version": "Ch\u1ecdn phi\u00ean b\u1ea3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
