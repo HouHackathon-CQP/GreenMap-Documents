@@ -1,455 +1,281 @@
-# Contributing Guidelines
+# Hướng Dẫn Đóng Góp
 
-Thank you for your interest in contributing to GreenMap! This document provides guidelines and instructions for contributing to the project.
+Cảm ơn bạn quan tâm đến việc đóng góp cho GreenMap! Dự án này gồm 4 repositories độc lập, mỗi repository có hướng dẫn đóng góp riêng.
 
-## Table of Contents
+## Các Repository GreenMap
 
-- [Code of Conduct](#code-of-conduct)
-- [Getting Started](#getting-started)
-- [How to Contribute](#how-to-contribute)
-- [Development Workflow](#development-workflow)
-- [Coding Standards](#coding-standards)
-- [Commit Guidelines](#commit-guidelines)
-- [Pull Request Process](#pull-request-process)
-- [Reporting Issues](#reporting-issues)
+Trước khi bắt đầu, xác định bạn muốn đóng góp cho repository nào:
 
-## Code of Conduct
+### 1. GreenMap-Backend
+**Repository:** github.com/HouHackathon-CQP/GreenMap-Backend
 
-Please read and follow our [Code of Conduct](code-of-conduct.md). We are committed to providing a welcoming and inclusive environment for all contributors.
+Stack: Python, FastAPI, PostgreSQL, MongoDB, Orion-LD
 
-## Getting Started
+**Các Cách Đóng Góp:**
+- Thêm API endpoints mới
+- Cải thiện business logic
+- Xử lý bugs
+- Tối ưu hóa database queries
+- Cập nhật agents (AQI, Weather)
 
-### Prerequisites
+### 2. GreenMap-Frontend
+**Repository:** github.com/HouHackathon-CQP/GreenMap-Frontend
 
-Before you begin, make sure you have:
+Stack: React, Tailwind CSS, Vite, Leaflet
 
-- Git installed on your machine
-- Node.js (v14 or higher)
-- Python (v3.8 or higher)
-- A GitHub account
-- Familiarity with Git and GitHub workflow
+**Các Cách Đóng Góp:**
+- Cải thiện UI/UX
+- Thêm features mới
+- Sửa bugs
+- Tối ưu hóa performance
+- Cập nhật stylesheets
 
-### Fork and Clone
+### 3. GreenMap-Data
+**Repository:** github.com/HouHackathon-CQP/GreenMap-Data
 
-1. Fork the GreenMap repository on GitHub
-2. Clone your fork locally:
+Stack: Python, Jupyter, Pandas, GeoPandas
+
+**Các Cách Đóng Góp:**
+- Thêm notebooks phân tích
+- Xử lý dữ liệu GeoJSON
+- Cải thiện data simulation
+- Thêm visualizations
+- Dokumentasi data
+
+### 4. GreenMap-Documents
+**Repository:** github.com/HouHackathon-CQP/GreenMap-Documents
+
+Stack: MkDocs, Material Theme
+
+**Các Cách Đóng Góp:**
+- Cập nhật documentation
+- Sửa typos
+- Thêm ví dụ mới
+- Cải thiện clarity
+- Dịch sang ngôn ngữ khác
+
+## Quy Trình Đóng Góp Chung
+
+### Bước 1: Fork Repository
+
+1. Truy cập repository GitHub bạn muốn đóng góp
+2. Nhấp **Fork** ở góc phải
+3. Clone fork của bạn:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/GreenMap.git
-cd GreenMap
+git clone https://github.com/YOUR_USERNAME/GreenMap-REPO.git
+cd GreenMap-REPO
 ```
 
-3. Add the upstream repository:
+### Bước 2: Tạo Feature Branch
 
 ```bash
-git remote add upstream https://github.com/HouHackathon-CQP/GreenMap.git
+# Update từ upstream
+git fetch upstream
+
+# Tạo branch mới
+git checkout -b feature/your-feature-name upstream/main
 ```
 
-### Set Up Development Environment
+Quy ước tên branch:
+- `feature/add-new-endpoint` - Tính năng mới
+- `fix/bug-description` - Sửa bug
+- `docs/update-readme` - Cập nhật docs
+- `style/format-code` - Cải thiện style
 
-1. Install dependencies:
+### Bước 3: Làm Việc Cục Bộ
 
+**Backend:**
+```bash
+python -m venv .venv
+.\.venv\Scripts\activate
+pip install -r requirements.txt
+# Make changes...
+python main.py  # Test
+```
+
+**Frontend:**
 ```bash
 npm install
-pip install -r requirements.txt
-```
-
-2. Create a `.env` file:
-
-```bash
-cp .env.example .env
-```
-
-3. Run the development server:
-
-```bash
 npm run dev
+# Make changes...
+npm run build  # Test build
 ```
 
-## How to Contribute
+**Data:**
+```bash
+pip install jupyter pandas geopandas
+jupyter notebook
+# Make changes to notebooks...
+```
 
-### Types of Contributions
+**Documents:**
+```bash
+python -m venv .venv
+.\.venv\Scripts\activate
+pip install -r requirements.txt
+mkdocs serve
+# Make changes to .md files...
+```
 
-We welcome various types of contributions:
-
-- 🐛 **Bug fixes** - Fix issues and improve stability
-- ✨ **New features** - Add new functionality
-- 📝 **Documentation** - Improve or add documentation
-- 🎨 **Design** - UI/UX improvements
-- 🧪 **Tests** - Add or improve test coverage
-- ♻️ **Refactoring** - Code quality improvements
-- 🌍 **Translations** - Add language support
-
-### Areas to Contribute
-
-Priority areas where we need help:
-
-1. **Mobile App Development** - iOS and Android apps
-2. **API Enhancements** - New endpoints and features
-3. **Documentation** - User guides and API docs
-4. **Accessibility** - Improve accessibility features
-5. **Internationalization** - Add language translations
-6. **Testing** - Increase test coverage
-7. **Performance** - Optimization and improvements
-
-## Development Workflow
-
-### Creating a Branch
-
-Create a feature branch from `main`:
+### Bước 4: Commit Changes
 
 ```bash
-git checkout main
-git pull upstream main
-git checkout -b feature/your-feature-name
+# Stage changes
+git add .
+
+# Commit với message rõ ràng
+git commit -m "feature: add new endpoint for sensor data"
 ```
 
-Branch naming conventions:
+Quy ước commit messages:
+- `feature:` - Tính năng mới
+- `fix:` - Sửa bug
+- `docs:` - Cập nhật docs
+- `test:` - Thêm tests
+- `refactor:` - Cải thiện code
+- `style:` - Định dạng code
 
-- `feature/` - New features
-- `fix/` - Bug fixes
-- `docs/` - Documentation changes
-- `refactor/` - Code refactoring
-- `test/` - Test additions/changes
-
-Examples:
-- `feature/add-project-tags`
-- `fix/map-rendering-issue`
-- `docs/update-api-reference`
-
-### Making Changes
-
-1. Make your changes following our [coding standards](#coding-standards)
-2. Test your changes thoroughly
-3. Run linters and formatters:
-
-```bash
-npm run lint
-npm run format
-```
-
-4. Run tests:
-
-```bash
-npm test
-```
-
-### Keeping Your Branch Updated
-
-Regularly sync with upstream:
-
-```bash
-git fetch upstream
-git rebase upstream/main
-```
-
-## Coding Standards
-
-### JavaScript/TypeScript
-
-We follow the Airbnb JavaScript Style Guide:
-
-```javascript
-// Good
-const getUserName = (user) => {
-  return user.name || 'Anonymous';
-};
-
-// Bad
-function get_user_name(user) {
-  return user.name || 'Anonymous'
-}
-```
-
-Key points:
-- Use `const` and `let`, not `var`
-- Use arrow functions when appropriate
-- Use template literals for string interpolation
-- Add semicolons
-- Use meaningful variable names
-
-### Python
-
-We follow PEP 8 style guide:
-
-```python
-# Good
-def get_user_name(user):
-    """Return the user's name or 'Anonymous'."""
-    return user.name or 'Anonymous'
-
-# Bad
-def GetUserName(user):
-    return user.name or 'Anonymous'
-```
-
-Key points:
-- Use snake_case for functions and variables
-- Use PascalCase for classes
-- Add docstrings to functions
-- Maximum line length: 88 characters (Black formatter)
-
-### HTML/CSS
-
-```html
-<!-- Good -->
-<div class="project-card">
-  <h2 class="project-card__title">{{ title }}</h2>
-  <p class="project-card__description">{{ description }}</p>
-</div>
-
-<!-- Bad -->
-<div class="projectCard">
-  <h2>{{ title }}</h2>
-  <p>{{ description }}</p>
-</div>
-```
-
-Key points:
-- Use BEM naming convention
-- Use semantic HTML
-- Keep CSS modular
-- Use CSS variables for theming
-
-### Documentation
-
-- Use clear, concise language
-- Include code examples
-- Add screenshots for UI changes
-- Keep documentation up-to-date with code changes
-
-## Commit Guidelines
-
-We follow [Conventional Commits](https://www.conventionalcommits.org/):
-
-### Commit Message Format
-
-```
-<type>(<scope>): <subject>
-
-<body>
-
-<footer>
-```
-
-### Types
-
-- `feat`: New feature
-- `fix`: Bug fix
-- `docs`: Documentation changes
-- `style`: Code style changes (formatting, etc.)
-- `refactor`: Code refactoring
-- `test`: Test additions/changes
-- `chore`: Build process or auxiliary tool changes
-
-### Examples
-
-```
-feat(projects): add tag filtering functionality
-
-Add ability to filter projects by tags on the map interface.
-Users can now select multiple tags to refine their search.
-
-Closes #123
-```
-
-```
-fix(api): resolve rate limiting issue
-
-Fix incorrect rate limit calculation that was causing
-premature throttling for enterprise accounts.
-
-Fixes #456
-```
-
-```
-docs(api): update authentication examples
-
-Add examples for Bearer token authentication and clarify
-the API key generation process.
-```
-
-### Best Practices
-
-- Use imperative mood ("add feature" not "added feature")
-- First line should be 50 characters or less
-- Reference issues and pull requests in the footer
-- Use body to explain what and why, not how
-
-## Pull Request Process
-
-### Before Submitting
-
-Checklist before creating a PR:
-
-- [ ] Code follows project style guidelines
-- [ ] Tests pass locally
-- [ ] New tests added for new functionality
-- [ ] Documentation updated
-- [ ] Commits follow conventional format
-- [ ] Branch is up-to-date with main
-
-### Creating a Pull Request
-
-1. Push your branch to your fork:
+### Bước 5: Push & Create Pull Request
 
 ```bash
 git push origin feature/your-feature-name
 ```
 
-2. Create a PR on GitHub with a clear title and description
+Sau đó:
+1. Truy cập GitHub fork của bạn
+2. Nhấp **Compare & Pull Request**
+3. Điền mô tả chi tiết
+4. Nhấp **Create Pull Request**
 
-### PR Template
+## Tiêu Chuẩn Mã
 
-Use this template for your PR description:
+### Python (Backend & Data)
 
-```markdown
-## Description
-Brief description of the changes
+```python
+# Follow PEP 8
+# Use type hints
+def get_sensors(limit: int = 10) -> List[Sensor]:
+    """Get list of sensors with limit."""
+    return sensors[:limit]
 
-## Type of Change
-- [ ] Bug fix
-- [ ] New feature
-- [ ] Documentation update
-- [ ] Refactoring
-
-## Related Issues
-Closes #123
-
-## Testing
-Describe how you tested the changes
-
-## Screenshots (if applicable)
-Add screenshots for UI changes
-
-## Checklist
-- [ ] Code follows style guidelines
-- [ ] Tests pass
-- [ ] Documentation updated
-- [ ] Self-review completed
+# Use docstrings
+class SensorRepository:
+    """Repository for sensor data access."""
+    
+    def find_by_id(self, sensor_id: str) -> Optional[Sensor]:
+        """Find sensor by ID."""
+        pass
 ```
 
-### Review Process
+### JavaScript/React (Frontend)
 
-1. At least one maintainer must approve
-2. All CI checks must pass
-3. Resolve any requested changes
-4. Once approved, a maintainer will merge
+```javascript
+// Use ES6+ syntax
+const getSensors = async (limit = 10) => {
+  const response = await fetch(`/api/sensors?limit=${limit}`);
+  return response.json();
+};
 
-### After Your PR is Merged
+// Use proper component structure
+export const SensorCard = ({ sensor }) => {
+  return (
+    <div className="sensor-card">
+      {sensor.name}
+    </div>
+  );
+};
 
-1. Delete your branch:
+// Use JSDoc comments
+/**
+ * Fetch sensors from API
+ * @param {number} limit - Number of sensors to fetch
+ * @returns {Promise<Array>} List of sensors
+ */
+```
 
+### Markdown (Documentation)
+
+```markdown
+# Heading 1
+## Heading 2
+
+- Use bullet points
+- For lists
+
+1. Use numbered
+2. For sequences
+
+**Bold** for emphasis
+*Italic* for code references
+
+`inline code` for variables
+```
+
+## Kiểm Tra Trước Khi Commit
+
+### Backend
 ```bash
-git branch -d feature/your-feature-name
-git push origin --delete feature/your-feature-name
+# Run tests
+pytest
+
+# Check code style
+flake8 .
+
+# Type checking
+mypy .
 ```
 
-2. Update your local main:
-
+### Frontend
 ```bash
-git checkout main
-git pull upstream main
+# Run tests
+npm test
+
+# Check linting
+npm run lint
+
+# Build check
+npm run build
 ```
 
-## Reporting Issues
+## Báo Cáo Vấn Đề (Issues)
 
-### Before Creating an Issue
+Nếu tìm thấy bug hoặc có đề xuất:
 
-1. Search existing issues
-2. Check if it's already fixed in `main`
-3. Gather relevant information
+1. Kiểm tra [GitHub Issues](https://github.com/HouHackathon-CQP) đã có issue chưa
+2. Nếu không có, tạo issue mới
+3. Cung cấp:
+   - **Title:** Tiêu đề rõ ràng
+   - **Description:** Mô tả chi tiết vấn đề
+   - **Steps to Reproduce:** Cách tái tạo (nếu là bug)
+   - **Expected/Actual:** Kết quả mong muốn/thực tế
 
-### Bug Reports
+## Quy Tắc Ứng Xử
 
-Include the following:
+Tất cả đóng góp viên phải:
+- Tôn trọng những người khác
+- Không quấy rối hoặc phân biệt đối xử
+- Thảo luận một cách xây dựng
+- Chấp nhận phản hồi tích cực
 
-```markdown
-## Bug Description
-Clear description of the bug
+Xem [Code of Conduct](code-of-conduct.md) để chi tiết.
 
-## Steps to Reproduce
-1. Go to '...'
-2. Click on '...'
-3. See error
+## Liên Hệ
 
-## Expected Behavior
-What should happen
+- **Maintainers:** Xem README của mỗi repository
+- **GitHub Discussions:** Thảo luận ý tưởng
+- **Issues:** Báo cáo vấn đề
+- **Pull Requests:** Gửi đóng góp
 
-## Actual Behavior
-What actually happens
+## Điều Khoản Giấy Phép
 
-## Environment
-- OS: [e.g., Windows 10]
-- Browser: [e.g., Chrome 96]
-- Version: [e.g., 1.2.3]
-
-## Screenshots
-If applicable
-
-## Additional Context
-Any other relevant information
-```
-
-### Feature Requests
-
-Include the following:
-
-```markdown
-## Feature Description
-Clear description of the proposed feature
-
-## Use Case
-Why is this feature needed?
-
-## Proposed Solution
-How should it work?
-
-## Alternatives Considered
-Other approaches you've thought about
-
-## Additional Context
-Any other relevant information
-```
-
-## Communication
-
-### Where to Ask Questions
-
-- **General questions**: GitHub Discussions
-- **Bug reports**: GitHub Issues
-- **Feature requests**: GitHub Issues
-- **Security issues**: security@greenmap.example.com
-- **Real-time chat**: Discord server
-
-### Response Times
-
-- We aim to respond to issues within 48 hours
-- PR reviews typically take 3-5 business days
-- Security issues are addressed immediately
-
-## Recognition
-
-Contributors are recognized in several ways:
-
-- Listed in CONTRIBUTORS.md
-- Mentioned in release notes
-- Featured on our website
-- Special badges for significant contributions
-
-## License
-
-By contributing to GreenMap, you agree that your contributions will be licensed under the same license as the project (see LICENSE file).
-
-## Getting Help
-
-Need help with contributing?
-
-- Read our [Getting Started Guide](../getting-started/quick-start.md)
-- Check out [good first issues](https://github.com/HouHackathon-CQP/GreenMap/labels/good%20first%20issue)
-- Join our Discord for real-time help
-- Email us at contribute@greenmap.example.com
+Bằng cách đóng góp, bạn đồng ý rằng đóng góp của bạn sẽ được cấp phép dưới giấy phép MIT.
 
 ---
 
-*Thank you for contributing to GreenMap! Together, we're making a positive impact!* 🌍💚
+**Cảm ơn bạn đã đóng góp cho GreenMap! 🙏**
+
+Để biết thêm chi tiết, kiểm tra README trong từng repository:
+- [GreenMap-Backend README](../../../GreenMap-Backend/README.md)
+- [GreenMap-Frontend README](../../../GreenMap-Frontend/README.md)
+- [GreenMap-Data README](../../../GreenMap-Data/README.md)

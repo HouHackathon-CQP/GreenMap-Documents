@@ -1,27 +1,28 @@
-site_name: GreenMap Documentation
-site_description: Documentation for the GreenMap project
-site_author: HouHackathon-CQP Team
+site_name: Tài Liệu GreenMap
+site_description: Tài liệu cho dự án GreenMap - Bản Đồ Xanh Hà Nội
+site_author: Đội HouHackathon-CQP
 site_url: https://houhackathon-cqp.github.io/GreenMap-Documents/
 
 theme:
   name: material
+  language: vi
   palette:
-    # Light mode
+    # Chế độ sáng
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: green
       accent: teal
       toggle:
         icon: material/brightness-7
-        name: Switch to dark mode
-    # Dark mode
+        name: Chuyển sang chế độ tối
+    # Chế độ tối
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: green
       accent: teal
       toggle:
         icon: material/brightness-4
-        name: Switch to light mode
+        name: Chuyển sang chế độ sáng
   features:
     - navigation.tabs
     - navigation.sections
@@ -32,9 +33,36 @@ theme:
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+nav:
+  - Trang Chủ: index.md
+  - Về GreenMap: about.md
+  - Bắt Đầu:
+    - Giới Thiệu: getting-started/introduction.md
+    - Hướng Dẫn Cài Đặt: getting-started/installation.md
+    - Hướng Dẫn Bắt Đầu Nhanh: getting-started/quick-start.md
+  - Hướng Dẫn Người Dùng:
+    - Tổng Quan: user-guide/overview.md
+    - Các Tính Năng: user-guide/features.md
+    - Hướng Dẫn Bản Đồ: user-guide/map-guide.md
+    - Quản Lý Tài Khoản: user-guide/accounts.md
+    - Báo Cáo Sự Cố: user-guide/reports.md
+    - Cài Đặt: user-guide/settings.md
+    - Câu Hỏi Thường Gặp: user-guide/faq.md
+  - Tài Liệu API:
+    - Tổng Quan: api-reference/overview.md
+    - Các Điểm Cuối: api-reference/endpoints.md
+  - Đóng Góp:
+    - Hướng Dẫn Đóng Góp: contributing/guidelines.md
+    - Quy Tắc Ứng Xử: contributing/code-of-conduct.md
 
 plugins:
-  - search
+  - search:
+      lang: vi
+  - glightbox
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -49,20 +77,14 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
 
-nav:
-  - Home: index.md
-  - Getting Started:
-      - Introduction: getting-started/introduction.md
-      - Installation: getting-started/installation.md
-      - Quick Start: getting-started/quick-start.md
-  - User Guide:
-      - Overview: user-guide/overview.md
-      - Features: user-guide/features.md
-  - API Reference:
-      - Overview: api-reference/overview.md
-      - Endpoints: api-reference/endpoints.md
-  - Contributing:
-      - Guidelines: contributing/guidelines.md
-      - Code of Conduct: contributing/code-of-conduct.md
-  - About: about.md
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/HouHackathon-CQP/GreenMap
+      name: GitHub
+
+copyright: Copyright &copy; 2024 HouHackathon-CQP Team. All rights reserved.

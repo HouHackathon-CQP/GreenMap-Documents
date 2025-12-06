@@ -1,388 +1,91 @@
-# Features
+# Các Tính Năng GreenMap-Frontend
 
-GreenMap offers a comprehensive set of features designed to make environmental action easy and impactful. This page details all available features.
+GreenMap-Frontend cung cấp một bộ tính năng toàn diện để giám sát chất lượng không khí và quản lý dữ liệu môi trường.
 
-## Map Features
+## Bản Đồ Tương Tác
 
-### Interactive Mapping
+### Tính Năng Chính
 
-Our core mapping functionality includes:
+- **Zoom & Pan**: Phóng to, thu nhỏ, và di chuyển trên bản đồ
+- **Multiple Layers**: Các lớp dữ liệu khác nhau (Sensors, Bikes, Charging, Parks, Attractions)
+- **Click for Details**: Nhấp vào điểm bất kỳ để xem thông tin chi tiết
+- **Real-time Updates**: Dữ liệu cập nhật theo thời gian thực
 
-#### Map Layers
+### Các Loại Điểm Dữ Liệu
 
-- **Satellite View**: High-resolution satellite imagery
-- **Street View**: Detailed street-level mapping
-- **Terrain View**: Topographical features
-- **Hybrid View**: Combination of satellite and street
+| Biểu Tượng | Loại | Thông Tin |
+|-----------|------|----------|
+| 🟢 | Sensor | AQI, Thời tiết, Tọa độ |
+| 🚲 | Bicycle Rental | Tên trạm, Vị trí |
+| 🔌 | Charging Station | Loại sạc, Nhà cung cấp |
+| 🌳 | Park | Tên công viên, Mô tả |
+| 🏛️ | Tourist Attraction | Tên địa điểm, Thông tin |
 
-#### Map Controls
+## Chỉ Số AQI & Thời Tiết
 
-```javascript
-// Example: Basic map interaction
-- Pan: Click and drag
-- Zoom: Mouse wheel or +/- buttons
-- Rotate: Ctrl + drag (3D view)
-- Tilt: Right-click + drag
-```
+### Chỉ Số AQI
 
-#### Custom Markers
+| Giá Trị | Mức | Màu |
+|--------|-----|-----|
+| 0-50 | Tốt | Xanh |
+| 51-100 | Trung Bình | Vàng |
+| 101-150 | Xấu | Cam |
+| 151-200 | Rất Xấu | Đỏ |
+| 201+ | Nguy Hiểm | Tím |
 
-Projects are displayed with color-coded markers:
+### Dữ Liệu Thời Tiết
 
-| Color | Project Type | Icon |
-|-------|--------------|------|
-| 🟢 Green | Tree Planting | 🌳 |
-| 🔵 Blue | Water Conservation | 💧 |
-| 🟡 Yellow | Cleanup Events | 🗑️ |
-| 🟣 Purple | Education | 📚 |
-| 🔴 Red | Urgent Action | ⚠️ |
+- Nhiệt độ hiện tại
+- Độ ẩm
+- Tốc độ gió
+- Điều kiện thời tiết
+- Dự báo
 
-### Location Services
+## Báo Cáo Sự Cố
 
-- **Auto-detection**: Automatically find your location
-- **Geofencing**: Get notified about nearby projects
-- **Route Planning**: Directions to project locations
-- **Offline Maps**: Download maps for offline use
+### Tạo Báo Cáo
 
-## Project Management
+1. Nhấp biểu tượng báo cáo trên bản đồ
+2. Chọn vị trí (hoặc tự động từ vị trí hiện tại)
+3. Điền thông tin:
+   - **Title**: Tiêu đề báo cáo
+   - **Description**: Mô tả chi tiết
+   - **Category**: Loại vấn đề (pollution, waste, etc.)
+   - **Severity**: Mức độ (low, medium, high)
+   - **Images**: Tải lên hình ảnh
 
-### Creating Projects
+4. Nhấp **Submit Report**
 
-#### Basic Information
+### Quản Lý Báo Cáo
 
-When creating a project, you can specify:
+Xem các báo cáo của bạn:
+- Trạng thái (pending, reviewed, resolved)
+- Phản hồi từ cộng đồng
+- Dữ liệu cập nhật
 
-```yaml
-Required Fields:
-  - Project Name
-  - Description
-  - Category
-  - Location
-  - Date & Time
+## Lọc & Tìm Kiếm
 
-Optional Fields:
-  - Cover Image
-  - Additional Images
-  - Documents/Resources
-  - Prerequisites
-  - Equipment Needed
-  - Target Participants
-```
+### Lọc Dữ Liệu
 
-#### Advanced Settings
+Sử dụng sidebar để lọc:
+- **By Type**: Sensor, Bike, Charging, Park, etc.
+- **By AQI Range**: 0-50, 51-100, etc.
+- **By Date**: Hôm nay, tuần này, tháng này
+- **By Location**: Radius tìm kiếm
 
-- **Recurring Events**: Set up repeating projects
-- **Team Projects**: Collaborate with other organizers
-- **Private Projects**: Invite-only events
-- **Prerequisites**: Set requirements for participants
-- **Waitlist**: Manage overflow registrations
+### Tìm Kiếm
 
-### Managing Projects
+Sử dụng search bar:
+- Tìm kiếm theo tên vị trí
+- Tìm kiếm theo địa chỉ
+- Tìm kiếm theo ID sensor
 
-#### Participant Management
+## Chế Độ Tối/Sáng
 
-- View participant list
-- Approve/reject registrations
-- Send bulk messages
-- Export participant data
-- Check-in system for attendance
-
-#### Project Updates
-
-Keep participants informed:
-
-- Send announcements
-- Post progress updates
-- Share photos and videos
-- Update project details
-- Cancel or reschedule
-
-#### Impact Tracking
-
-Monitor project outcomes:
-
-**Metrics Available:**
-- Number of participants
-- Hours contributed
-- Resources collected/planted
-- Carbon offset achieved
-- Area covered
-- Before/after photos
-
-## Community Features
-
-### Social Interaction
-
-#### Commenting System
-
-- Comment on projects
-- Reply to other comments
-- Like/react to comments
-- Report inappropriate content
-- Tag other users
-
-#### Messaging
-
-- Direct messages to users
-- Group chats for teams
-- Project-specific discussions
-- File sharing
-- Voice notes
-
-#### Following System
-
-- Follow other users
-- Follow projects
-- Activity feed
-- Notification preferences
-
-### Achievements & Gamification
-
-#### Badges
-
-Earn badges for various achievements:
-
-| Badge | Requirement | Icon |
-|-------|-------------|------|
-| First Step | Join your first project | 🎯 |
-| Tree Hugger | Plant 10 trees | 🌳 |
-| Clean Sweep | Participate in 5 cleanups | 🧹 |
-| Eco Warrior | 50+ hours contributed | ⚔️ |
-| Community Hero | Organize 10 projects | 🦸 |
-| Green Leader | 100+ followers | 👑 |
-
-#### Leaderboards
-
-Compete and inspire:
-
-- Global leaderboard
-- Local area rankings
-- Category-specific rankings
-- Team leaderboards
-- Time-based challenges
-
-#### Streaks
-
-Maintain your environmental commitment:
-
-- Daily check-in streaks
-- Monthly participation streaks
-- Yearly achievement milestones
-
-## User Profile Features
-
-### Profile Customization
-
-Personalize your profile:
-
-- Profile picture and banner
-- Bio and description
-- Location and interests
-- Social media links
-- Custom themes
-
-### Impact Dashboard
-
-Your personal environmental impact:
-
-**Statistics Tracked:**
-- ✓ Total projects participated
-- ✓ Hours volunteered
-- ✓ Trees planted
-- ✓ Waste collected (kg)
-- ✓ CO₂ offset (kg)
-- ✓ Water saved (liters)
-- ✓ Distance traveled green
-
-### Portfolio
-
-Showcase your work:
-
-- Photo galleries
-- Project highlights
-- Testimonials
-- Certificates
-- Media mentions
-
-## Search & Discovery
-
-### Advanced Search
-
-Find exactly what you're looking for:
-
-**Search Filters:**
-- Keywords
-- Location (radius search)
-- Date range
-- Category
-- Difficulty level
-- Duration
-- Participant count
-- Language
-
-### Recommendations
-
-AI-powered suggestions:
-
-- Projects based on your interests
-- Nearby opportunities
-- Trending initiatives
-- Similar projects
-- User recommendations
-
-### Saved Searches
-
-- Save frequent searches
-- Get alerts for new matches
-- Share searches with others
-
-## Notifications
-
-### Notification Types
-
-Stay informed with timely updates:
-
-| Type | Description | Delivery Method |
-|------|-------------|-----------------|
-| Project Updates | Changes to joined projects | Email, Push, In-app |
-| New Projects | Projects matching interests | Email, Weekly digest |
-| Messages | Direct messages from users | Push, Email |
-| Achievements | Badges and milestones | In-app, Push |
-| Reminders | Upcoming project reminders | Push, Email, SMS |
-| Community | Comments, likes, follows | In-app |
-
-### Notification Settings
-
-Customize how you receive notifications:
-
-- Enable/disable by type
-- Set quiet hours
-- Choose delivery methods
-- Frequency preferences
-
-## Mobile App Features
-
-### Mobile-Specific
-
-Features exclusive to mobile:
-
-- **QR Code Check-in**: Quick event registration
-- **Offline Mode**: Access saved content offline
-- **Camera Integration**: Instant photo uploads
-- **Push Notifications**: Real-time alerts
-- **Location Services**: Auto-discovery of nearby projects
-- **Calendar Integration**: Sync with device calendar
-
-## Reporting & Analytics
-
-### Personal Reports
-
-Generate reports on your impact:
-
-- Monthly summary reports
-- Annual impact statements
-- Custom date range reports
-- Exportable data (CSV, PDF)
-
-### Project Reports
-
-For organizers:
-
-- Participation statistics
-- Demographics breakdown
-- Impact metrics
-- Feedback analysis
-- Photo collages
-
-## Integration Features
-
-### Calendar Integration
-
-Sync with your favorite calendar:
-
-- Google Calendar
-- Apple Calendar
-- Outlook Calendar
-- Custom ICS export
-
-### Social Media
-
-Share your impact:
-
-- One-click sharing
-- Custom share templates
-- Auto-posting (optional)
-- Social media previews
-
-### Third-Party Apps
-
-Connect with other platforms:
-
-- Strava (track green commutes)
-- Fitbit (track activity)
-- iNaturalist (biodiversity)
-- Weather apps (event planning)
-
-## Accessibility Features
-
-Ensuring everyone can participate:
-
-- **Screen Reader Support**: Full ARIA compliance
-- **Keyboard Navigation**: Complete keyboard control
-- **High Contrast Mode**: Enhanced visibility
-- **Text Scaling**: Adjustable font sizes
-- **Voice Commands**: Hands-free operation
-- **Closed Captions**: Video accessibility
-- **Multiple Languages**: 15+ languages supported
-
-## Privacy & Security
-
-### Privacy Controls
-
-- **Profile Visibility**: Public, friends, or private
-- **Location Sharing**: Control who sees your location
-- **Activity Visibility**: Hide specific activities
-- **Data Download**: Export all your data
-- **Account Deletion**: Full data removal
-
-### Security Features
-
-- Two-factor authentication (2FA)
-- Login alerts
-- Session management
-- Encrypted communications
-- Regular security audits
-
-## FAQ
-
-### General Questions
-
-**Q: Is GreenMap free to use?**  
-A: Yes! Basic features are completely free. Premium features are available for organizers and organizations.
-
-**Q: Can I use GreenMap offline?**  
-A: Yes, you can download maps and project information for offline viewing in the mobile app.
-
-**Q: How is impact calculated?**  
-A: Impact metrics are calculated based on established environmental standards and verified data from project organizers.
-
-**Q: Can I create private projects?**  
-A: Yes, you can create private, invite-only projects with an Organizer account.
-
-**Q: Is my data secure?**  
-A: Absolutely. We use industry-standard encryption and never sell your personal data.
-
-### Technical Questions
-
-**Q: Which browsers are supported?**  
-A: Chrome, Firefox, Safari, and Edge (latest versions).
-
-**Q: Is there an API?**  
-A: Yes! Check our [API Reference](../api-reference/overview.md) for details.
-
-**Q: Can I export my data?**  
-A: Yes, you can export all your data from Settings → Privacy → Download Data.
+Nhấp biểu tượng mặt trăng/mặt trời ở góc trên bên phải để:
+- **Light Mode**: Giao diện sáng, dễ dàng trong ngày
+- **Dark Mode**: Giao diện tối, bảo vệ mắt vào đêm
 
 ---
 
-*Explore all these features and start making an impact today!*
+Để biết thêm, xem [Map Guide](map-guide.md) hoặc [User Guide Overview](overview.md).

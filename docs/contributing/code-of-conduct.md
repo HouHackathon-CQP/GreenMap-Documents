@@ -1,103 +1,103 @@
-# Code of Conduct
+# Quy Tắc Ứng Xử
 
-## Our Pledge
+## Cam Kết Của Chúng Tôi
 
-We as members, contributors, and leaders pledge to make participation in the GreenMap community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.
+Chúng tôi, với tư cách là những thành viên, những người đóng góp và lãnh đạo, cam kết làm cho sự tham gia vào cộng đồng GreenMap trở thành một trải nghiệm không quấy rối cho tất cả mọi người, bất kể tuổi tác, kích thước cơ thể, khuyết tật rõ ràng hoặc không rõ ràng, nguồn gốc, đặc điểm tính dục, bản sắc giới tính và biểu hiện, mức độ kinh nghiệm, giáo dục, tình trạng kinh tế xã hội, quốc tịch, ngoại hình cá nhân, chủng tộc, tôn giáo, hoặc bản sắc tính dục và khuynh hướng.
 
-We pledge to act and interact in ways that contribute to an open, welcoming, diverse, inclusive, and healthy community.
+Chúng tôi cam kết hành động và tương tác theo những cách có góp phần tạo nên một cộng đồng mở, chào mừng, đa dạng, bao gồm và lành mạnh.
 
-## Our Standards
+## Tiêu Chuẩn Của Chúng Tôi
 
-### Positive Behavior
+### Hành Vi Tích Cực
 
-Examples of behavior that contributes to a positive environment:
+Các ví dụ về hành vi có góp phần tạo nên môi trường tích cực:
 
-- **Being Respectful**: Using welcoming and inclusive language
-- **Being Empathetic**: Being respectful of differing viewpoints and experiences
-- **Accepting Feedback**: Gracefully accepting constructive criticism
-- **Taking Responsibility**: Focusing on what is best for the community and accepting responsibility for our mistakes
-- **Being Collaborative**: Working together towards common goals
-- **Being Supportive**: Helping others learn and grow
+- **Tôn Trọng**: Sử dụng ngôn ngữ chào mừng và bao gồm
+- **Đồng Cảm**: Tôn trọng những quan điểm và kinh nghiệm khác nhau
+- **Chấp Nhận Phản Hồi**: Chấp nhận một cách dễ dàng những lời chỉ trích xây dựng
+- **Chịu Trách Nhiệm**: Tập trung vào những gì tốt nhất cho cộng đồng và chấp nhận trách nhiệm về những sai lầm của chúng tôi
+- **Hợp Tác**: Làm việc cùng nhau hướng tới những mục tiêu chung
+- **Hỗ Trợ**: Giúp người khác học hỏi và phát triển
 
-### Unacceptable Behavior
+### Hành Vi Không Được Chấp Nhận
 
-Examples of unacceptable behavior include:
+Các ví dụ về hành vi không được chấp nhận bao gồm:
 
-- **Harassment**: The use of sexualized language or imagery, and unwelcome sexual attention or advances
-- **Trolling**: Insulting or derogatory comments, and personal or political attacks
-- **Discrimination**: Public or private harassment, intimidation, or discrimination
-- **Privacy Violations**: Publishing others' private information without explicit permission
-- **Inappropriate Content**: Other conduct which could reasonably be considered inappropriate in a professional setting
-- **Disruption**: Deliberate intimidation, stalking, or following
-- **Unwelcome Contact**: Continued one-on-one communication after requests to cease
+- **Quấy Rối**: Sử dụng ngôn ngữ hoặc hình ảnh có tính chất tình dục, chú ý tình dục không mong muốn hoặc tiến bộ
+- **Nói Chơi Tục Tĩu**: Bình luận xúc phạm hoặc méchỉ trích, và những cuộc tấn công cá nhân hoặc chính trị
+- **Phân Biệt Đối Xử**: Quấy rối công khai hoặc riêng tư, đe dọa hoặc phân biệt đối xử
+- **Vi Phạm Quyền Riêng Tư**: Công bố thông tin riêng tư của người khác mà không có sự cho phép rõ ràng
+- **Nội Dung Không Phù Hợp**: Hành vi khác có thể được coi một cách hợp lý là không phù hợp trong một cài đặt chuyên nghiệp
+- **Gián Đoạn**: Đe dọa cố ý, theo dõi hoặc theo sau
+- **Liên Hệ Không Mong Muốn**: Liên hệ liên tục một-một sau khi yêu cầu dừng lại
 
-## Our Responsibilities
+## Trách Nhiệm Của Chúng Tôi
 
-Project maintainers are responsible for clarifying and enforcing our standards of acceptable behavior and will take appropriate and fair corrective action in response to any behavior that they deem inappropriate, threatening, offensive, or harmful.
+Những người duy trì dự án chịu trách nhiệm làm rõ và thực thi các tiêu chuẩn của chúng tôi về hành vi có thể chấp nhận được và sẽ thực hiện hành động sửa chữa thích hợp và công bằng để đáp lại bất kỳ hành vi nào mà họ coi là không phù hợp, đe dọa, xúc phạm hoặc có hại.
 
-Project maintainers have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned with this Code of Conduct, and will communicate reasons for moderation decisions when appropriate.
+Những người duy trì dự án có quyền và trách nhiệm xóa, chỉnh sửa hoặc từ chối bình luận, commit, mã, chỉnh sửa wiki, vấn đề và những đóng góp khác không phù hợp với Quy Tắc Ứng Xử này, và sẽ thông báo lý do cho các quyết định điều chỉnh khi thích hợp.
 
-## Scope
+## Phạm Vi
 
-This Code of Conduct applies within all community spaces, including:
+Quy Tắc Ứng Xử này áp dụng trong tất cả các không gian cộng đồng, bao gồm:
 
-- GitHub repositories (issues, pull requests, discussions)
-- Official communication channels (Discord, forums, mailing lists)
-- Social media accounts
-- Community events (online and offline)
-- When representing the project in public spaces
+- Repository GitHub (các vấn đề, yêu cầu kéo, thảo luận)
+- Các kênh liên lạc chính thức (Discord, diễn đàn, danh sách gửi thư)
+- Tài khoản phương tiện truyền thông xã hội
+- Sự kiện cộng đồng (trực tuyến và ngoại tuyến)
+- Khi đại diện cho dự án trong không gian công cộng
 
-This Code of Conduct also applies when an individual is officially representing the community in public spaces. Examples include using an official email address, posting via an official social media account, or acting as an appointed representative at an online or offline event.
+Quy Tắc Ứng Xử này cũng áp dụng khi một cá nhân chính thức đại diện cho cộng đồng trong không gian công cộng. Các ví dụ bao gồm sử dụng một địa chỉ email chính thức, đăng qua một tài khoản phương tiện truyền thông xã hội chính thức, hoặc hành động như một đại diện được chỉ định tại một sự kiện trực tuyến hoặc ngoại tuyến.
 
-## Enforcement
+## Thực Thi
 
-### Reporting
+### Báo Cáo
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement at:
+Các trường hợp hành vi lạm dụng, quấy rối hoặc không được chấp nhận có thể được báo cáo cho các lãnh đạo cộng đồng chịu trách nhiệm thực thi tại:
 
 **conduct@greenmap.example.com**
 
-All complaints will be reviewed and investigated promptly and fairly. All community leaders are obligated to respect the privacy and security of the reporter of any incident.
+Tất cả các khiếu nại sẽ được xem xét và điều tra nhanh chóng và công bằng. Tất cả các lãnh đạo cộng đồng có nghĩa vụ tôn trọng quyền riêng tư và an ninh của người báo cáo bất kỳ sự cố nào.
 
-### What to Include in a Report
+### Những Gì Cần Bao Gồm Trong Báo Cáo
 
-When reporting an incident, please include:
+Khi báo cáo một sự cố, vui lòng bao gồm:
 
-- Your contact information
-- Names (real, nicknames, or pseudonyms) of any individuals involved
-- Description of the incident
-- When and where the incident occurred
-- Whether the incident is ongoing
-- Any additional context or information
-- If you believe anyone is at immediate physical risk
+- Thông tin liên lạc của bạn
+- Tên (thực, biệt danh hoặc ẩn danh) của bất kỳ cá nhân nào liên quan
+- Mô tả sự cố
+- Khi và nơi sự cố xảy ra
+- Liệu sự cố có đang diễn ra
+- Bất kỳ ngữ cảnh hoặc thông tin bổ sung nào
+- Nếu bạn tin rằng bất kỳ ai có nguy hiểm vật lý ngay lập tức
 
-### Confidentiality
+### Bảo Mật
 
-We will respect confidentiality requests for the purpose of protecting victims of abuse. At our discretion, we may publicly name a person about whom we've received harassment complaints, or privately warn third parties about them, if we believe that doing so will increase the safety of GreenMap members or the general public.
+Chúng tôi sẽ tôn trọng các yêu cầu bảo mật nhằm bảo vệ các nạn nhân của lạm dụng. Theo quyết định của chúng tôi, chúng tôi có thể công khai đặt tên cho một người về người chúng tôi đã nhận được các khiếu nại quấy rối, hoặc riêng tư cảnh báo các bên thứ ba về họ, nếu chúng tôi tin rằng làm như vậy sẽ tăng sự an toàn của các thành viên GreenMap hoặc công chúng nói chung.
 
-## Enforcement Guidelines
+## Hướng Dẫn Thực Thi
 
-Community leaders will follow these Community Impact Guidelines in determining the consequences for any action they deem in violation of this Code of Conduct:
+Các lãnh đạo cộng đồng sẽ tuân theo Hướng Dẫn Tác Động Cộng Đồng này để xác định hậu quả cho bất kỳ hành động nào mà họ coi là vi phạm Quy Tắc Ứng Xử này:
 
-### 1. Correction
+### 1. Sửa Chữa
 
-**Community Impact**: Use of inappropriate language or other behavior deemed unprofessional or unwelcome in the community.
+**Tác Động Cộng Đồng**: Sử dụng ngôn ngữ không phù hợp hoặc hành vi khác được coi là không chuyên nghiệp hoặc không mong muốn trong cộng đồng.
 
-**Consequence**: A private, written warning from community leaders, providing clarity around the nature of the violation and an explanation of why the behavior was inappropriate. A public apology may be requested.
+**Hậu Quả**: Một cảnh báo riêng tư, bằng văn bản từ các lãnh đạo cộng đồng, cung cấp sự rõ ràng về bản chất của vi phạm và lời giải thích về lý do hành vi đó không phù hợp. Một lời xin lỗi công khai có thể được yêu cầu.
 
-### 2. Warning
+### 2. Cảnh Báo
 
-**Community Impact**: A violation through a single incident or series of actions.
+**Tác Động Cộng Đồng**: Một vi phạm thông qua một sự cố duy nhất hoặc một loạt hành động.
 
-**Consequence**: A warning with consequences for continued behavior. No interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, for a specified period of time. This includes avoiding interactions in community spaces as well as external channels like social media. Violating these terms may lead to a temporary or permanent ban.
+**Hậu Quả**: Một cảnh báo với hậu quả cho hành vi liên tục. Không có tương tác với những người liên quan, bao gồm tương tác không được yêu cầu với những người thực thi Quy Tắc Ứng Xử, trong một khoảng thời gian xác định. Điều này bao gồm tránh các tương tác trong không gian cộng đồng cũng như các kênh bên ngoài như phương tiện truyền thông xã hội. Vi phạm các điều khoản này có thể dẫn đến lệnh cấm tạm thời hoặc vĩnh viễn.
 
-### 3. Temporary Ban
+### 3. Lệnh Cấm Tạm Thời
 
-**Community Impact**: A serious violation of community standards, including sustained inappropriate behavior.
+**Tác Động Cộng Đồng**: Một vi phạm nghiêm trọng các tiêu chuẩn cộng đồng, bao gồm hành vi không phù hợp kéo dài.
 
-**Consequence**: A temporary ban from any sort of interaction or public communication with the community for a specified period of time. No public or private interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, is allowed during this period. Violating these terms may lead to a permanent ban.
+**Hậu Quả**: Lệnh cấm tạm thời không được tương tác hoặc liên lạc công khai với cộng đồng trong một khoảng thời gian xác định. Không có tương tác công khai hoặc riêng tư với những người liên quan, bao gồm tương tác không được yêu cầu với những người thực thi Quy Tắc Ứng Xử, được phép trong khoảng thời gian này. Vi phạm các điều khoản này có thể dẫn đến lệnh cấm vĩnh viễn.
 
-### 4. Permanent Ban
+### 4. Lệnh Cấm Vĩnh Viễn
 
 **Community Impact**: Demonstrating a pattern of violation of community standards, including sustained inappropriate behavior, harassment of an individual, or aggression toward or disparagement of classes of individuals.
 

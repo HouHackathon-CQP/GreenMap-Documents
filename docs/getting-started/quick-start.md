@@ -1,180 +1,210 @@
-# Quick Start Guide
+# Hướng Dẫn Bắt Đầu Nhanh
 
-Get up and running with GreenMap in just a few minutes! This guide will walk you through the essential steps to start using GreenMap.
+Hướng dẫn này giúp bạn khởi chạy toàn bộ GreenMap system trong 10-15 phút.
 
-## 5-Minute Quick Start
+## Điều Kiện Tiên Quyết
 
-### Step 1: Access GreenMap
+Đảm bảo bạn đã:
+- Clone tất cả 4 repositories từ [Hướng Dẫn Cài Đặt](installation.md)
+- Cài đặt các dependencies cần thiết
+- Khởi động Docker services cho Backend
 
-Open your web browser and navigate to:
+## Bước 1: Khởi Động Backend Services
 
+```bash
+cd d:\GreenMap\GreenMap-Backend
+
+# Kích hoạt venv (nếu chưa)
+.\.venv\Scripts\activate
+
+# Khởi động Docker containers
+docker-compose up -d
+
+# Kiểm tra containers đã chạy
+docker-compose ps
 ```
-http://localhost:3000
+
+Chờ 10-15 giây để PostgreSQL, MongoDB, và Orion-LD khởi động.
+
+## Bước 2: Khởi Tạo Database (Lần Đầu)
+
+```bash
+# Với venv đã kích hoạt
+python init_db.py
+
+# Xem output để xác nhận
 ```
 
-Or visit our hosted version at: `https://greenmap.example.com`
+## Bước 3: Khởi Động Backend API
 
-### Step 2: Create an Account
+Mở **Terminal 1** và chạy:
 
-1. Click on **Sign Up** in the top right corner
-2. Fill in your details:
-   - Username
-   - Email address
+```bash
+cd d:\GreenMap\GreenMap-Backend
+.\.venv\Scripts\activate
+python main.py
+```
+
+Chờ cho đến khi thấy:
+```
+Uvicorn running on http://127.0.0.1:8000
+```
+
+### Kiểm Tra Backend
+
+Mở browser và truy cập: **http://localhost:8000/docs**
+
+Bạn sẽ thấy Swagger API documentation.
+
+## Bước 4: Khởi Động Agents (Tùy Chọn)
+
+Mở **Terminal 2** và chạy AQI Agent:
+
+```bash
+cd d:\GreenMap\GreenMap-Backend
+.\.venv\Scripts\activate
+python aqi_agent.py
+```
+
+Mở **Terminal 3** và chạy Weather Agent:
+
+```bash
+cd d:\GreenMap\GreenMap-Backend
+.\.venv\Scripts\activate
+python weather_agent.py
+```
+
+Các agents này cập nhật dữ liệu AQI và thời tiết realtime từ external APIs.
+
+## Bước 5: Khởi Động Frontend
+
+Mở **Terminal 4** và chạy:
+
+```bash
+cd d:\GreenMap\GreenMap-Frontend
+npm run dev
+```
+
+Chờ cho đến khi thấy:
+```
+Local:   http://localhost:3000/
+```
+
+### Kiểm Tra Frontend
+
+Mở browser và truy cập: **http://localhost:3000**
+
+Bạn sẽ thấy GreenMap web application.
+
+## Bước 6: Khám Phá Application
+
+### Đăng Ký / Đăng Nhập
+
+1. Nhấp **Sign Up** (hoặc **Login** nếu đã có account)
+2. Điền thông tin:
+   - Email
    - Password
-3. Click **Create Account**
-4. Verify your email (check your inbox)
+   - Confirm Password
+3. Nhấp **Create Account**
 
-### Step 3: Explore the Map
+### Khám Phá Bản Đồ
 
-Once logged in, you'll see the interactive map:
+1. Sau khi đăng nhập, bạn sẽ thấy bản đồ tương tác
+2. Các điểm dữ liệu hiển thị:
+   - 🟢 Sensors (chất lượng không khí)
+   - 🚲 Bicycle Rental Stations
+   - 🔌 Charging Stations
+   - 🌳 Parks
+   - 🏛️ Tourist Attractions
 
-- **Zoom In/Out**: Use the +/- buttons or scroll wheel
-- **Pan**: Click and drag to move around
-- **Filter**: Use the sidebar to filter projects by type
+### Xem Chi Tiết
 
-### Step 4: Find a Project
+1. Nhấp vào bất kỳ điểm nào trên bản đồ
+2. Xem thông tin chi tiết:
+   - Tên vị trí
+   - Tọa độ
+   - AQI value (nếu có)
+   - Thời tiết cục bộ
+   - Dữ liệu lịch sử
 
-1. Browse projects on the map (represented by green markers)
-2. Click on a marker to see project details
-3. View information about the project, including:
-   - Description
-   - Location
-   - Date and time
-   - Number of participants
+### Lọc Dữ Liệu
 
-### Step 5: Join a Project
+Sử dụng sidebar bên trái để lọc theo:
+- Loại dữ liệu (sensors, bikes, charging, etc.)
+- Khoảng AQI
+- Thời gian
 
-To participate in a project:
+## Bước 7: Xem Tài Liệu (Tùy Chọn)
 
-1. Click on a project marker
-2. Read the project details
-3. Click **Join Project**
-4. Confirm your participation
+Mở **Terminal 5** để xem documentation:
 
-Congratulations! You're now part of the GreenMap community! 🎉
+```bash
+cd d:\GreenMap\GreenMap-Documents
+.\.venv\Scripts\activate
+mkdocs serve
+```
 
-## Basic Features Overview
+Truy cập: **http://localhost:8000/GreenMap-Documents/**
 
-### Dashboard
+## Tóm Tắt Các Port
 
-Your personal dashboard shows:
+| Ứng Dụng | URL | Terminal |
+|---------|-----|----------|
+| **Backend API** | http://localhost:8000 | Terminal 1 |
+| **AQI Agent** | (Background) | Terminal 2 |
+| **Weather Agent** | (Background) | Terminal 3 |
+| **Frontend** | http://localhost:3000 | Terminal 4 |
+| **Documentation** | http://localhost:8000/GreenMap-Documents/ | Terminal 5 |
 
-- **Your Projects**: Projects you've joined or created
-- **Activity Feed**: Recent updates from the community
-- **Impact Stats**: Your environmental contribution metrics
+## Xử Lý Sự Cố Nhanh
 
-### Creating a Project
+### Frontend không load
 
-To create your own environmental project:
+```bash
+# Xóa cache và cài lại
+cd d:\GreenMap\GreenMap-Frontend
+rm -r node_modules
+npm install
+npm run dev
+```
 
-1. Click **Create Project** button
-2. Fill in the project details:
-   - Project Name
-   - Description
-   - Location (use the map picker)
-   - Date and Time
-   - Category (tree planting, cleanup, etc.)
-   - Maximum Participants
-3. Add photos or documents (optional)
-4. Click **Publish Project**
+### Database connection error
 
-### Project Categories
+```bash
+# Kiểm tra Docker containers
+docker-compose ps
 
-GreenMap supports various project types:
+# Xem logs
+docker-compose logs postgres
 
-| Category | Description | Example |
-|----------|-------------|---------|
-| 🌳 Tree Planting | Reforestation initiatives | Community tree planting day |
-| 🗑️ Cleanup | Litter and waste removal | Beach cleanup event |
-| ♻️ Recycling | Recycling drives and education | E-waste collection drive |
-| 🚴 Green Transport | Sustainable transportation | Bike-to-work campaign |
-| 🌱 Urban Gardening | Community gardens | Rooftop garden project |
-| 📚 Education | Environmental awareness | Sustainability workshop |
+# Restart if needed
+docker-compose restart
+```
 
-## Common Tasks
+### Port đã bị chiếm dụng
 
-### Searching for Projects
+Thay đổi port trong config files hoặc:
+```bash
+# Tìm process đang sử dụng port
+netstat -ano | findstr :3000
 
-Use the search bar to find specific projects by name, location, category, or date.
+# Kill process (Windows)
+taskkill /PID <PID> /F
+```
 
-**Example searches:**
-- "Tree planting in Austin"
-- "Beach cleanup"
-- "Recycling workshop"
+## Các Bước Tiếp Theo
 
-### Managing Your Profile
+1. **Đọc User Guide** - [Hướng Dẫn Người Dùng](../user-guide/overview.md)
+2. **Tìm Hiểu API** - [API Reference](../api-reference/overview.md)
+3. **Contribute Code** - [Contributing Guidelines](../contributing/guidelines.md)
+4. **Tìm Kiếm Issues** - [GitHub Issues](https://github.com/HouHackathon-CQP)
 
-Update your profile settings:
+## Cần Giúp?
 
-1. Click on your avatar (top right)
-2. Select **Profile Settings**
-3. Update your information:
-   - Profile picture
-   - Bio
-   - Location
-   - Interests
-4. Click **Save Changes**
-
-### Tracking Your Impact
-
-View your environmental impact:
-
-1. Go to **Dashboard**
-2. View your **Impact Stats**:
-   - Projects participated in
-   - Hours contributed
-   - Trees planted
-   - Waste collected (kg)
-   - CO₂ offset (kg)
-
-## Tips for Success
-
-!!! tip "Pro Tips"
-    - **Enable Notifications**: Stay updated on project changes
-    - **Join Nearby Projects**: Start local for maximum impact
-    - **Invite Friends**: Share project links with your network
-    - **Document Progress**: Upload photos from events
-    - **Stay Engaged**: Comment and interact with other users
-
-## Keyboard Shortcuts
-
-Speed up your workflow with keyboard shortcuts:
-
-| Shortcut | Action |
-|----------|--------|
-| `Ctrl + F` | Search projects |
-| `Ctrl + N` | Create new project |
-| `Ctrl + D` | Go to dashboard |
-| `Esc` | Close modal/dialog |
-
-## Mobile App
-
-GreenMap is also available as a mobile app:
-
-- **iOS**: Download from the App Store
-- **Android**: Download from Google Play
-
-Features on mobile:
-- Push notifications for project updates
-- Location-based project discovery
-- Quick check-in at events
-- Offline mode for viewing saved projects
-
-## What's Next?
-
-Now that you're familiar with the basics:
-
-- Explore the [User Guide](../user-guide/overview.md) for advanced features
-- Learn about [API Integration](../api-reference/overview.md) for developers
-- Read our [Contributing Guidelines](../contributing/guidelines.md) to help improve GreenMap
-
-## Need Help?
-
-- 📖 Check the [User Guide](../user-guide/overview.md)
-- 💬 Join our community forum
-- 📧 Email support: support@greenmap.example.com
-- 🐛 Report bugs on [GitHub Issues](https://github.com/HouHackathon-CQP/GreenMap/issues)
+- Kiểm tra [FAQ](../user-guide/faq.md) (nếu có)
+- Xem logs của các terminals
+- Mở issue trên GitHub repositories
 
 ---
 
-*Happy mapping! Together, we're making a difference!* 🌍💚
+**🎉 Chúc mừng! Bạn đã thiết lập GreenMap thành công!**

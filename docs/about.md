@@ -1,301 +1,205 @@
-# About GreenMap
+# Về GreenMap
 
-## Project Overview
+## GreenMap Là Gì?
 
-GreenMap is an innovative open-source platform designed to connect people with environmental initiatives and promote sustainable actions in communities worldwide. Our mission is to make environmental activism accessible, measurable, and impactful for everyone.
+**GreenMap** là một hệ thống quản lý dữ liệu môi trường tích hợp, được phát triển cho **HouHackathon 2024**.
 
-## Our Story
+Dự án này gồm 4 repositories độc lập:
 
-### The Beginning
+1. **GreenMap-Backend** - REST API và xử lý dữ liệu realtime
+2. **GreenMap-Frontend** - Ứng dụng web React với bản đồ tương tác
+3. **GreenMap-Data** - Jupyter notebooks để phân tích dữ liệu
+4. **GreenMap-Documents** - Tài liệu toàn diện (tài liệu này)
 
-GreenMap was born during the HouHackathon-CQP hackathon, where a group of passionate developers and environmental advocates came together with a common goal: to create a tool that would make it easier for people to find and participate in environmental projects.
+## Lịch Sử Phát Triển
 
-### The Problem We Solve
+### Khởi Nguồn
 
-Before GreenMap:
-- Environmental projects were scattered across various platforms
-- Difficult to discover local green initiatives
-- No centralized way to track environmental impact
-- Limited tools for project organizers
-- Lack of community engagement features
+GreenMap được phát triển trong HouHackathon, khi một nhóm các lập trình viên quyết định giải quyết vấn đề giám sát chất lượng không khí và quản lý dữ liệu môi trường ở Hà Nội.
 
-### Our Solution
+### Vấn Đề Chúng Tôi Giải Quyết
 
-GreenMap provides:
-- **Centralized Platform**: One place to discover all environmental projects
-- **Interactive Mapping**: Visual representation of green initiatives
-- **Impact Tracking**: Measurable results and progress
-- **Community Building**: Connect with like-minded individuals
-- **Organizer Tools**: Easy project management for leaders
+Trước GreenMap:
+- Dữ liệu AQI phân tán trên nhiều nền tảng
+- Khó khăn trong việc khám phá các dự án xanh địa phương
+- Không có cách tập trung để theo dõi tác động môi trường
+- Thiếu công cụ quản lý dữ liệu đô thị
+- Hạn chế tính năng báo cáo sự cố môi trường từ cộng đồng
 
-## Our Mission
+### Giải Pháp của Chúng Tôi
 
-To empower individuals and communities to take meaningful environmental action by providing accessible, engaging, and effective tools for discovering, organizing, and participating in green initiatives.
+GreenMap cung cấp:
+- **Nền tảng Tập Trung**: Một nơi để theo dõi tất cả chỉ số AQI, thời tiết, và dữ liệu đô thị
+- **Bản Đồ Tương Tác**: Hiển thị trực quan dữ liệu bằng bản đồ thực tế (Leaflet)
+- **Theo Dõi Realtime**: Cập nhật dữ liệu sensor liên tục từ external APIs
+- **Quản Lý Báo Cáo**: Hệ thống báo cáo sự cố môi trường từ cộng đồng
+- **API REST**: Cho phép tích hợp với các ứng dụng khác
+- **Dữ Liệu Mở**: Sử dụng GeoJSON format để khả năng tương tác
 
-## Our Vision
+## Sứ Mệnh
 
-We envision a world where:
-- Every person can easily find and join environmental projects
-- Communities are connected through shared environmental goals
-- Environmental impact is transparent and measurable
-- Sustainable actions are gamified and rewarding
-- Technology serves as a bridge between intention and action
-
-## Core Values
-
-### 🌍 Sustainability First
-
-Environmental protection is at the heart of everything we do. We ensure our platform promotes genuine environmental impact.
-
-### 🤝 Community-Driven
-
-We believe in the power of community. GreenMap is built by and for people who care about the planet.
-
-### 💡 Open Source
-
-Transparency and collaboration are key. Our code is open source, and we welcome contributions from everyone.
-
-### 📊 Data-Driven
-
-We use data to measure impact and improve our platform. All metrics are based on verified environmental standards.
-
-### 🌟 Inclusive Design
-
-Environmental action should be accessible to everyone, regardless of technical ability, background, or location.
-
-### 🔄 Continuous Improvement
-
-We're always learning and evolving based on user feedback and environmental research.
-
-## What Makes Us Different
-
-### Interactive Visualization
-
-Unlike traditional listing platforms, GreenMap uses an interactive map interface that makes discovering projects intuitive and engaging.
-
-### Gamification Elements
-
-We incorporate badges, achievements, and leaderboards to make environmental action fun and motivating.
-
-### Impact Metrics
-
-Every action is tracked and translated into measurable environmental impact, from CO₂ offset to trees planted.
-
-### Community Features
-
-Built-in social features allow users to connect, share, and inspire each other.
-
-### Open API
-
-Developers can integrate GreenMap into their applications, extending our reach and impact.
-
-## Key Features
-
-### For Participants
-
-- Discover local environmental projects
-- Track personal environmental impact
-- Earn badges and achievements
-- Connect with the community
-- Access educational resources
-
-### For Organizers
-
-- Create and manage projects easily
-- Manage participant registrations
-- Send updates and communications
-- Generate impact reports
-- Build a following
-
-### For Developers
-
-- RESTful API access
-- Comprehensive documentation
-- SDKs for popular languages
-- Webhook support
-- Sandbox environment
-
-## Technology Stack
-
-GreenMap is built with modern, scalable technologies:
-
-### Frontend
-- React.js for the web application
-- React Native for mobile apps
-- Mapbox GL for interactive mapping
-- Material-UI for design system
-
-### Backend
-- Node.js with Express
-- Python with Django (API services)
-- PostgreSQL database
-- Redis for caching
-
-### Infrastructure
-- Docker for containerization
-- AWS for cloud hosting
-- CI/CD with GitHub Actions
-- Monitoring with DataDog
-
-## Impact Statistics
-
-Since our launch:
-
-- **50,000+** registered users
-- **5,000+** environmental projects
-- **100,000+** hours contributed
-- **25,000+** trees planted
-- **500 tons** of CO₂ offset
-- **150+** cities worldwide
-
-*Statistics as of January 2024*
-
-## Team
-
-### Core Team
-
-GreenMap is maintained by a dedicated team of developers, designers, and environmental advocates.
-
-**Founders**: HouHackathon-CQP Team
-
-### Contributors
-
-We're grateful to our amazing community of contributors who help make GreenMap better every day. See our [CONTRIBUTORS.md](https://github.com/HouHackathon-CQP/GreenMap/blob/main/CONTRIBUTORS.md) for the full list.
-
-### Advisory Board
-
-We work with environmental experts and organizations to ensure our platform creates genuine impact.
-
-## Partnerships
-
-We partner with:
-
-- Environmental NGOs
-- Local governments
-- Educational institutions
-- Corporate sustainability programs
-- Research organizations
-
-Interested in partnering? Contact us at partnerships@greenmap.example.com
-
-## Funding
-
-GreenMap is funded through:
-
-- Open-source grants
-- Corporate sponsorships
-- Premium features for organizations
-- Donations from users
-
-All funding is transparently reported and used to improve the platform and expand our impact.
-
-## Media & Press
-
-### Press Inquiries
-
-For press inquiries, please contact: press@greenmap.example.com
-
-### Media Kit
-
-Download our media kit with logos, screenshots, and brand guidelines:
-[Download Media Kit](https://greenmap.example.com/media-kit)
-
-### Featured In
-
-- TechCrunch
-- Environmental Science Journal
-- Green Tech Magazine
-- Local news outlets
-
-## Awards & Recognition
-
-- 🏆 Best Environmental Tech Platform 2023
-- 🌟 Open Source Project of the Year
-- 🌍 Green Innovation Award
-- 💡 Social Impact Technology Award
-
-## Research & Publications
-
-GreenMap contributes to environmental research:
-
-- Published papers on environmental engagement
-- Open datasets for researchers
-- Collaboration with universities
-- Impact assessment reports
-
-## Contact Us
-
-### General Inquiries
-- Email: hello@greenmap.example.com
-- Website: https://greenmap.example.com
-
-### Support
-- Email: support@greenmap.example.com
-- Discord: [Join our server](https://discord.gg/greenmap)
-
-### Development
-- GitHub: https://github.com/HouHackathon-CQP/GreenMap
-- Email: dev@greenmap.example.com
-
-### Partnerships
-- Email: partnerships@greenmap.example.com
-
-### Press
-- Email: press@greenmap.example.com
-
-## Social Media
-
-Follow us for updates and environmental tips:
-
-- Twitter: [@GreenMapApp](https://twitter.com/greenmapapp)
-- Instagram: [@greenmap](https://instagram.com/greenmap)
-- LinkedIn: [GreenMap](https://linkedin.com/company/greenmap)
-- Facebook: [GreenMap Community](https://facebook.com/greenmap)
-
-## Join Our Community
-
-- 💬 [Discord Server](https://discord.gg/greenmap)
-- 🐙 [GitHub Discussions](https://github.com/HouHackathon-CQP/GreenMap/discussions)
-- 📧 [Newsletter](https://greenmap.example.com/newsletter)
-- 📱 [Mobile Apps](https://greenmap.example.com/apps)
-
-## Support GreenMap
-
-Help us grow and create more impact:
-
-- **Contribute**: [Contributing Guidelines](contributing/guidelines.md)
-- **Donate**: [Support Us](https://greenmap.example.com/donate)
-- **Spread the Word**: Share GreenMap with your network
-- **Use It**: Join and create projects on the platform
-
-## Roadmap
-
-### Current Focus
-- Mobile app improvements
-- Expanded language support
-- Enhanced analytics
-- API v2 development
-
-### Future Plans
-- AR features for project discovery
-- AI-powered project recommendations
-- Carbon credit integration
-- Educational content platform
-
-## License
-
-GreenMap is open source software licensed under the MIT License. See [LICENSE](https://github.com/HouHackathon-CQP/GreenMap/blob/main/LICENSE) for details.
-
-## Acknowledgments
-
-We thank:
-- All our contributors and community members
-- Open source projects we build upon
-- Environmental organizations we partner with
-- Users who trust us with their environmental journey
+Trao quyền cho các cá nhân và cộng đồng thực hiện hành động có ý nghĩa cho môi trường bằng cách cung cấp các công cụ dễ tiếp cận, hữu ích và hiệu quả để:
+- Giám sát chất lượng không khí
+- Quản lý dữ liệu đô thị
+- Báo cáo sự cố môi trường
+- Tương tác với cộng đồng
+
+## Tầm Nhìn
+
+Chúng tôi mong muốn một thế giới nơi:
+- Mỗi người có thể dễ dàng theo dõi chất lượng không khí xung quanh mình
+- Các cộng đồng được kết nối thông qua dữ liệu môi trường chung
+- Tác động môi trường là minh bạch và có thể đo lường được
+- Công nghệ phục vụ như một cầu nối giữa ý định và hành động thực tế
+- Dữ liệu mở được sử dụng để cải thiện chất lượng sống
+
+## Giá Trị Cốt Lõi
+
+### 🌍 Bền Vững Trên Hết
+Bảo vệ môi trường là trái tim của mọi thứ chúng tôi làm. Chúng tôi đảm bảo rằng nền tảng của chúng tôi thúc đẩy tác động môi trường thực tế.
+
+### 👥 Cộng Đồng Trước Tiên
+Xây dựng cộng đồng mạnh mẽ, kết nối những người quan tâm đến môi trường.
+
+### 🔓 Minh Bạch Hoàn Toàn
+Dữ liệu mở, code mở source, quy trình mở. Bất cứ ai cũng có thể thấy những gì chúng tôi đang làm.
+
+### ♿ Dễ Tiếp Cận
+Công cụ của chúng tôi được thiết kế cho mọi người - không cần kỹ năng kỹ thuật cao.
+
+### 🚀 Đổi Mới Liên Tục
+Luôn tìm kiếm những cách mới để cải thiện và mở rộng chức năng.
+
+## Các Repositories
+
+### GreenMap-Backend
+**Repository:** github.com/HouHackathon-CQP/GreenMap-Backend
+
+**Chủ Động:**
+- Cung cấp REST API endpoints
+- Quản lý database (PostgreSQL, MongoDB)
+- Xử lý xác thực người dùng (OAuth2, JWT)
+- Chạy agents realtime (AQI, Weather)
+- Tích hợp với Orion-LD Context Broker
+- Nhập dữ liệu từ OpenStreetMap
+
+**Stack:** Python 3.10+, FastAPI, SQLAlchemy, PostgreSQL, MongoDB, Orion-LD
+
+### GreenMap-Frontend
+**Repository:** github.com/HouHackathon-CQP/GreenMap-Frontend
+
+**Chủ Động:**
+- Cung cấp giao diện web
+- Hiển thị bản đồ tương tác (Leaflet)
+- Quản lý tài khoản người dùng
+- Tạo và quản lý báo cáo
+- Lọc và tìm kiếm dữ liệu
+- Chế độ tối/sáng
+
+**Stack:** React 18+, Vite, Tailwind CSS, Leaflet
+
+### GreenMap-Data
+**Repository:** github.com/HouHackathon-CQP/GreenMap-Data
+
+**Chủ Động:**
+- Cung cấp Jupyter notebooks
+- Phân tích dữ liệu AQI
+- Xử lý GeoJSON files
+- Tạo dữ liệu mô phỏng
+- EDA (Exploratory Data Analysis)
+- Dự báo và mô phỏng
+
+**Stack:** Python, Jupyter, Pandas, GeoPandas, Shapely
+
+### GreenMap-Documents
+**Repository:** github.com/HouHackathon-CQP/GreenMap-Documents
+
+**Chủ Động:**
+- Cung cấp tài liệu toàn diện
+- Hướng dẫn cài đặt
+- Hướng dẫn người dùng
+- Tài liệu API
+- Hướng dẫn đóng góp
+
+**Stack:** MkDocs, Material Theme
+
+## Kiến Trúc Tổng Thể
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                      Người Dùng                              │
+│                (Web Browser - GreenMap-Frontend)             │
+└──────────────────────────┬──────────────────────────────────┘
+                           │ HTTP Request
+                           ↓
+┌──────────────────────────────────────────────────────────────┐
+│               GreenMap-Backend API                           │
+│                (Python/FastAPI)                              │
+│  ┌──────────────────────────────────────────────────────┐    │
+│  │ - Auth (OAuth2, JWT)                               │    │
+│  │ - Locations, Sensors, Reports endpoints            │    │
+│  │ - AQI Agent (updates realtime)                      │    │
+│  │ - Weather Agent (updates realtime)                  │    │
+│  │ - Context Broker Integration (Orion-LD)            │    │
+│  │ - OSM Data Import                                   │    │
+│  └──────────────────────────────────────────────────────┘    │
+└──────┬───────────────────┬──────────────────────────┬────────┘
+       │                   │                          │
+       ↓                   ↓                          ↓
+   PostgreSQL           MongoDB                  Orion-LD
+   (Relational)       (Documents)            (Context Broker)
+   (Users, Reports)   (Sensor Data)          (NGSI-LD Data)
+                                                      ↑
+                                                      │
+                    ┌─────────────────────────────────┘
+                    │
+                    ↓
+       ┌────────────────────────────┐
+       │  GreenMap-Data              │
+       │  (Jupyter/Pandas/GeoPandas) │
+       │  - Data Analysis            │
+       │  - GeoJSON Processing       │
+       │  - Simulation Data          │
+       │  - EDA Notebooks            │
+       └────────────────────────────┘
+                    │
+                    ↑
+       ┌────────────────────────────┐
+       │  Data Sources               │
+       │  - Sensors                  │
+       │  - OpenStreetMap            │
+       │  - Weather APIs             │
+       │  - CSV/GeoJSON Files        │
+       └────────────────────────────┘
+```
+
+## Công Nghệ Stack
+
+| Lớp | Công Nghệ |
+|-----|-----------|
+| **Frontend** | React, TypeScript, Tailwind CSS, Vite, Leaflet |
+| **Backend** | Python, FastAPI, SQLAlchemy, Pydantic |
+| **Database** | PostgreSQL, MongoDB |
+| **Context Broker** | Orion-LD (NGSI-LD) |
+| **Data Processing** | Jupyter, Pandas, GeoPandas |
+| **DevOps** | Docker, Docker Compose |
+| **Documentation** | MkDocs, Material Theme |
+
+## Team & Credits
+
+**Phát triển bởi:** HouHackathon-CQP participants
+
+**Giấy Phép:** MIT License
+
+## Liên Hệ & Liên Kết
+
+- **GitHub:** github.com/HouHackathon-CQP
+- **Issues:** Report bugs trên GitHub
+- **Discussions:** Thảo luận trên GitHub
+- **Documentation:** Xem tài liệu tại đây
 
 ---
 
-*Together, we're creating a greener future, one project at a time!* 🌍💚
+**Cảm ơn bạn đã quan tâm đến GreenMap! 🌍💚**
 
-*For more information, visit our [documentation home](index.md) or check out the [Getting Started guide](getting-started/introduction.md).*
+Để bắt đầu, xem [Hướng Dẫn Cài Đặt](getting-started/installation.md).

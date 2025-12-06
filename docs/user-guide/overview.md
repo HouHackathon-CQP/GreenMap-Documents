@@ -1,233 +1,138 @@
-# User Guide Overview
+# Hướng Dẫn Người Dùng - Tổng Quan
 
-Welcome to the GreenMap User Guide! This comprehensive guide covers all features and functionality of the GreenMap platform.
+Chào mừng đến hướng dẫn người dùng GreenMap! Hướng dẫn này giúp bạn sử dụng GreenMap web application hiệu quả.
 
-## What You'll Learn
+## GreenMap-Frontend Là Gì?
 
-This user guide is organized into sections that cover:
+**GreenMap-Frontend** là ứng dụng web React cho phép người dùng:
+- Xem chất lượng không khí trên bản đồ tương tác
+- Tìm kiếm và khám phá các địa điểm
+- Báo cáo vấn đề môi trường
+- Quản lý hồ sơ cá nhân
+- Tương tác với cộng đồng
 
-- **Account Management**: Creating and managing your account
-- **Map Navigation**: Using the interactive map interface
-- **Project Management**: Creating and managing projects
-- **Community Features**: Engaging with other users
-- **Settings & Preferences**: Customizing your experience
+## Các Tính Năng Chính
 
-## Who This Guide Is For
+### 🗺️ Bản Đồ Tương Tác
+- Hiển thị realtime các sensors, trạm xe đạp, trạm sạc, công viên, điểm du lịch
+- Phóng to/thu nhỏ để khám phá từng khu vực
+- Nhấp vào các điểm để xem thông tin chi tiết
+- Lọc dữ liệu theo loại
 
-This guide is designed for:
+### 📊 Dữ Liệu AQI Realtime
+- Chỉ số AQI từ các sensors
+- Dữ liệu thời tiết cục bộ (nhiệt độ, độ ẩm, gió)
+- Cảnh báo tự động khi AQI xấu
+- Dữ liệu lịch sử và xu hướng
 
-- **New Users**: Complete walkthroughs of basic features
-- **Experienced Users**: Advanced tips and tricks
-- **Project Organizers**: Best practices for running projects
-- **Administrators**: Management and moderation tools
+### 👤 Quản Lý Tài Khoản
+- Đăng ký / Đăng nhập
+- Cập nhật profile
+- Quản lý mật khẩu
+- Theo dõi lịch sử báo cáo
 
-## Platform Overview
+### 🔔 Báo Cáo Sự Cố
+- Tạo báo cáo về vấn đề môi trường
+- Kèm theo vị trí và hình ảnh
+- Theo dõi trạng thái báo cáo
+- Nhận phản hồi từ cộng đồng
 
-### Core Components
+### 🌙 Chế Độ Tối/Sáng
+- Tùy chỉnh giao diện theo sở thích
+- Bảo vệ mắt trong điều kiện ánh sáng khác nhau
 
-GreenMap consists of several integrated components:
+## Các Loại Dữ Liệu Trên Bản Đồ
 
-#### 1. Interactive Map
+### 🟢 Sensors (Chất Lượng Không Khí)
+- Hiển thị AQI realtime
+- Cập nhật từ các external APIs
+- Cung cấp thông tin thời tiết
 
-The heart of GreenMap is our interactive mapping system:
+### 🚲 Trạm Xe Đạp (Bicycle Rental)
+- Vị trí các trạm cho thuê xe đạp
+- Từ GreenMap-Data GeoJSON files
 
-- View projects by location
-- Filter by category, date, or status
-- Discover nearby environmental initiatives
-- Custom map layers and overlays
+### 🔌 Trạm Sạc (Charging Stations)
+- Vị trí trạm sạc xe điện
+- Để hỗ trợ giao thông xanh
 
-#### 2. Project System
+### 🌳 Công Viên (Parks)
+- Vị trí các công viên và không gian xanh
+- Từ OpenStreetMap data
 
-Create and manage environmental projects:
+### 🏛️ Điểm Du Lịch (Tourist Attractions)
+- Các địa điểm du lịch nổi tiếng
+- Thông tin du lịch bổ sung
 
-- Set up project details and requirements
-- Manage participant registrations
-- Track project progress and updates
-- Share results and impact metrics
+## Công Nghệ Sử Dụng
 
-#### 3. User Profiles
+| Thành Phần | Công Nghệ |
+|-----------|-----------|
+| **Framework** | React 18+ |
+| **Styling** | Tailwind CSS |
+| **Build Tool** | Vite |
+| **Bản Đồ** | Leaflet |
+| **State Management** | React Hooks |
+| **API Client** | Fetch API |
+| **Runtime** | Node.js 18+ |
 
-Personal profiles for community members:
-
-- Showcase your environmental contributions
-- Track your impact statistics
-- Connect with other green advocates
-- Build your reputation in the community
-
-#### 4. Social Features
-
-Engage with the GreenMap community:
-
-- Comment on projects
-- Share updates and photos
-- Message other users
-- Form teams and groups
-
-## Getting Around
-
-### Main Navigation
-
-The main navigation bar provides quick access to key areas:
+## Kiến Trúc
 
 ```
-[Logo] | Discover | Projects | Dashboard | Community | Profile
+┌─────────────────────────────────────────┐
+│   GreenMap-Frontend (React)             │
+├─────────────────────────────────────────┤
+│                                         │
+│  ┌─────────────────────────────────┐   │
+│  │  src/                           │   │
+│  │  ├── pages/                     │   │
+│  │  │   ├── Login                  │   │
+│  │  │   ├── Home (Map)             │   │
+│  │  │   ├── Reports                │   │
+│  │  │   └── Profile                │   │
+│  │  ├── components/                │   │
+│  │  │   ├── MapComponent           │   │
+│  │  │   ├── Sidebar                │   │
+│  │  │   ├── InfoPanel              │   │
+│  │  │   └── Navigation             │   │
+│  │  ├── services/                  │   │
+│  │  │   └── apiService.js          │   │
+│  │  ├── utils/                     │   │
+│  │  └── App.jsx                    │   │
+│  └─────────────────────────────────┘   │
+│            ↓ (HTTP)                     │
+│  ┌─────────────────────────────────┐   │
+│  │  GreenMap-Backend API           │   │
+│  │  (http://localhost:8000)        │   │
+│  └─────────────────────────────────┘   │
+│                                         │
+└─────────────────────────────────────────┘
 ```
 
-- **Discover**: Browse and search for projects
-- **Projects**: Manage your projects (joined or created)
-- **Dashboard**: Your personal hub
-- **Community**: Social features and forums
-- **Profile**: Your account settings
+## Điều Kiện Trước Khi Bắt Đầu
 
-### Map Interface
+Đảm bảo:
+- Backend API đang chạy tại `http://localhost:8000`
+- Frontend đang chạy tại `http://localhost:3000`
+- Bạn có kết nối internet để tải bản đồ
+- Browser hỗ trợ JavaScript
 
-The map interface includes:
+## Cấu Trúc Hướng Dẫn
 
-- **Search Bar**: Find projects by name or location
-- **Filters Panel**: Refine results by criteria
-- **Map Controls**: Zoom, pan, and layer controls
-- **Info Panel**: Project details when clicked
+Hướng dẫn người dùng gồm các phần:
 
-## Key Features
+1. **[Features](features.md)** - Chi tiết về các tính năng
+2. **[Map Usage](map-guide.md)** - Cách sử dụng bản đồ
+3. **[Accounts](accounts.md)** - Quản lý tài khoản
+4. **[Reports](reports.md)** - Tạo và quản lý báo cáo
+5. **[Settings](settings.md)** - Tùy chỉnh ứng dụng
 
-### For Participants
+## Bước Tiếp Theo
 
-As a project participant, you can:
-
-- ✅ Join projects that interest you
-- 📊 Track your environmental impact
-- 📸 Share photos and updates
-- 🏆 Earn badges and achievements
-- 💬 Connect with like-minded individuals
-
-### For Organizers
-
-As a project organizer, you can:
-
-- 📝 Create detailed project listings
-- 👥 Manage participant registrations
-- 📢 Send updates and notifications
-- 📈 Generate impact reports
-- 🎯 Set goals and track progress
-
-### For Administrators
-
-Platform administrators have access to:
-
-- 🔧 User management tools
-- 📊 Platform analytics
-- 🛡️ Moderation capabilities
-- ⚙️ System configuration
-- 📧 Communication tools
-
-## Account Types
-
-GreenMap offers different account types:
-
-| Account Type | Features | Best For |
-|--------------|----------|----------|
-| **Free** | Join projects, basic profile | Individual users |
-| **Organizer** | Create unlimited projects | Community leaders |
-| **Organization** | Team management, branding | NGOs, companies |
-| **Enterprise** | API access, custom features | Large organizations |
-
-## Best Practices
-
-### For Maximum Impact
-
-!!! success "Tips for Success"
-    1. **Complete Your Profile**: Add details to build trust
-    2. **Be Active**: Participate regularly in projects
-    3. **Document Progress**: Share photos and updates
-    4. **Engage with Others**: Build community connections
-    5. **Provide Feedback**: Help improve projects
-
-### Safety Guidelines
-
-!!! warning "Stay Safe"
-    - Meet in public, well-lit locations
-    - Follow local COVID-19 guidelines
-    - Bring appropriate safety equipment
-    - Stay hydrated and take breaks
-    - Report any safety concerns immediately
-
-## Data Privacy
-
-Your privacy matters to us:
-
-- 🔒 Secure data encryption
-- 👤 Control your privacy settings
-- 🚫 No selling of personal data
-- 📋 Transparent data policies
-- ✅ GDPR compliant
-
-## Accessibility
-
-GreenMap is designed to be accessible:
-
-- Screen reader compatible
-- Keyboard navigation support
-- High contrast mode available
-- Adjustable text sizes
-- Multiple language support
-
-## Support Resources
-
-### Help Center
-
-Find answers to common questions:
-
-- FAQ section
-- Video tutorials
-- Step-by-step guides
-- Troubleshooting tips
-
-### Community Support
-
-Get help from the community:
-
-- User forums
-- Discord server
-- Social media groups
-- Local meetups
-
-### Contact Support
-
-Need direct assistance?
-
-- 📧 Email: support@greenmap.example.com
-- 💬 Live chat (Mon-Fri, 9am-5pm EST)
-- 📞 Phone: +1-555-GREEN-MAP
-
-## Updates and Releases
-
-Stay informed about new features:
-
-- Monthly feature releases
-- Security updates
-- Bug fixes
-- Newsletter subscription
-
-## Quick Reference
-
-### Common Actions
-
-| Action | Where to Find It | Shortcut |
-|--------|------------------|----------|
-| Create Project | Dashboard → Create | `Ctrl+N` |
-| Search Projects | Top navigation bar | `Ctrl+F` |
-| View Profile | User menu → Profile | `Ctrl+P` |
-| Settings | User menu → Settings | `Ctrl+,` |
-| Help | Footer → Help Center | `F1` |
-
-## Next Steps
-
-Explore specific features in detail:
-
-- [Detailed Features Guide](features.md) - Learn about all features
-- [API Reference](../api-reference/overview.md) - For developers
-- [Contributing](../contributing/guidelines.md) - Help improve GreenMap
+- Xem [Các Tính Năng](features.md) để chi tiết hơn
+- Đọc [Hướng Dẫn Bản Đồ](map-guide.md) để sử dụng bản đồ
+- Khám phá [API Documentation](../api-reference/overview.md) nếu bạn là developer
 
 ---
 
-*Ready to dive deeper? Let's explore the features!*
+**Sẵn sàng khám phá GreenMap? Hãy bắt đầu! 🚀**
