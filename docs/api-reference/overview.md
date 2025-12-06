@@ -1,410 +1,271 @@
-# API Reference Overview
+# Tài Liệu API - Tổng Quan
 
-Welcome to the GreenMap API documentation! This reference provides comprehensive information about the GreenMap REST API.
+Chào mừng đến tài liệu API của **GreenMap-Backend**! 
 
-## Introduction
+## GreenMap-Backend API Là Gì?
 
-The GreenMap API allows developers to integrate GreenMap functionality into their applications, websites, or services. Our API is designed to be RESTful, easy to use, and well-documented.
+**GreenMap-Backend** cung cấp REST API để:
+- Lấy dữ liệu sensors (AQI, thời tiết)
+- Quản lý người dùng (đăng ký, đăng nhập)
+- Tạo và quản lý báo cáo sự cố
+- Tương tác với Context Broker (Orion-LD)
+- Quản lý các địa điểm (locations)
 
-## API Base URL
+## URL Cơ Sở API
 
 ```
-Production: https://api.greenmap.example.com/v1
-Staging: https://staging-api.greenmap.example.com/v1
+Phát triển cục bộ: http://localhost:8000
+Phần tài liệu: http://localhost:8000/docs (Swagger UI)
 ```
 
-## Authentication
+## Xác Thực
 
-### API Keys
+API sử dụng **OAuth2 và JWT tokens**:
 
-To use the GreenMap API, you need an API key:
+### 1. Đăng Nhập (Lấy Token)
 
-1. Sign up for a GreenMap account
-2. Navigate to Settings → Developer
-3. Generate an API key
-4. Include the key in all API requests
+```bash
+POST /api/login
+Content-Type: application/json
 
-### Authentication Methods
-
-#### Bearer Token
-
-Include your API key in the Authorization header:
-
-```http
-GET /api/v1/projects
-Authorization: Bearer YOUR_API_KEY
+{
+  "email": "user@example.com",
+  "password": "password123"
+}
 ```
 
-#### Query Parameter (Not Recommended)
-
-For testing purposes only:
-
-```http
-GET /api/v1/projects?api_key=YOUR_API_KEY
-```
-
-## Rate Limiting
-
-To ensure fair usage, the API implements rate limiting:
-
-| Account Type | Rate Limit | Burst Limit |
-|--------------|------------|-------------|
-| Free | 100 requests/hour | 10 requests/minute |
-| Organizer | 500 requests/hour | 30 requests/minute |
-| Organization | 2,000 requests/hour | 100 requests/minute |
-| Enterprise | 10,000 requests/hour | 500 requests/minute |
-
-### Rate Limit Headers
-
-Response headers include rate limit information:
-
-```http
-X-RateLimit-Limit: 100
-X-RateLimit-Remaining: 95
-X-RateLimit-Reset: 1640000000
-```
-
-### Handling Rate Limits
-
-When you exceed the rate limit, you'll receive:
-
+Response:
 ```json
 {
-  "error": {
-    "code": "rate_limit_exceeded",
-    "message": "Rate limit exceeded. Try again in 3600 seconds.",
-    "retry_after": 3600
+  "access_token": "eyJhbGciOiJIUzI1NiIs...",
+  "token_type": "bearer",
+  "user": {
+    "id": "123",
+    "email": "user@example.com",
+    "role": "user"
   }
 }
 ```
 
-## Request Format
+### 2. Sử Dụng Token
 
-### Content Type
-
-All requests should use JSON:
+Bao gồm token trong header:
 
 ```http
-Content-Type: application/json
+GET /api/locations
+Authorization: Bearer eyJhbGciOiJIUzI1NiIs...
 ```
 
-### Example Request
+## Giới Hạn Tỷ Lệ
+
+- **Public endpoints:** 100 requests/hour
+- **Authenticated endpoints:** 1000 requests/hour
+- **Reset:** Mỗi giờ UTC
+
+## Mã Trạng Thái HTTP
+
+| Mã | Ý Nghĩa |
+|----|---------|
+| 200 | OK - Thành công |
+| 201 | Created - Tạo mới thành công |
+| 400 | Bad Request - Yêu cầu không hợp lệ |
+| 401 | Unauthorized - Cần xác thực |
+| 403 | Forbidden - Không có quyền |
+| 404 | Not Found - Không tìm thấy |
+| 500 | Internal Server Error - Lỗi server |
+
+## Cấu Trúc Phản Hồi
+
+### Thành Công
+
+```json
+{
+  "success": true,
+  "data": {...},
+  "message": "Operation successful"
+}
+```
+
+### Lỗi
+
+```json
+{
+  "success": false,
+  "error": "Error message",
+  "code": "ERROR_CODE",
+  "details": {...}
+}
+```
+
+## Các Endpoints Chính
+
+### Tài Khoản & Xác Thực
+
+- `POST /api/auth/register` - Đăng ký người dùng mới
+- `POST /api/auth/login` - Đăng nhập
+- `POST /api/auth/logout` - Đăng xuất
+- `GET /api/auth/me` - Lấy thông tin người dùng hiện tại
+- `PUT /api/auth/profile` - Cập nhật profile
+
+### Locations (Địa điểm)
+
+- `GET /api/locations` - Lấy danh sách địa điểm
+- `GET /api/locations/{id}` - Lấy chi tiết địa điểm
+- `POST /api/locations` - Tạo địa điểm mới
+- `PUT /api/locations/{id}` - Cập nhật địa điểm
+- `DELETE /api/locations/{id}` - Xóa địa điểm
+
+### Sensors (Cảm Biến)
+
+- `GET /api/sensors` - Lấy tất cả sensors
+- `GET /api/sensors/{id}` - Chi tiết sensor
+- `GET /api/sensors/{id}/aqi` - Dữ liệu AQI hiện tại
+- `GET /api/sensors/{id}/history` - Lịch sử AQI
+
+### Reports (Báo Cáo)
+
+- `GET /api/reports` - Danh sách báo cáo
+- `POST /api/reports` - Tạo báo cáo mới
+- `GET /api/reports/{id}` - Chi tiết báo cáo
+- `PUT /api/reports/{id}` - Cập nhật báo cáo
+- `DELETE /api/reports/{id}` - Xóa báo cáo
+
+### Weather (Thời Tiết)
+
+- `GET /api/weather` - Dữ liệu thời tiết hiện tại
+- `GET /api/weather/forecast` - Dự báo thời tiết
+
+### Context Broker (Orion-LD)
+
+- `GET /api/context/entities` - Lấy các entities
+- `GET /api/context/entities/{id}` - Chi tiết entity
+- `POST /api/context/entities` - Tạo entity mới
+
+## Ví Dụ Sử Dụng
+
+### Lấy Danh Sách Sensors
 
 ```bash
-curl -X POST https://api.greenmap.example.com/v1/projects \
-  -H "Authorization: Bearer YOUR_API_KEY" \
+curl -X GET "http://localhost:8000/api/sensors" \
+  -H "Authorization: Bearer YOUR_TOKEN"
+```
+
+Response:
+```json
+{
+  "success": true,
+  "data": [
+    {
+      "id": "sensor_001",
+      "name": "Sensor District 1",
+      "location": {
+        "lat": 10.7769,
+        "lng": 106.6296
+      },
+      "aqi": 45,
+      "lastUpdate": "2024-01-15T10:30:00Z"
+    }
+  ]
+}
+```
+
+### Tạo Báo Cáo
+
+```bash
+curl -X POST "http://localhost:8000/api/reports" \
+  -H "Authorization: Bearer YOUR_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{
-    "name": "Community Tree Planting",
-    "description": "Join us for a day of tree planting",
-    "category": "tree_planting",
+    "title": "Air Pollution Alert",
+    "description": "High pollution detected",
     "location": {
-      "lat": 30.2672,
-      "lng": -97.7431
+      "lat": 10.7769,
+      "lng": 106.6296
     },
-    "date": "2024-06-15T10:00:00Z"
+    "category": "pollution",
+    "severity": "high"
   }'
 ```
 
-## Response Format
+## Công Cụ Thử Nghiệm
 
-### Success Response
+### Swagger UI
 
-Successful responses return a 2xx status code:
+Khi Backend chạy, truy cập:
 
-```json
-{
-  "success": true,
-  "data": {
-    "id": "proj_123456",
-    "name": "Community Tree Planting",
-    "status": "active",
-    "created_at": "2024-01-15T10:00:00Z"
-  },
-  "meta": {
-    "request_id": "req_abc123"
-  }
-}
+```
+http://localhost:8000/docs
 ```
 
-### Error Response
+Giao diện Swagger cho phép bạn:
+- Xem tất cả endpoints
+- Kiểm tra yêu cầu/phản hồi
+- Thử trực tiếp các API calls
 
-Error responses return appropriate 4xx or 5xx status codes:
+### API Testing Tools
 
-```json
-{
-  "error": {
-    "code": "invalid_request",
-    "message": "The 'name' field is required",
-    "details": {
-      "field": "name",
-      "issue": "missing_required_field"
-    }
-  },
-  "meta": {
-    "request_id": "req_abc123"
-  }
-}
-```
-
-## Status Codes
-
-| Code | Status | Description |
-|------|--------|-------------|
-| 200 | OK | Request succeeded |
-| 201 | Created | Resource created successfully |
-| 204 | No Content | Request succeeded with no response body |
-| 400 | Bad Request | Invalid request parameters |
-| 401 | Unauthorized | Invalid or missing API key |
-| 403 | Forbidden | Insufficient permissions |
-| 404 | Not Found | Resource not found |
-| 429 | Too Many Requests | Rate limit exceeded |
-| 500 | Internal Server Error | Server error |
-| 503 | Service Unavailable | Temporary service disruption |
+- **Postman** - GUI client
+- **curl** - Command line
+- **Thunder Client** - VS Code extension
+- **REST Client** - VS Code extension
 
 ## Pagination
 
-List endpoints support pagination:
-
-### Request Parameters
-
-```http
-GET /api/v1/projects?page=1&per_page=20
-```
-
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| page | integer | 1 | Page number |
-| per_page | integer | 20 | Items per page (max 100) |
-
-### Response Format
-
-```json
-{
-  "success": true,
-  "data": [...],
-  "pagination": {
-    "page": 1,
-    "per_page": 20,
-    "total_pages": 5,
-    "total_items": 95,
-    "has_next": true,
-    "has_prev": false
-  }
-}
-```
-
-## Filtering and Sorting
-
-### Filtering
-
-Filter results using query parameters:
-
-```http
-GET /api/v1/projects?category=tree_planting&status=active
-```
-
-### Sorting
-
-Sort results using the `sort` parameter:
-
-```http
-GET /api/v1/projects?sort=created_at:desc
-```
-
-Multiple sort fields:
-
-```http
-GET /api/v1/projects?sort=status:asc,created_at:desc
-```
-
-## Webhooks
-
-Subscribe to real-time events:
-
-### Available Events
-
-- `project.created` - New project created
-- `project.updated` - Project details updated
-- `project.deleted` - Project deleted
-- `participant.joined` - User joined a project
-- `participant.left` - User left a project
-
-### Webhook Configuration
-
-Configure webhooks in your developer settings:
-
-```json
-{
-  "url": "https://your-app.com/webhooks/greenmap",
-  "events": ["project.created", "participant.joined"],
-  "secret": "whsec_your_secret_key"
-}
-```
-
-### Webhook Payload
-
-```json
-{
-  "event": "project.created",
-  "timestamp": "2024-01-15T10:00:00Z",
-  "data": {
-    "project": {
-      "id": "proj_123456",
-      "name": "Community Tree Planting"
-    }
-  }
-}
-```
-
-## SDKs and Libraries
-
-Official SDKs are available for popular languages:
-
-### JavaScript/Node.js
+Các endpoints danh sách hỗ trợ pagination:
 
 ```bash
-npm install @greenmap/sdk
+GET /api/sensors?page=1&limit=10&sort=name&order=asc
 ```
 
-```javascript
-const GreenMap = require('@greenmap/sdk');
-const client = new GreenMap('YOUR_API_KEY');
+Query Parameters:
+- `page` - Trang hiện tại (mặc định: 1)
+- `limit` - Số mục mỗi trang (mặc định: 20)
+- `sort` - Trường để sort
+- `order` - asc hoặc desc
 
-const projects = await client.projects.list();
-```
+## Caching
 
-### Python
-
-```bash
-pip install greenmap-sdk
-```
-
-```python
-from greenmap import GreenMap
-
-client = GreenMap(api_key='YOUR_API_KEY')
-projects = client.projects.list()
-```
-
-### Ruby
-
-```bash
-gem install greenmap
-```
-
-```ruby
-require 'greenmap'
-
-client = GreenMap::Client.new(api_key: 'YOUR_API_KEY')
-projects = client.projects.list
-```
-
-## API Versioning
-
-The API uses URL versioning:
+API sử dụng HTTP caching headers:
 
 ```
-/v1/projects  # Current stable version
-/v2/projects  # Next version (beta)
+Cache-Control: max-age=300
 ```
 
-We maintain backward compatibility for at least 12 months after a new version is released.
+Bạn nên respect các headers này trong client.
 
-## Testing
+## Webhooks (Tùy Chọn)
 
-### Sandbox Environment
+Hiện tại không hỗ trợ webhooks, nhưng có thể thêm vào tương lai.
 
-Test your integration safely:
+## Lỗi Thường Gặp
 
-```
-Sandbox: https://sandbox-api.greenmap.example.com/v1
-```
+### 401 Unauthorized
+- Token hết hạn → Đăng nhập lại
+- Token không hợp lệ → Kiểm tra syntax
+- Thiếu header Authorization → Thêm header
 
-Sandbox features:
-- Test API keys
-- Sample data
-- No rate limiting
-- Data resets daily
+### 403 Forbidden
+- Không có quyền truy cập → Kiểm tra role
 
-### Postman Collection
+### 404 Not Found
+- Endpoint không tồn tại → Kiểm tra URL
+- Resource không tồn tại → Kiểm tra ID
 
-Download our Postman collection:
+### 429 Too Many Requests
+- Vượt giới hạn tỷ lệ → Chờ trước khi request lại
 
-[Download Collection](https://api.greenmap.example.com/postman/collection.json)
+## Các Tài Liệu Tiếp Theo
 
-## Best Practices
+- [Endpoints API Endpoints](endpoints.md) - Chi tiết mỗi endpoint
+- [Backend Repository](../../../GreenMap-Backend/README.md) - GitHub repo
+- [Contributing](../contributing/guidelines.md) - Đóng góp code
 
-### Error Handling
+## Liên Hệ & Hỗ Trợ
 
-Always handle errors gracefully:
-
-```javascript
-try {
-  const project = await client.projects.get(projectId);
-} catch (error) {
-  if (error.code === 'not_found') {
-    console.log('Project not found');
-  } else if (error.code === 'rate_limit_exceeded') {
-    // Wait and retry
-    await sleep(error.retry_after * 1000);
-  } else {
-    throw error;
-  }
-}
-```
-
-### Caching
-
-Implement caching to reduce API calls:
-
-```javascript
-// Cache for 5 minutes
-const cache = new Map();
-const CACHE_TTL = 5 * 60 * 1000;
-
-async function getCachedProject(id) {
-  const cached = cache.get(id);
-  if (cached && Date.now() - cached.time < CACHE_TTL) {
-    return cached.data;
-  }
-  
-  const project = await client.projects.get(id);
-  cache.set(id, { data: project, time: Date.now() });
-  return project;
-}
-```
-
-### Batch Requests
-
-Minimize API calls by batching:
-
-```javascript
-// Instead of multiple requests
-const project1 = await client.projects.get('proj_1');
-const project2 = await client.projects.get('proj_2');
-
-// Use batch endpoint
-const projects = await client.projects.getBatch(['proj_1', 'proj_2']);
-```
-
-## Support
-
-Need help with the API?
-
-- 📖 [Full API Documentation](endpoints.md)
-- 💬 [Developer Forum](https://forum.greenmap.example.com)
-- 📧 Email: api@greenmap.example.com
-- 🐛 [Report Issues](https://github.com/HouHackathon-CQP/GreenMap/issues)
-
-## Changelog
-
-Stay updated with API changes:
-
-- [API Changelog](https://api.greenmap.example.com/changelog)
-- [Breaking Changes](https://api.greenmap.example.com/breaking-changes)
-- [Deprecation Schedule](https://api.greenmap.example.com/deprecations)
+- **GitHub Issues:** Report bugs tại GitHub repos
+- **Discussions:** Thảo luận trên GitHub
+- **Documentation:** Xem đầy đủ docs tại đây
 
 ---
 
-*Ready to build with GreenMap? Check out the [Endpoints](endpoints.md) documentation!*
+**Sẵn sàng bắt đầu với API? Hãy kiểm tra [Endpoints](endpoints.md)! 🚀**
