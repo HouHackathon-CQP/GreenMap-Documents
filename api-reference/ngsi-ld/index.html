@@ -12,13 +12,13 @@
         <meta name="author" content="Đội HouHackathon-CQP">
       
       
-        <link rel="canonical" href="https://houhackathon-cqp.github.io/GreenMap-Documents/getting-started/installation/">
+        <link rel="canonical" href="https://houhackathon-cqp.github.io/GreenMap-Documents/api-reference/ngsi-ld/">
       
       
-        <link rel="prev" href="../architecture/">
+        <link rel="prev" href="../rest-api/">
       
       
-        <link rel="next" href="../../user-guide/">
+        <link rel="next" href="../authentication/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Hướng Dẫn Cài Đặt - GreenMap Docs</title>
+        <title>NGSI-LD API - GreenMap Docs</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#huong-dan-cai-at" class="md-skip">
+        <a href="#ngsi-ld-api" class="md-skip">
           Bỏ qua
         </a>
       
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Hướng Dẫn Cài Đặt
+              NGSI-LD API
             
           </span>
         </div>
@@ -246,13 +246,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../getting-started/" class="md-tabs__link">
           
   
   
@@ -308,11 +306,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../api-reference/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -425,31 +425,28 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   
@@ -467,7 +464,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -485,7 +482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../getting-started/" class="md-nav__link">
         
   
   
@@ -513,7 +510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../introduction/" class="md-nav__link">
+      <a href="../../getting-started/introduction/" class="md-nav__link">
         
   
   
@@ -541,7 +538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../features/" class="md-nav__link">
+      <a href="../../getting-started/features/" class="md-nav__link">
         
   
   
@@ -569,7 +566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../system-requirements/" class="md-nav__link">
+      <a href="../../getting-started/system-requirements/" class="md-nav__link">
         
   
   
@@ -597,7 +594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../architecture/" class="md-nav__link">
+      <a href="../../getting-started/architecture/" class="md-nav__link">
         
   
   
@@ -622,37 +619,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Hướng Dẫn Cài Đặt
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../getting-started/installation/" class="md-nav__link">
         
   
   
@@ -668,109 +638,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Mục lục">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Mục lục
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#cai-at-nhanh-docker" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cài Đặt Nhanh (Docker)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cai-at-chi-tiet" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cài Đặt Chi Tiết
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Cài Đặt Chi Tiết">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#backend-service" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Backend Service
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#frontend-portal" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Frontend Portal
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mobile-app" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Mobile App
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cau-hinh-moi-truong-env" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cấu Hình Môi Trường (.env)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#xac-minh-cai-at" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Xác Minh Cài Đặt
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1245,28 +1112,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   
@@ -1284,7 +1154,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1302,7 +1172,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api-reference/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -1330,7 +1200,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api-reference/rest-api/" class="md-nav__link">
+      <a href="../rest-api/" class="md-nav__link">
         
   
   
@@ -1355,10 +1225,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../api-reference/ngsi-ld/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NGSI-LD API
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1374,6 +1271,209 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Mục lục">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Mục lục
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#base-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Base URL
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#required-headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required Headers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entities
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Entities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#query-entities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query Entities
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-entity-by-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get Entity by ID
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-entity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create Entity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-entity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Update Entity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-entity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Delete Entity
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entity-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entity Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Entity Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#airqualityobserved" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AirQualityObserved
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weatherobserved" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WeatherObserved
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trafficflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TrafficFlow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subscriptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subscriptions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Subscriptions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-subscription" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create Subscription
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1386,7 +1486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api-reference/authentication/" class="md-nav__link">
+      <a href="../authentication/" class="md-nav__link">
         
   
   
@@ -1414,7 +1514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api-reference/endpoints/" class="md-nav__link">
+      <a href="../endpoints/" class="md-nav__link">
         
   
   
@@ -1670,10 +1770,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#cai-at-nhanh-docker" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Cài Đặt Nhanh (Docker)
+        Overview
       
     </span>
   </a>
@@ -1681,22 +1781,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cai-at-chi-tiet" class="md-nav__link">
+  <a href="#base-url" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Cài Đặt Chi Tiết
+        Base URL
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Cài Đặt Chi Tiết">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#required-headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required Headers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entities
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Entities">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#backend-service" class="md-nav__link">
+  <a href="#query-entities" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Backend Service
+        Query Entities
       
     </span>
   </a>
@@ -1704,10 +1826,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#frontend-portal" class="md-nav__link">
+  <a href="#get-entity-by-id" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Frontend Portal
+        Get Entity by ID
       
     </span>
   </a>
@@ -1715,10 +1837,32 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#mobile-app" class="md-nav__link">
+  <a href="#create-entity" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Mobile App
+        Create Entity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-entity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Update Entity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-entity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Delete Entity
       
     </span>
   </a>
@@ -1731,24 +1875,80 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cau-hinh-moi-truong-env" class="md-nav__link">
+  <a href="#entity-types" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Cấu Hình Môi Trường (.env)
+        Entity Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Entity Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#airqualityobserved" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AirQualityObserved
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#xac-minh-cai-at" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#weatherobserved" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Xác Minh Cài Đặt
+        WeatherObserved
       
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trafficflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TrafficFlow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subscriptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subscriptions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Subscriptions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-subscription" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create Subscription
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1783,186 +1983,284 @@
  See the License for the specific language governing permissions and
  limitations under the License. */ -->
 
-<h1 id="huong-dan-cai-at">Hướng Dẫn Cài Đặt<a class="headerlink" href="#huong-dan-cai-at" title="Permanent link">&para;</a></h1>
-<p>Hướng dẫn chi tiết cài đặt từng thành phần của hệ thống GreenMap.</p>
-<h2 id="cai-at-nhanh-docker">Cài Đặt Nhanh (Docker)<a class="headerlink" href="#cai-at-nhanh-docker" title="Permanent link">&para;</a></h2>
-<p>Cách nhanh nhất để chạy toàn bộ hệ thống:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># 1. Clone Backend repository</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/HouHackathon-CQP/GreenMap-Backend.git
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nb">cd</span><span class="w"> </span>GreenMap-Backend
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># 2. Tạo file .env từ template</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>cp<span class="w"> </span>env.example<span class="w"> </span>.env
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># Chỉnh sửa .env với các giá trị phù hợp</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="c1"># 3. Khởi động với Docker Compose</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>docker-compose<span class="w"> </span>up<span class="w"> </span>-d
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="c1"># 4. Kiểm tra trạng thái</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>docker-compose<span class="w"> </span>ps
+<h1 id="ngsi-ld-api">NGSI-LD API<a class="headerlink" href="#ngsi-ld-api" title="Permanent link">&para;</a></h1>
+<p>GreenMap sử dụng Orion-LD Context Broker để quản lý dữ liệu ngữ cảnh theo tiêu chuẩn NGSI-LD.</p>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>NGSI-LD là tiêu chuẩn của ETSI cho dữ liệu ngữ cảnh (context data), được thiết kế cho các ứng dụng IoT và Smart City.</p>
+<h2 id="base-url">Base URL<a class="headerlink" href="#base-url" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>http://localhost:1026/ngsi-ld/v1
 </span></code></pre></div>
-<div class="admonition success">
-<p class="admonition-title">Kết quả</p>
-<p>Sau khi hoàn tất, các service sẽ chạy tại:</p>
-<ul>
-<li><strong>Backend API</strong>: <code>http://localhost:8000</code></li>
-<li><strong>API Docs</strong>: <code>http://localhost:8000/docs</code></li>
-<li><strong>Orion-LD</strong>: <code>http://localhost:1026</code></li>
-</ul>
-</div>
-<hr />
-<h2 id="cai-at-chi-tiet">Cài Đặt Chi Tiết<a class="headerlink" href="#cai-at-chi-tiet" title="Permanent link">&para;</a></h2>
-<h3 id="backend-service">Backend Service<a class="headerlink" href="#backend-service" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Windows</label><label for="__tabbed_1_2">macOS/Linux</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="language-powershell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c"># 1. Clone repository</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">://</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">HouHackathon-CQP</span><span class="p">/</span><span class="n">GreenMap-Backend</span><span class="p">.</span><span class="n">git</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nb">cd </span><span class="n">GreenMap-Backend</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c"># 2. Tạo môi trường ảo</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">python</span> <span class="n">-m</span> <span class="n">venv</span> <span class="p">.</span><span class="n">venv</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">.\.</span><span class="n">venv</span><span class="p">\</span><span class="n">Scripts</span><span class="p">\</span><span class="n">activate</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="c"># 3. Cài đặt dependencies</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="n">pip</span> <span class="n">install</span> <span class="n">-r</span> <span class="n">requirements</span><span class="p">.</span><span class="n">txt</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="c"># 4. Cấu hình môi trường</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="nb">cp </span><span class="n">env</span><span class="p">.</span><span class="n">example</span> <span class="p">.</span><span class="n">env</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="c"># Chỉnh sửa .env</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="c"># 5. Khởi động Docker (DB + Broker)</span>
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="n">docker-compose</span> <span class="n">up</span> <span class="n">-d</span> <span class="n">postgres</span> <span class="n">mongo</span> <span class="n">orion</span>
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="c"># 6. Chạy migrations và init data</span>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="n">python</span> <span class="n">setup_project</span><span class="p">.</span><span class="n">py</span>
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="c"># 7. Khởi động server</span>
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="n">uvicorn</span> <span class="n">app</span><span class="p">.</span><span class="n">main</span><span class="p">:</span><span class="n">app</span> <span class="p">-</span><span class="n">-reload</span>
-</span></code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># 1. Clone repository</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/HouHackathon-CQP/GreenMap-Backend.git
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nb">cd</span><span class="w"> </span>GreenMap-Backend
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1"># 2. Tạo môi trường ảo</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="nb">source</span><span class="w"> </span>.venv/bin/activate
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="c1"># 3. Cài đặt dependencies</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="c1"># 4. Cấu hình môi trường</span>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>cp<span class="w"> </span>env.example<span class="w"> </span>.env
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="c1"># Chỉnh sửa .env</span>
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>
-</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="c1"># 5. Khởi động Docker (DB + Broker)</span>
-</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>docker-compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>postgres<span class="w"> </span>mongo<span class="w"> </span>orion
-</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>
-</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="c1"># 6. Chạy migrations và init data</span>
-</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>python<span class="w"> </span>setup_project.py
-</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>
-</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="c1"># 7. Khởi động server</span>
-</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>uvicorn<span class="w"> </span>app.main:app<span class="w"> </span>--reload
-</span></code></pre></div>
-</div>
-</div>
-</div>
-<h3 id="frontend-portal">Frontend Portal<a class="headerlink" href="#frontend-portal" title="Permanent link">&para;</a></h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># 1. Clone repository</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/HouHackathon-CQP/GreenMap-Frontend.git
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nb">cd</span><span class="w"> </span>GreenMap-Frontend
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="c1"># 2. Cài đặt dependencies</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>npm<span class="w"> </span>install
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="c1"># 3. Cấu hình môi trường</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="c1"># Tạo file .env với nội dung:</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="c1"># VITE_API_URL=http://localhost:8000</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="c1"># VITE_MAPTILER_KEY=your_maptiler_key</span>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="c1"># 4. Khởi động development server</span>
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>npm<span class="w"> </span>run<span class="w"> </span>dev
-</span></code></pre></div>
-<div class="admonition info">
-<p class="admonition-title">MapTiler API Key</p>
-<p>Để sử dụng bản đồ, bạn cần đăng ký tài khoản miễn phí tại <a href="https://www.maptiler.com/">MapTiler</a> để lấy API Key.</p>
-</div>
-<h3 id="mobile-app">Mobile App<a class="headerlink" href="#mobile-app" title="Permanent link">&para;</a></h3>
-<ol>
-<li>
-<p><strong>Mở Android Studio</strong> và chọn "Open" → Chọn thư mục <code>GreenMap-Mobile-App</code></p>
-</li>
-<li>
-<p><strong>Tạo file <code>local.properties</code></strong> trong thư mục gốc:
-   <div class="language-properties highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="na">sdk.dir</span><span class="o">=</span><span class="s">/path/to/Android/sdk</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="na">MAPTILER_API_KEY</span><span class="o">=</span><span class="s">your_maptiler_key</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="na">API_BASE_URL</span><span class="o">=</span><span class="s">http://10.0.2.2:8000/</span>
-</span></code></pre></div></p>
-</li>
-<li>
-<p><strong>Sync Gradle</strong> và chờ download dependencies</p>
-</li>
-<li>
-<p><strong>Chạy ứng dụng</strong> trên Emulator hoặc thiết bị thật</p>
-</li>
-</ol>
-<hr />
-<h2 id="cau-hinh-moi-truong-env">Cấu Hình Môi Trường (.env)<a class="headerlink" href="#cau-hinh-moi-truong-env" title="Permanent link">&para;</a></h2>
-<p>Tạo file <code>.env</code> với các biến sau:</p>
-<div class="language-ini highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Database</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="na">DATABASE_URL</span><span class="o">=</span><span class="s">&quot;postgresql+asyncpg://admin:password@localhost:5432/greenmap_db&quot;</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1"># Security</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="na">SECRET_KEY</span><span class="o">=</span><span class="s">&quot;your-super-secret-key-at-least-32-characters&quot;</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="na">ALGORITHM</span><span class="o">=</span><span class="s">&quot;HS256&quot;</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="na">ACCESS_TOKEN_EXPIRE_MINUTES</span><span class="o">=</span><span class="s">30</span>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="c1"># Admin Account</span>
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="na">FIRST_SUPERUSER</span><span class="o">=</span><span class="s">&quot;admin@greenmap.hanoi&quot;</span>
-</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="na">FIRST_SUPERUSER_PASSWORD</span><span class="o">=</span><span class="s">&quot;your-admin-password&quot;</span>
-</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>
-</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="c1"># Context Broker</span>
-</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="na">ORION_BROKER_URL</span><span class="o">=</span><span class="s">&quot;http://localhost:1026&quot;</span>
-</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>
-</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="c1"># External APIs</span>
-</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="na">OPENAQ_API_KEY</span><span class="o">=</span><span class="s">&quot;your-openaq-key&quot;</span>
+<h2 id="required-headers">Required Headers<a class="headerlink" href="#required-headers" title="Permanent link">&para;</a></h2>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="err">Accept: application/ld+json</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="err">Content-Type: application/ld+json</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="err">Link: &lt;https://raw.githubusercontent.com/smart-data-models/dataModel.Environment/master/context.jsonld&gt;; rel=&quot;http://www.w3.org/ns/ldp#context&quot;; type=&quot;application/ld+json&quot;</span>
 </span></code></pre></div>
 <hr />
-<h2 id="xac-minh-cai-at">Xác Minh Cài Đặt<a class="headerlink" href="#xac-minh-cai-at" title="Permanent link">&para;</a></h2>
-<p>Sau khi cài đặt, kiểm tra các endpoint sau:</p>
+<h2 id="entities">Entities<a class="headerlink" href="#entities" title="Permanent link">&para;</a></h2>
+<h3 id="query-entities">Query Entities<a class="headerlink" href="#query-entities" title="Permanent link">&para;</a></h3>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="err">GET /ngsi-ld/v1/entities</span>
+</span></code></pre></div>
+<p><strong>Query Parameters:</strong></p>
 <table>
 <thead>
 <tr>
-<th>Service</th>
-<th>URL</th>
-<th>Expected</th>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Backend Health</td>
-<td><code>http://localhost:8000/api/system/health</code></td>
-<td><code>{"status": "healthy"}</code></td>
+<td>type</td>
+<td>string</td>
+<td>Filter by entity type</td>
 </tr>
 <tr>
-<td>API Docs</td>
-<td><code>http://localhost:8000/docs</code></td>
-<td>Swagger UI</td>
+<td>q</td>
+<td>string</td>
+<td>Query expression</td>
 </tr>
 <tr>
-<td>Orion Version</td>
-<td><code>http://localhost:1026/version</code></td>
-<td>Version info JSON</td>
+<td>georel</td>
+<td>string</td>
+<td>Geo-relationship (near, within, etc.)</td>
 </tr>
 <tr>
-<td>Frontend</td>
-<td><code>http://localhost:5173</code></td>
-<td>Login page</td>
+<td>geometry</td>
+<td>string</td>
+<td>Geometry type (Point, Polygon)</td>
+</tr>
+<tr>
+<td>coordinates</td>
+<td>string</td>
+<td>Coordinates array</td>
+</tr>
+<tr>
+<td>geoproperty</td>
+<td>string</td>
+<td>Property to use for geo query</td>
 </tr>
 </tbody>
 </table>
+<p><strong>Example - Get all AQI stations:</strong>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="err">GET /ngsi-ld/v1/entities?type=AirQualityObserved</span>
+</span></code></pre></div></p>
+<p><strong>Example - Geo query (within 5km):</strong>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="err">GET /ngsi-ld/v1/entities?type=AirQualityObserved&amp;georel=near;maxDistance==5000&amp;geometry=Point&amp;coordinates=[105.8542,21.0285]</span>
+</span></code></pre></div></p>
+<h3 id="get-entity-by-id">Get Entity by ID<a class="headerlink" href="#get-entity-by-id" title="Permanent link">&para;</a></h3>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="err">GET /ngsi-ld/v1/entities/{entityId}</span>
+</span></code></pre></div>
+<p><strong>Example:</strong>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="err">GET /ngsi-ld/v1/entities/urn:ngsi-ld:AirQualityObserved:HN-001</span>
+</span></code></pre></div></p>
+<p><strong>Response:</strong>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">{</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nt">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld&quot;</span><span class="p">,</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;urn:ngsi-ld:AirQualityObserved:HN-001&quot;</span><span class="p">,</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AirQualityObserved&quot;</span><span class="p">,</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">  </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GeoProperty&quot;</span><span class="p">,</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Point&quot;</span><span class="p">,</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">      </span><span class="nt">&quot;coordinates&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mf">105.8542</span><span class="p">,</span><span class="w"> </span><span class="mf">21.0285</span><span class="p">]</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">  </span><span class="nt">&quot;airQualityIndex&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Property&quot;</span><span class="p">,</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">    </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">85</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="w">  </span><span class="nt">&quot;dateObserved&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Property&quot;</span><span class="p">,</span>
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="w">    </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025-12-10T14:30:00Z&quot;</span>
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="p">}</span>
+</span></code></pre></div></p>
+<h3 id="create-entity">Create Entity<a class="headerlink" href="#create-entity" title="Permanent link">&para;</a></h3>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="err">POST /ngsi-ld/v1/entities</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="err">Content-Type: application/ld+json</span>
+</span></code></pre></div>
+<p><strong>Request Body:</strong>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">{</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="nt">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="s2">&quot;https://raw.githubusercontent.com/smart-data-models/dataModel.Environment/master/context.jsonld&quot;</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">  </span><span class="p">],</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;urn:ngsi-ld:AirQualityObserved:HN-002&quot;</span><span class="p">,</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AirQualityObserved&quot;</span><span class="p">,</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">  </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GeoProperty&quot;</span><span class="p">,</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">    </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Point&quot;</span><span class="p">,</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">      </span><span class="nt">&quot;coordinates&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mf">105.85</span><span class="p">,</span><span class="w"> </span><span class="mf">21.03</span><span class="p">]</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="w">  </span><span class="nt">&quot;airQualityIndex&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Property&quot;</span><span class="p">,</span>
+</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="w">    </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">75</span>
+</span><span id="__span-9-17"><a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-9-18"><a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="p">}</span>
+</span></code></pre></div></p>
+<h3 id="update-entity">Update Entity<a class="headerlink" href="#update-entity" title="Permanent link">&para;</a></h3>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="err">PATCH /ngsi-ld/v1/entities/{entityId}/attrs</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="err">Content-Type: application/ld+json</span>
+</span></code></pre></div>
+<p><strong>Request Body:</strong>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="p">{</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="nt">&quot;airQualityIndex&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Property&quot;</span><span class="p">,</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">90</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="p">}</span>
+</span></code></pre></div></p>
+<h3 id="delete-entity">Delete Entity<a class="headerlink" href="#delete-entity" title="Permanent link">&para;</a></h3>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="err">DELETE /ngsi-ld/v1/entities/{entityId}</span>
+</span></code></pre></div>
+<hr />
+<h2 id="entity-types">Entity Types<a class="headerlink" href="#entity-types" title="Permanent link">&para;</a></h2>
+<h3 id="airqualityobserved">AirQualityObserved<a class="headerlink" href="#airqualityobserved" title="Permanent link">&para;</a></h3>
+<p>Dữ liệu chất lượng không khí.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>location</td>
+<td>GeoProperty</td>
+<td>Vị trí trạm</td>
+</tr>
+<tr>
+<td>airQualityIndex</td>
+<td>Property</td>
+<td>Chỉ số AQI</td>
+</tr>
+<tr>
+<td>PM2.5</td>
+<td>Property</td>
+<td>Nồng độ PM2.5 (µg/m³)</td>
+</tr>
+<tr>
+<td>PM10</td>
+<td>Property</td>
+<td>Nồng độ PM10 (µg/m³)</td>
+</tr>
+<tr>
+<td>dateObserved</td>
+<td>Property</td>
+<td>Thời gian đo</td>
+</tr>
+</tbody>
+</table>
+<h3 id="weatherobserved">WeatherObserved<a class="headerlink" href="#weatherobserved" title="Permanent link">&para;</a></h3>
+<p>Dữ liệu thời tiết.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>location</td>
+<td>GeoProperty</td>
+<td>Vị trí trạm</td>
+</tr>
+<tr>
+<td>temperature</td>
+<td>Property</td>
+<td>Nhiệt độ (°C)</td>
+</tr>
+<tr>
+<td>humidity</td>
+<td>Property</td>
+<td>Độ ẩm (%)</td>
+</tr>
+<tr>
+<td>windSpeed</td>
+<td>Property</td>
+<td>Tốc độ gió (m/s)</td>
+</tr>
+<tr>
+<td>precipitation</td>
+<td>Property</td>
+<td>Lượng mưa (mm)</td>
+</tr>
+<tr>
+<td>dateObserved</td>
+<td>Property</td>
+<td>Thời gian đo</td>
+</tr>
+</tbody>
+</table>
+<h3 id="trafficflow">TrafficFlow<a class="headerlink" href="#trafficflow" title="Permanent link">&para;</a></h3>
+<p>Dữ liệu giao thông.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>location</td>
+<td>GeoProperty</td>
+<td>Vị trí đoạn đường</td>
+</tr>
+<tr>
+<td>density</td>
+<td>Property</td>
+<td>Mật độ (0-1)</td>
+</tr>
+<tr>
+<td>averageSpeed</td>
+<td>Property</td>
+<td>Tốc độ trung bình (km/h)</td>
+</tr>
+<tr>
+<td>congestionLevel</td>
+<td>Property</td>
+<td>Mức độ tắc nghẽn</td>
+</tr>
+<tr>
+<td>dateObserved</td>
+<td>Property</td>
+<td>Thời gian đo</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="subscriptions">Subscriptions<a class="headerlink" href="#subscriptions" title="Permanent link">&para;</a></h2>
+<p>Đăng ký nhận thông báo khi dữ liệu thay đổi.</p>
+<h3 id="create-subscription">Create Subscription<a class="headerlink" href="#create-subscription" title="Permanent link">&para;</a></h3>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="err">POST /ngsi-ld/v1/subscriptions</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="err">Content-Type: application/ld+json</span>
+</span></code></pre></div>
+<p><strong>Request Body:</strong>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="p">{</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">  </span><span class="nt">&quot;@context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld&quot;</span><span class="p">,</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Subscription&quot;</span><span class="p">,</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">  </span><span class="nt">&quot;entities&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AirQualityObserved&quot;</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="w">  </span><span class="p">],</span>
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="w">  </span><span class="nt">&quot;watchedAttributes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;airQualityIndex&quot;</span><span class="p">],</span>
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="w">  </span><span class="nt">&quot;notification&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="w">    </span><span class="nt">&quot;endpoint&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="w">      </span><span class="nt">&quot;uri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://your-callback-url/notify&quot;</span><span class="p">,</span>
+</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="w">      </span><span class="nt">&quot;accept&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;application/json&quot;</span>
+</span><span id="__span-14-14"><a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-14-15"><a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-14-16"><a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="p">}</span>
+</span></code></pre></div></p>
 
 
 
@@ -2000,7 +2298,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Chân trang" >
         
           
-          <a href="../architecture/" class="md-footer__link md-footer__link--prev" aria-label="Trước: Kiến Trúc Tổng Quan">
+          <a href="../rest-api/" class="md-footer__link md-footer__link--prev" aria-label="Trước: REST API">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2010,20 +2308,20 @@
                 Trước
               </span>
               <div class="md-ellipsis">
-                Kiến Trúc Tổng Quan
+                REST API
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../user-guide/" class="md-footer__link md-footer__link--next" aria-label="Sau: Index">
+          <a href="../authentication/" class="md-footer__link md-footer__link--next" aria-label="Sau: Authentication">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Sau
               </span>
               <div class="md-ellipsis">
-                Index
+                Authentication
               </div>
             </div>
             <div class="md-footer__button md-icon">

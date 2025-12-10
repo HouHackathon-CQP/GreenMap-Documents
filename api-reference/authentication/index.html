@@ -12,13 +12,13 @@
         <meta name="author" content="Đội HouHackathon-CQP">
       
       
-        <link rel="canonical" href="https://houhackathon-cqp.github.io/GreenMap-Documents/api-reference/endpoints/">
+        <link rel="canonical" href="https://houhackathon-cqp.github.io/GreenMap-Documents/api-reference/authentication/">
       
       
-        <link rel="prev" href="../authentication/">
+        <link rel="prev" href="../ngsi-ld/">
       
       
-        <link rel="next" href="../../policies/">
+        <link rel="next" href="../endpoints/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Endpoints - GreenMap Docs</title>
+        <title>Authentication - GreenMap Docs</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cac-iem-cuoi-api-endpoints" class="md-skip">
+        <a href="#authentication" class="md-skip">
           Bỏ qua
         </a>
       
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Endpoints
+              Authentication
             
           </span>
         </div>
@@ -1253,34 +1253,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../authentication/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Authentication
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -1300,7 +1272,7 @@
   <span class="md-ellipsis">
     
   
-    Endpoints
+    Authentication
   
 
     
@@ -1318,7 +1290,7 @@
   <span class="md-ellipsis">
     
   
-    Endpoints
+    Authentication
   
 
     
@@ -1344,22 +1316,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#endpoints-hien-co" class="md-nav__link">
+  <a href="#luong-xac-thuc" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Endpoints Hiện Có
+        Luồng Xác Thực
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Endpoints Hiện Có">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jwt-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JWT Token
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="JWT Token">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#xac-thuc-authentication" class="md-nav__link">
+  <a href="#structure" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Xác Thực (Authentication)
+        Structure
       
     </span>
   </a>
@@ -1367,43 +1350,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ia-iem-locations" class="md-nav__link">
+  <a href="#token-expiration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Địa Điểm (Locations)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cam-bien-sensors" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cảm Biến (Sensors)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bao-cao-reports" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Báo Cáo (Reports)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#thoi-tiet-weather" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Thời Tiết (Weather)
+        Token Expiration
       
     </span>
   </a>
@@ -1416,43 +1366,138 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cach-xem-tai-lieu-chi-tiet" class="md-nav__link">
+  <a href="#endpoints" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Cách Xem Tài Liệu Chi Tiết
+        Endpoints
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Endpoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#login" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Login
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#xac-thuc" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#protected-endpoints" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Xác Thực
+        Protected Endpoints
       
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#loi-thuong-gap" class="md-nav__link">
+  <a href="#roles-permissions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Lỗi Thường Gặp
+        Roles &amp; Permissions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Roles &amp; Permissions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roles
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#ban-can-giup" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#permissions-matrix" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Bạn Cần Giúp?
+        Permissions Matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backend-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backend (FastAPI)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frontend-react" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frontend (React)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mobile-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mobile (Kotlin)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security Best Practices
       
     </span>
   </a>
@@ -1463,6 +1508,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../endpoints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Endpoints
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -1703,22 +1776,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#endpoints-hien-co" class="md-nav__link">
+  <a href="#luong-xac-thuc" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Endpoints Hiện Có
+        Luồng Xác Thực
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Endpoints Hiện Có">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jwt-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JWT Token
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="JWT Token">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#xac-thuc-authentication" class="md-nav__link">
+  <a href="#structure" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Xác Thực (Authentication)
+        Structure
       
     </span>
   </a>
@@ -1726,43 +1810,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ia-iem-locations" class="md-nav__link">
+  <a href="#token-expiration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Địa Điểm (Locations)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cam-bien-sensors" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cảm Biến (Sensors)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bao-cao-reports" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Báo Cáo (Reports)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#thoi-tiet-weather" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Thời Tiết (Weather)
+        Token Expiration
       
     </span>
   </a>
@@ -1775,43 +1826,138 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cach-xem-tai-lieu-chi-tiet" class="md-nav__link">
+  <a href="#endpoints" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Cách Xem Tài Liệu Chi Tiết
+        Endpoints
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Endpoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#login" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Login
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#xac-thuc" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#protected-endpoints" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Xác Thực
+        Protected Endpoints
       
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#loi-thuong-gap" class="md-nav__link">
+  <a href="#roles-permissions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Lỗi Thường Gặp
+        Roles &amp; Permissions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Roles &amp; Permissions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roles
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#ban-can-giup" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#permissions-matrix" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Bạn Cần Giúp?
+        Permissions Matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backend-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backend (FastAPI)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frontend-react" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frontend (React)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mobile-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mobile (Kotlin)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security Best Practices
       
     </span>
   </a>
@@ -1849,131 +1995,234 @@
  See the License for the specific language governing permissions and
  limitations under the License. */ -->
 
-<!--docs/api-reference/endpoints.md-->
-<h1 id="cac-iem-cuoi-api-endpoints">Các Điểm Cuối API (Endpoints)<a class="headerlink" href="#cac-iem-cuoi-api-endpoints" title="Permanent link">&para;</a></h1>
-<p><strong>Lưu Ý:</strong> GreenMap-Backend hiện đang trong giai đoạn phát triển. Danh sách endpoints dưới đây là dự kiến và có thể thay đổi.</p>
-<p>Để xem danh sách đầy đủ các endpoints hiện có, vui lòng truy cập <strong>Swagger UI</strong> khi Backend đang chạy:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>http://localhost:8000/docs
+<h1 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h1>
+<p>GreenMap sử dụng JWT (JSON Web Token) cho xác thực và phân quyền.</p>
+<h2 id="luong-xac-thuc">Luồng Xác Thực<a class="headerlink" href="#luong-xac-thuc" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Client
+    participant API
+    participant DB
+
+    Client-&gt;&gt;API: POST /login (email, password)
+    API-&gt;&gt;DB: Verify credentials
+    DB--&gt;&gt;API: User data
+    API-&gt;&gt;API: Generate JWT
+    API--&gt;&gt;Client: { access_token, token_type }
+
+    Note over Client: Store token
+
+    Client-&gt;&gt;API: GET /users/me (Authorization: Bearer token)
+    API-&gt;&gt;API: Verify JWT
+    API-&gt;&gt;DB: Get user data
+    DB--&gt;&gt;API: User data
+    API--&gt;&gt;Client: User profile</code></pre>
+<h2 id="jwt-token">JWT Token<a class="headerlink" href="#jwt-token" title="Permanent link">&para;</a></h2>
+<h3 id="structure">Structure<a class="headerlink" href="#structure" title="Permanent link">&para;</a></h3>
+<p>Token JWT bao gồm 3 phần:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Header.Payload.Signature
 </span></code></pre></div>
-<h2 id="endpoints-hien-co">Endpoints Hiện Có<a class="headerlink" href="#endpoints-hien-co" title="Permanent link">&para;</a></h2>
-<h3 id="xac-thuc-authentication">Xác Thực (Authentication)<a class="headerlink" href="#xac-thuc-authentication" title="Permanent link">&para;</a></h3>
-<ul>
-<li><code>POST /api/auth/register</code> - Đăng ký người dùng mới</li>
-<li><code>POST /api/auth/login</code> - Đăng nhập</li>
-<li><code>POST /api/auth/logout</code> - Đăng xuất</li>
-<li><code>GET /api/auth/me</code> - Lấy thông tin người dùng hiện tại</li>
-<li><code>PUT /api/auth/profile</code> - Cập nhật profile</li>
-</ul>
-<h3 id="ia-iem-locations">Địa Điểm (Locations)<a class="headerlink" href="#ia-iem-locations" title="Permanent link">&para;</a></h3>
-<ul>
-<li><code>GET /api/locations</code> - Lấy danh sách địa điểm</li>
-<li><code>GET /api/locations/{id}</code> - Lấy chi tiết địa điểm</li>
-<li><code>POST /api/locations</code> - Tạo địa điểm mới</li>
-<li><code>PUT /api/locations/{id}</code> - Cập nhật địa điểm</li>
-<li><code>DELETE /api/locations/{id}</code> - Xóa địa điểm</li>
-</ul>
-<h3 id="cam-bien-sensors">Cảm Biến (Sensors)<a class="headerlink" href="#cam-bien-sensors" title="Permanent link">&para;</a></h3>
-<ul>
-<li><code>GET /api/sensors</code> - Lấy tất cả sensors</li>
-<li><code>GET /api/sensors/{id}</code> - Chi tiết sensor</li>
-<li><code>GET /api/sensors/{id}/aqi</code> - Dữ liệu AQI hiện tại</li>
-<li><code>GET /api/sensors/{id}/history</code> - Lịch sử AQI</li>
-</ul>
-<h3 id="bao-cao-reports">Báo Cáo (Reports)<a class="headerlink" href="#bao-cao-reports" title="Permanent link">&para;</a></h3>
-<ul>
-<li><code>GET /api/reports</code> - Danh sách báo cáo</li>
-<li><code>POST /api/reports</code> - Tạo báo cáo mới</li>
-<li><code>GET /api/reports/{id}</code> - Chi tiết báo cáo</li>
-<li><code>PUT /api/reports/{id}</code> - Cập nhật báo cáo</li>
-<li><code>DELETE /api/reports/{id}</code> - Xóa báo cáo</li>
-</ul>
-<h3 id="thoi-tiet-weather">Thời Tiết (Weather)<a class="headerlink" href="#thoi-tiet-weather" title="Permanent link">&para;</a></h3>
-<ul>
-<li><code>GET /api/weather</code> - Dữ liệu thời tiết hiện tại</li>
-<li><code>GET /api/weather/forecast</code> - Dự báo thời tiết</li>
-</ul>
-<h2 id="cach-xem-tai-lieu-chi-tiet">Cách Xem Tài Liệu Chi Tiết<a class="headerlink" href="#cach-xem-tai-lieu-chi-tiet" title="Permanent link">&para;</a></h2>
-<ol>
-<li>
-<p><strong>Khởi động Backend</strong>:
-   <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">cd</span><span class="w"> </span>d:<span class="se">\G</span>reenMap<span class="se">\G</span>reenMap-Backend
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>.<span class="se">\.</span>venv<span class="se">\S</span>cripts<span class="se">\a</span>ctivate
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>python<span class="w"> </span>main.py
+<p><strong>Ví dụ Payload:</strong>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">&quot;sub&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;admin@greenmap.hanoi&quot;</span><span class="p">,</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">&quot;role&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="nt">&quot;exp&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1702224600</span><span class="p">,</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="nt">&quot;iat&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1702222800</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">}</span>
 </span></code></pre></div></p>
-</li>
-<li>
-<p><strong>Truy cập Swagger UI</strong>:</p>
-</li>
-<li>Mở browser: <code>http://localhost:8000/docs</code></li>
-<li>Giao diện Swagger sẽ hiển thị tất cả endpoints</li>
-<li>
-<p>Bạn có thể test trực tiếp từ đây</p>
-</li>
-<li>
-<p><strong>Hoặc xem ReDoc</strong>:</p>
-</li>
-<li><code>http://localhost:8000/redoc</code></li>
-</ol>
-<h2 id="xac-thuc">Xác Thực<a class="headerlink" href="#xac-thuc" title="Permanent link">&para;</a></h2>
-<p>Hầu hết các endpoints cần token JWT. Lấy token bằng cách:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>POST<span class="w"> </span>/api/auth/login
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Content-Type:<span class="w"> </span>application/json
+<h3 id="token-expiration">Token Expiration<a class="headerlink" href="#token-expiration" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Access Token</strong>: 30 phút (có thể cấu hình)</li>
+<li>Sau khi hết hạn, cần đăng nhập lại</li>
+</ul>
+<h2 id="endpoints">Endpoints<a class="headerlink" href="#endpoints" title="Permanent link">&para;</a></h2>
+<h3 id="login">Login<a class="headerlink" href="#login" title="Permanent link">&para;</a></h3>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="err">POST /api/v1/login/access-token</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="err">Content-Type: application/x-www-form-urlencoded</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="o">{</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="s2">&quot;email&quot;</span>:<span class="w"> </span><span class="s2">&quot;user@example.com&quot;</span>,
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span><span class="s2">&quot;password&quot;</span>:<span class="w"> </span><span class="s2">&quot;password123&quot;</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="o">}</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="err">username=admin@greenmap.hanoi&amp;password=yourpassword</span>
 </span></code></pre></div>
-<p>Sau đó sử dụng token trong header:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Authorization:<span class="w"> </span>Bearer<span class="w"> </span>YOUR_TOKEN
+<p><strong>Success Response (200):</strong>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">&quot;access_token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;eyJhbGciOiJIUzI1NiIs...&quot;</span><span class="p">,</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nt">&quot;token_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bearer&quot;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">}</span>
+</span></code></pre></div></p>
+<p><strong>Error Response (401):</strong>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">{</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">&quot;detail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Incorrect email or password&quot;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="p">}</span>
+</span></code></pre></div></p>
+<h3 id="protected-endpoints">Protected Endpoints<a class="headerlink" href="#protected-endpoints" title="Permanent link">&para;</a></h3>
+<p>Thêm header <code>Authorization</code> với prefix <code>Bearer</code>:</p>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="err">GET /api/v1/users/me</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="err">Authorization: Bearer eyJhbGciOiJIUzI1NiIs...</span>
 </span></code></pre></div>
-<h2 id="loi-thuong-gap">Lỗi Thường Gặp<a class="headerlink" href="#loi-thuong-gap" title="Permanent link">&para;</a></h2>
+<h2 id="roles-permissions">Roles &amp; Permissions<a class="headerlink" href="#roles-permissions" title="Permanent link">&para;</a></h2>
+<h3 id="roles">Roles<a class="headerlink" href="#roles" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Mã</th>
-<th>Ý Nghĩa</th>
+<th>Role</th>
+<th>Mô tả</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>200</td>
-<td>OK - Thành công</td>
+<td><code>admin</code></td>
+<td>Toàn quyền quản trị hệ thống</td>
 </tr>
 <tr>
-<td>201</td>
-<td>Created - Tạo mới thành công</td>
-</tr>
-<tr>
-<td>400</td>
-<td>Bad Request - Yêu cầu không hợp lệ</td>
-</tr>
-<tr>
-<td>401</td>
-<td>Unauthorized - Cần xác thực</td>
-</tr>
-<tr>
-<td>403</td>
-<td>Forbidden - Không có quyền</td>
-</tr>
-<tr>
-<td>404</td>
-<td>Not Found - Không tìm thấy</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal Server Error - Lỗi server</td>
+<td><code>citizen</code></td>
+<td>Người dùng thông thường</td>
 </tr>
 </tbody>
 </table>
-<h2 id="ban-can-giup">Bạn Cần Giúp?<a class="headerlink" href="#ban-can-giup" title="Permanent link">&para;</a></h2>
+<h3 id="permissions-matrix">Permissions Matrix<a class="headerlink" href="#permissions-matrix" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Action</th>
+<th>Admin</th>
+<th>Citizen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Users</td>
+<td>List</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Users</td>
+<td>Create</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Reports</td>
+<td>Create</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Reports</td>
+<td>List Own</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Reports</td>
+<td>List All</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Reports</td>
+<td>Update Status</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Locations</td>
+<td>List</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Locations</td>
+<td>Create/Update/Delete</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+</tbody>
+</table>
+<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
+<h3 id="backend-fastapi">Backend (FastAPI)<a class="headerlink" href="#backend-fastapi" title="Permanent link">&para;</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">fastapi</span><span class="w"> </span><span class="kn">import</span> <span class="n">Depends</span><span class="p">,</span> <span class="n">HTTPException</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">fastapi.security</span><span class="w"> </span><span class="kn">import</span> <span class="n">OAuth2PasswordBearer</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">oauth2_scheme</span> <span class="o">=</span> <span class="n">OAuth2PasswordBearer</span><span class="p">(</span><span class="n">tokenUrl</span><span class="o">=</span><span class="s2">&quot;/api/v1/login/access-token&quot;</span><span class="p">)</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">get_current_user</span><span class="p">(</span><span class="n">token</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Depends</span><span class="p">(</span><span class="n">oauth2_scheme</span><span class="p">)):</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    <span class="k">try</span><span class="p">:</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>        <span class="n">payload</span> <span class="o">=</span> <span class="n">jwt</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="n">SECRET_KEY</span><span class="p">,</span> <span class="n">algorithms</span><span class="o">=</span><span class="p">[</span><span class="n">ALGORITHM</span><span class="p">])</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>        <span class="n">user_id</span> <span class="o">=</span> <span class="n">payload</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;sub&quot;</span><span class="p">)</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>        <span class="k">if</span> <span class="n">user_id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>            <span class="k">raise</span> <span class="n">HTTPException</span><span class="p">(</span><span class="n">status_code</span><span class="o">=</span><span class="mi">401</span><span class="p">,</span> <span class="n">detail</span><span class="o">=</span><span class="s2">&quot;Invalid token&quot;</span><span class="p">)</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>    <span class="k">except</span> <span class="n">JWTError</span><span class="p">:</span>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>        <span class="k">raise</span> <span class="n">HTTPException</span><span class="p">(</span><span class="n">status_code</span><span class="o">=</span><span class="mi">401</span><span class="p">,</span> <span class="n">detail</span><span class="o">=</span><span class="s2">&quot;Invalid token&quot;</span><span class="p">)</span>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>    <span class="n">user</span> <span class="o">=</span> <span class="k">await</span> <span class="n">get_user</span><span class="p">(</span><span class="n">user_id</span><span class="p">)</span>
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>    <span class="k">if</span> <span class="n">user</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>        <span class="k">raise</span> <span class="n">HTTPException</span><span class="p">(</span><span class="n">status_code</span><span class="o">=</span><span class="mi">401</span><span class="p">,</span> <span class="n">detail</span><span class="o">=</span><span class="s2">&quot;User not found&quot;</span><span class="p">)</span>
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>    <span class="k">return</span> <span class="n">user</span>
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>
+</span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">require_admin</span><span class="p">(</span><span class="n">current_user</span> <span class="o">=</span> <span class="n">Depends</span><span class="p">(</span><span class="n">get_current_user</span><span class="p">)):</span>
+</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>    <span class="k">if</span> <span class="n">current_user</span><span class="o">.</span><span class="n">role</span> <span class="o">!=</span> <span class="s2">&quot;admin&quot;</span><span class="p">:</span>
+</span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>        <span class="k">raise</span> <span class="n">HTTPException</span><span class="p">(</span><span class="n">status_code</span><span class="o">=</span><span class="mi">403</span><span class="p">,</span> <span class="n">detail</span><span class="o">=</span><span class="s2">&quot;Admin access required&quot;</span><span class="p">)</span>
+</span><span id="__span-6-23"><a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>    <span class="k">return</span> <span class="n">current_user</span>
+</span></code></pre></div>
+<h3 id="frontend-react">Frontend (React)<a class="headerlink" href="#frontend-react" title="Permanent link">&para;</a></h3>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1">// Store token</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">login</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">email</span><span class="p">,</span><span class="w"> </span><span class="nx">password</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">api</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/api/v1/login/access-token&#39;</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="ow">new</span><span class="w"> </span><span class="nx">URLSearchParams</span><span class="p">({</span><span class="w"> </span><span class="nx">username</span><span class="o">:</span><span class="w"> </span><span class="nx">email</span><span class="p">,</span><span class="w"> </span><span class="nx">password</span><span class="w"> </span><span class="p">})</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">  </span><span class="p">);</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">  </span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">&#39;token&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">access_token</span><span class="p">);</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="p">};</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="c1">// Axios interceptor</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="nx">api</span><span class="p">.</span><span class="nx">interceptors</span><span class="p">.</span><span class="nx">request</span><span class="p">.</span><span class="nx">use</span><span class="p">((</span><span class="nx">config</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s1">&#39;token&#39;</span><span class="p">);</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">token</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">    </span><span class="nx">config</span><span class="p">.</span><span class="nx">headers</span><span class="p">.</span><span class="nx">Authorization</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`Bearer </span><span class="si">${</span><span class="nx">token</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">config</span><span class="p">;</span>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="p">});</span>
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="c1">// Handle 401</span>
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="nx">api</span><span class="p">.</span><span class="nx">interceptors</span><span class="p">.</span><span class="nx">response</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span>
+</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="w">  </span><span class="p">(</span><span class="nx">response</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">response</span><span class="p">,</span>
+</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="w">  </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">response</span><span class="o">?</span><span class="p">.</span><span class="nx">status</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">401</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="w">      </span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">removeItem</span><span class="p">(</span><span class="s1">&#39;token&#39;</span><span class="p">);</span>
+</span><span id="__span-7-24"><a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a><span class="w">      </span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;/login&#39;</span><span class="p">;</span>
+</span><span id="__span-7-25"><a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-7-26"><a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+</span><span id="__span-7-27"><a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-7-28"><a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a><span class="p">);</span>
+</span></code></pre></div>
+<h3 id="mobile-kotlin">Mobile (Kotlin)<a class="headerlink" href="#mobile-kotlin" title="Permanent link">&para;</a></h3>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">AuthInterceptor</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Interceptor</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="kd">override</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">intercept</span><span class="p">(</span><span class="n">chain</span><span class="p">:</span><span class="w"> </span><span class="n">Interceptor</span><span class="p">.</span><span class="na">Chain</span><span class="p">):</span><span class="w"> </span><span class="n">Response</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dataStore</span><span class="p">.</span><span class="na">getToken</span><span class="p">()</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">request</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">token</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">            </span><span class="n">chain</span><span class="p">.</span><span class="na">request</span><span class="p">().</span><span class="na">newBuilder</span><span class="p">()</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">                </span><span class="p">.</span><span class="na">addHeader</span><span class="p">(</span><span class="s">&quot;Authorization&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Bearer </span><span class="si">$</span><span class="n">token</span><span class="s">&quot;</span><span class="p">)</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">                </span><span class="p">.</span><span class="na">build</span><span class="p">()</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">            </span><span class="n">chain</span><span class="p">.</span><span class="na">request</span><span class="p">()</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">chain</span><span class="p">.</span><span class="na">proceed</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="security-best-practices">Security Best Practices<a class="headerlink" href="#security-best-practices" title="Permanent link">&para;</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Lưu ý bảo mật</p>
 <ul>
-<li>Xem <a href="../overview/">API Overview</a> để hiểu rõ hơn</li>
-<li>Truy cập <a href="https://github.com/HouHackathon-CQP/GreenMap-Backend">Backend Repository</a> để code</li>
-<li>Tạo issue trên GitHub nếu tìm thấy bug</li>
+<li>❌ Không lưu token trong code</li>
+<li>❌ Không log token ra console</li>
+<li>✅ Sử dụng HTTPS trong production</li>
+<li>✅ Rotate SECRET_KEY định kỳ</li>
+<li>✅ Implement token refresh (nếu cần)</li>
 </ul>
-<hr />
-<p><strong>Lưu Ý:</strong> Vì GreenMap-Backend đang phát triển, danh sách endpoints có thể thay đổi. Luôn kiểm tra Swagger UI để có danh sách mới nhất.</p>
+</div>
 
 
 
@@ -2011,7 +2260,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Chân trang" >
         
           
-          <a href="../authentication/" class="md-footer__link md-footer__link--prev" aria-label="Trước: Authentication">
+          <a href="../ngsi-ld/" class="md-footer__link md-footer__link--prev" aria-label="Trước: NGSI-LD API">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2021,20 +2270,20 @@
                 Trước
               </span>
               <div class="md-ellipsis">
-                Authentication
+                NGSI-LD API
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../policies/" class="md-footer__link md-footer__link--next" aria-label="Sau: Index">
+          <a href="../endpoints/" class="md-footer__link md-footer__link--next" aria-label="Sau: Endpoints">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Sau
               </span>
               <div class="md-ellipsis">
-                Index
+                Endpoints
               </div>
             </div>
             <div class="md-footer__button md-icon">

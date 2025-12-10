@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Tài liệu cho dự án GreenMap - Bản Đồ Xanh Hà Nội">
+        <meta name="description" content="Tài liệu kỹ thuật toàn diện cho hệ sinh thái GreenMap - Bản Đồ Xanh Hà Nội">
       
       
         <meta name="author" content="Đội HouHackathon-CQP">
@@ -15,21 +15,17 @@
         <link rel="canonical" href="https://houhackathon-cqp.github.io/GreenMap-Documents/about/">
       
       
-        <link rel="prev" href="..">
-      
-      
-        <link rel="next" href="../getting-started/introduction/">
       
       
         
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../assets/logo.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
     
     
       
-        <title>Về GreenMap - Tài Liệu GreenMap</title>
+        <title>About - GreenMap Docs</title>
       
     
     
@@ -50,10 +46,12 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../stylesheets/greenmap.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -61,16 +59,7 @@
 
     
     
-   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }
-    .gscrollbar-fixer { padding-right: 15px; }
-    .gdesc-inner { font-size: 0.75rem; }
-    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  </head>
   
   
     
@@ -80,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="teal">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="teal">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -101,12 +90,13 @@
     
       
 
-<header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Đầu trang">
-    <a href=".." title="Tài Liệu GreenMap" class="md-header__button md-logo" aria-label="Tài Liệu GreenMap" data-md-component="logo">
-      
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Đầu trang">
+    <a href=".." title="GreenMap Docs" class="md-header__button md-logo" aria-label="GreenMap Docs" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -117,13 +107,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Tài Liệu GreenMap
+            GreenMap Docs
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Về GreenMap
+              About
             
           </span>
         </div>
@@ -136,20 +126,20 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="teal"  aria-label="Chuyển sang chế độ tối"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="teal"  aria-label="Chuyển sang chế độ sáng"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="Chuyển sang chế độ tối" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      <label class="md-header__button md-icon" title="Chuyển sang chế độ sáng" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="teal"  aria-label="Chuyển sang chế độ sáng"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="teal"  aria-label="Chuyển sang chế độ tối"  type="radio" name="__palette" id="__palette_1">
     
-      <label class="md-header__button md-icon" title="Chuyển sang chế độ sáng" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      <label class="md-header__button md-icon" title="Chuyển sang chế độ tối" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
       </label>
     
   
@@ -180,6 +170,11 @@
       </label>
       <nav class="md-search__options" aria-label="Tìm kiếm">
         
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Chia sẻ" aria-label="Chia sẻ" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
         <button type="reset" class="md-search__icon md-icon" title="Xoá" aria-label="Xoá" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
@@ -204,16 +199,22 @@
       
     
     
+      <div class="md-header__source">
+        <a href="https://github.com/HouHackathon-CQP" title="Xem mã nguồn" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HouHackathon-CQP
+  </div>
+</a>
+      </div>
+    
   </nav>
   
-</header>
     
-    <div class="md-container" data-md-component="container">
       
-      
-        
-          
-            
 <nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
@@ -241,32 +242,11 @@
   
   
   
-    
-  
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Về GreenMap
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
   
     
     
       <li class="md-tabs__item">
-        <a href="../getting-started/introduction/" class="md-tabs__link">
+        <a href="../getting-started/" class="md-tabs__link">
           
   
   
@@ -286,11 +266,11 @@
     
     
       <li class="md-tabs__item">
-        <a href="../user-guide/overview/" class="md-tabs__link">
+        <a href="../user-guide/" class="md-tabs__link">
           
   
   
-  Hướng Dẫn Người Dùng
+  Hướng Dẫn Sử Dụng
 
         </a>
       </li>
@@ -306,11 +286,11 @@
     
     
       <li class="md-tabs__item">
-        <a href="../api-reference/overview/" class="md-tabs__link">
+        <a href="../developer-guide/" class="md-tabs__link">
           
   
   
-  Tài Liệu API
+  Tài Liệu Kỹ Thuật
 
         </a>
       </li>
@@ -326,11 +306,31 @@
     
     
       <li class="md-tabs__item">
-        <a href="../contributing/guidelines/" class="md-tabs__link">
+        <a href="../api-reference/" class="md-tabs__link">
           
   
   
-  Đóng Góp
+  API Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../policies/" class="md-tabs__link">
+          
+  
+  
+  Chính Sách
 
         </a>
       </li>
@@ -341,7 +341,13 @@
     </ul>
   </div>
 </nav>
-          
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
         
       
       <main class="md-main" data-md-component="main">
@@ -360,14 +366,25 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Thanh điều hướng" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Tài Liệu GreenMap" class="md-nav__button md-logo" aria-label="Tài Liệu GreenMap" data-md-component="logo">
+    <a href=".." title="GreenMap Docs" class="md-nav__button md-logo" aria-label="GreenMap Docs" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../assets/logo.png" alt="logo">
 
     </a>
-    Tài Liệu GreenMap
+    GreenMap Docs
   </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/HouHackathon-CQP" title="Xem mã nguồn" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HouHackathon-CQP
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -402,340 +419,6 @@
       
   
   
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Về GreenMap
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Về GreenMap
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Mục lục">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Mục lục
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#greenmap-la-gi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GreenMap Là Gì?
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lich-su-phat-trien" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Lịch Sử Phát Triển
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Lịch Sử Phát Triển">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#khoi-nguon" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Khởi Nguồn
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#van-e-chung-toi-giai-quyet" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Vấn Đề Chúng Tôi Giải Quyết
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#giai-phap-cua-chung-toi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Giải Pháp của Chúng Tôi
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#su-menh" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sứ Mệnh
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tam-nhin" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tầm Nhìn
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#gia-tri-cot-loi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Giá Trị Cốt Lõi
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Giá Trị Cốt Lõi">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ben-vung-tren-het" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🌍 Bền Vững Trên Hết
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cong-ong-truoc-tien" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        👥 Cộng Đồng Trước Tiên
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#minh-bach-hoan-toan" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🔓 Minh Bạch Hoàn Toàn
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#de-tiep-can" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ♿ Dễ Tiếp Cận
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#oi-moi-lien-tuc" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🚀 Đổi Mới Liên Tục
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cac-repositories" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Các Repositories
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Các Repositories">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#greenmap-backend" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GreenMap-Backend
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#greenmap-frontend" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GreenMap-Frontend
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#greenmap-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GreenMap-Data
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#greenmap-documents" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GreenMap-Documents
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#kien-truc-tong-the" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Kiến Trúc Tổng Thể
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cong-nghe-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Công Nghệ Stack
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#team-credits" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Team &amp; Credits
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lien-he-lien-ket" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Liên Hệ &amp; Liên Kết
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
   
   
     
@@ -754,10 +437,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   
@@ -775,8 +458,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -793,6 +476,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../getting-started/introduction/" class="md-nav__link">
         
   
@@ -801,6 +512,90 @@
     
   
     Giới Thiệu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tính Năng
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/system-requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Yêu Cầu Hệ Thống
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kiến Trúc Tổng Quan
   
 
     
@@ -842,6 +637,67 @@
 
               
             
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hướng Dẫn Sử Dụng
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hướng Dẫn Sử Dụng
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
               
                 
   
@@ -849,14 +705,182 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/quick-start/" class="md-nav__link">
+      <a href="../user-guide/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Hướng Dẫn Bắt Đầu Nhanh
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user-guide/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tổng Quan Giao Diện
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user-guide/map-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bản Đồ Tương Tác
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user-guide/reports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quản Lý Báo Cáo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user-guide/infrastructure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quản Lý Hạ Tầng
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user-guide/settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cài Đặt Tài Khoản
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user-guide/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
   
 
     
@@ -909,7 +933,7 @@
   <span class="md-ellipsis">
     
   
-    Hướng Dẫn Người Dùng
+    Tài Liệu Kỹ Thuật
   
 
     
@@ -925,7 +949,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Hướng Dẫn Người Dùng
+    Tài Liệu Kỹ Thuật
   
 
           </label>
@@ -938,14 +962,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-guide/overview/" class="md-nav__link">
+      <a href="../developer-guide/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Tổng Quan
+    Index
   
 
     
@@ -966,14 +990,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-guide/features/" class="md-nav__link">
+      <a href="../developer-guide/backend/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Các Tính Năng
+    Backend Service
   
 
     
@@ -994,14 +1018,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-guide/map-guide/" class="md-nav__link">
+      <a href="../developer-guide/frontend/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Hướng Dẫn Bản Đồ
+    Frontend Portal
   
 
     
@@ -1022,14 +1046,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-guide/accounts/" class="md-nav__link">
+      <a href="../developer-guide/mobile/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Quản Lý Tài Khoản
+    Mobile App
   
 
     
@@ -1050,70 +1074,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-guide/reports/" class="md-nav__link">
+      <a href="../developer-guide/data/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Báo Cáo Sự Cố
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../user-guide/settings/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Cài Đặt
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../user-guide/faq/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Câu Hỏi Thường Gặp
+    Data Pipeline
   
 
     
@@ -1166,7 +1134,7 @@
   <span class="md-ellipsis">
     
   
-    Tài Liệu API
+    API Reference
   
 
     
@@ -1182,7 +1150,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Tài Liệu API
+    API Reference
   
 
           </label>
@@ -1195,14 +1163,98 @@
   
   
     <li class="md-nav__item">
-      <a href="../api-reference/overview/" class="md-nav__link">
+      <a href="../api-reference/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Tổng Quan
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-reference/rest-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    REST API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-reference/ngsi-ld/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NGSI-LD API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-reference/authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Authentication
   
 
     
@@ -1230,7 +1282,7 @@
   <span class="md-ellipsis">
     
   
-    Các Điểm Cuối
+    Endpoints
   
 
     
@@ -1283,7 +1335,7 @@
   <span class="md-ellipsis">
     
   
-    Đóng Góp
+    Chính Sách
   
 
     
@@ -1299,7 +1351,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Đóng Góp
+    Chính Sách
   
 
           </label>
@@ -1312,14 +1364,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributing/guidelines/" class="md-nav__link">
+      <a href="../policies/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Hướng Dẫn Đóng Góp
+    Index
   
 
     
@@ -1340,7 +1392,91 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributing/code-of-conduct/" class="md-nav__link">
+      <a href="../policies/license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Giấy Phép
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../policies/security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bảo Mật
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../policies/contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Đóng Góp
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../policies/code-of-conduct/" class="md-nav__link">
         
   
   
@@ -1395,10 +1531,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#greenmap-la-gi" class="md-nav__link">
+  <a href="#tam-nhin-su-menh" class="md-nav__link">
     <span class="md-ellipsis">
       
-        GreenMap Là Gì?
+        Tầm Nhìn &amp; Sứ Mệnh
       
     </span>
   </a>
@@ -1406,29 +1542,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#lich-su-phat-trien" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Lịch Sử Phát Triển
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Lịch Sử Phát Triển">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#khoi-nguon" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Khởi Nguồn
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#van-e-chung-toi-giai-quyet" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1437,63 +1550,14 @@
     </span>
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#giai-phap-cua-chung-toi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Giải Pháp của Chúng Tôi
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#su-menh" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sứ Mệnh
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tam-nhin" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tầm Nhìn
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#gia-tri-cot-loi" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Giá Trị Cốt Lõi
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Giá Trị Cốt Lõi">
+    <nav class="md-nav" aria-label="Vấn Đề Chúng Tôi Giải Quyết">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ben-vung-tren-het" class="md-nav__link">
+  <a href="#hien-trang" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🌍 Bền Vững Trên Hết
+        Hiện Trạng
       
     </span>
   </a>
@@ -1501,43 +1565,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#cong-ong-truoc-tien" class="md-nav__link">
+  <a href="#giai-phap-greenmap" class="md-nav__link">
     <span class="md-ellipsis">
       
-        👥 Cộng Đồng Trước Tiên
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#minh-bach-hoan-toan" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🔓 Minh Bạch Hoàn Toàn
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#de-tiep-can" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ♿ Dễ Tiếp Cận
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#oi-moi-lien-tuc" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🚀 Đổi Mới Liên Tục
+        Giải Pháp GreenMap
       
     </span>
   </a>
@@ -1550,55 +1581,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cac-repositories" class="md-nav__link">
+  <a href="#cong-nghe-kien-truc" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Các Repositories
+        Công Nghệ &amp; Kiến Trúc
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Các Repositories">
+    <nav class="md-nav" aria-label="Công Nghệ &amp; Kiến Trúc">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#greenmap-backend" class="md-nav__link">
+  <a href="#tech-stack" class="md-nav__link">
     <span class="md-ellipsis">
       
-        GreenMap-Backend
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#greenmap-frontend" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GreenMap-Frontend
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#greenmap-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GreenMap-Data
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#greenmap-documents" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GreenMap-Documents
+        Tech Stack
       
     </span>
   </a>
@@ -1611,10 +1609,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#kien-truc-tong-the" class="md-nav__link">
+  <a href="#team" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Kiến Trúc Tổng Thể
+        Team
       
     </span>
   </a>
@@ -1622,10 +1620,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cong-nghe-stack" class="md-nav__link">
+  <a href="#tinh-nang-noi-bat" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Công Nghệ Stack
+        Tính Năng Nổi Bật
       
     </span>
   </a>
@@ -1633,10 +1631,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#team-credits" class="md-nav__link">
+  <a href="#roadmap" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Team &amp; Credits
+        Roadmap
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Roadmap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-hoan-thanh-v10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Đã Hoàn Thành (v1.0)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ke-hoach-tuong-lai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kế Hoạch Tương Lai
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Open Source
       
     </span>
   </a>
@@ -1644,10 +1681,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#lien-he-lien-ket" class="md-nav__link">
+  <a href="#lien-he" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Liên Hệ &amp; Liên Kết
+        Liên Hệ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acknowledgments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acknowledgments
       
     </span>
   </a>
@@ -1671,197 +1719,218 @@
 
 
 
+<!-- /*Copyright 2025 HouHackathon-CQP
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License. */ -->
+
 <h1 id="ve-greenmap">Về GreenMap<a class="headerlink" href="#ve-greenmap" title="Permanent link">&para;</a></h1>
-<h2 id="greenmap-la-gi">GreenMap Là Gì?<a class="headerlink" href="#greenmap-la-gi" title="Permanent link">&para;</a></h2>
-<p><strong>GreenMap</strong> là một hệ thống quản lý dữ liệu môi trường tích hợp, được phát triển cho <strong>HouHackathon 2024</strong>.</p>
-<p>Dự án này gồm 4 repositories độc lập:</p>
-<ol>
-<li><strong>GreenMap-Backend</strong> - REST API và xử lý dữ liệu realtime</li>
-<li><strong>GreenMap-Frontend</strong> - Ứng dụng web React với bản đồ tương tác</li>
-<li><strong>GreenMap-Data</strong> - Jupyter notebooks để phân tích dữ liệu</li>
-<li><strong>GreenMap-Documents</strong> - Tài liệu toàn diện (tài liệu này)</li>
-</ol>
-<h2 id="lich-su-phat-trien">Lịch Sử Phát Triển<a class="headerlink" href="#lich-su-phat-trien" title="Permanent link">&para;</a></h2>
-<h3 id="khoi-nguon">Khởi Nguồn<a class="headerlink" href="#khoi-nguon" title="Permanent link">&para;</a></h3>
-<p>GreenMap được phát triển trong HouHackathon, khi một nhóm các lập trình viên quyết định giải quyết vấn đề giám sát chất lượng không khí và quản lý dữ liệu môi trường ở Hà Nội.</p>
-<h3 id="van-e-chung-toi-giai-quyet">Vấn Đề Chúng Tôi Giải Quyết<a class="headerlink" href="#van-e-chung-toi-giai-quyet" title="Permanent link">&para;</a></h3>
-<p>Trước GreenMap:
-- Dữ liệu AQI phân tán trên nhiều nền tảng
-- Khó khăn trong việc khám phá các dự án xanh địa phương
-- Không có cách tập trung để theo dõi tác động môi trường
-- Thiếu công cụ quản lý dữ liệu đô thị
-- Hạn chế tính năng báo cáo sự cố môi trường từ cộng đồng</p>
-<h3 id="giai-phap-cua-chung-toi">Giải Pháp của Chúng Tôi<a class="headerlink" href="#giai-phap-cua-chung-toi" title="Permanent link">&para;</a></h3>
-<p>GreenMap cung cấp:
-- <strong>Nền tảng Tập Trung</strong>: Một nơi để theo dõi tất cả chỉ số AQI, thời tiết, và dữ liệu đô thị
-- <strong>Bản Đồ Tương Tác</strong>: Hiển thị trực quan dữ liệu bằng bản đồ thực tế (Leaflet)
-- <strong>Theo Dõi Realtime</strong>: Cập nhật dữ liệu sensor liên tục từ external APIs
-- <strong>Quản Lý Báo Cáo</strong>: Hệ thống báo cáo sự cố môi trường từ cộng đồng
-- <strong>API REST</strong>: Cho phép tích hợp với các ứng dụng khác
-- <strong>Dữ Liệu Mở</strong>: Sử dụng GeoJSON format để khả năng tương tác</p>
-<h2 id="su-menh">Sứ Mệnh<a class="headerlink" href="#su-menh" title="Permanent link">&para;</a></h2>
-<p>Trao quyền cho các cá nhân và cộng đồng thực hiện hành động có ý nghĩa cho môi trường bằng cách cung cấp các công cụ dễ tiếp cận, hữu ích và hiệu quả để:
-- Giám sát chất lượng không khí
-- Quản lý dữ liệu đô thị
-- Báo cáo sự cố môi trường
-- Tương tác với cộng đồng</p>
-<h2 id="tam-nhin">Tầm Nhìn<a class="headerlink" href="#tam-nhin" title="Permanent link">&para;</a></h2>
-<p>Chúng tôi mong muốn một thế giới nơi:
-- Mỗi người có thể dễ dàng theo dõi chất lượng không khí xung quanh mình
-- Các cộng đồng được kết nối thông qua dữ liệu môi trường chung
-- Tác động môi trường là minh bạch và có thể đo lường được
-- Công nghệ phục vụ như một cầu nối giữa ý định và hành động thực tế
-- Dữ liệu mở được sử dụng để cải thiện chất lượng sống</p>
-<h2 id="gia-tri-cot-loi">Giá Trị Cốt Lõi<a class="headerlink" href="#gia-tri-cot-loi" title="Permanent link">&para;</a></h2>
-<h3 id="ben-vung-tren-het">🌍 Bền Vững Trên Hết<a class="headerlink" href="#ben-vung-tren-het" title="Permanent link">&para;</a></h3>
-<p>Bảo vệ môi trường là trái tim của mọi thứ chúng tôi làm. Chúng tôi đảm bảo rằng nền tảng của chúng tôi thúc đẩy tác động môi trường thực tế.</p>
-<h3 id="cong-ong-truoc-tien">👥 Cộng Đồng Trước Tiên<a class="headerlink" href="#cong-ong-truoc-tien" title="Permanent link">&para;</a></h3>
-<p>Xây dựng cộng đồng mạnh mẽ, kết nối những người quan tâm đến môi trường.</p>
-<h3 id="minh-bach-hoan-toan">🔓 Minh Bạch Hoàn Toàn<a class="headerlink" href="#minh-bach-hoan-toan" title="Permanent link">&para;</a></h3>
-<p>Dữ liệu mở, code mở source, quy trình mở. Bất cứ ai cũng có thể thấy những gì chúng tôi đang làm.</p>
-<h3 id="de-tiep-can">♿ Dễ Tiếp Cận<a class="headerlink" href="#de-tiep-can" title="Permanent link">&para;</a></h3>
-<p>Công cụ của chúng tôi được thiết kế cho mọi người - không cần kỹ năng kỹ thuật cao.</p>
-<h3 id="oi-moi-lien-tuc">🚀 Đổi Mới Liên Tục<a class="headerlink" href="#oi-moi-lien-tuc" title="Permanent link">&para;</a></h3>
-<p>Luôn tìm kiếm những cách mới để cải thiện và mở rộng chức năng.</p>
-<h2 id="cac-repositories">Các Repositories<a class="headerlink" href="#cac-repositories" title="Permanent link">&para;</a></h2>
-<h3 id="greenmap-backend">GreenMap-Backend<a class="headerlink" href="#greenmap-backend" title="Permanent link">&para;</a></h3>
-<p><strong>Repository:</strong> github.com/HouHackathon-CQP/GreenMap-Backend</p>
-<p><strong>Chủ Động:</strong>
-- Cung cấp REST API endpoints
-- Quản lý database (PostgreSQL, MongoDB)
-- Xử lý xác thực người dùng (OAuth2, JWT)
-- Chạy agents realtime (AQI, Weather)
-- Tích hợp với Orion-LD Context Broker
-- Nhập dữ liệu từ OpenStreetMap</p>
-<p><strong>Stack:</strong> Python 3.10+, FastAPI, SQLAlchemy, PostgreSQL, MongoDB, Orion-LD</p>
-<h3 id="greenmap-frontend">GreenMap-Frontend<a class="headerlink" href="#greenmap-frontend" title="Permanent link">&para;</a></h3>
-<p><strong>Repository:</strong> github.com/HouHackathon-CQP/GreenMap-Frontend</p>
-<p><strong>Chủ Động:</strong>
-- Cung cấp giao diện web
-- Hiển thị bản đồ tương tác (Leaflet)
-- Quản lý tài khoản người dùng
-- Tạo và quản lý báo cáo
-- Lọc và tìm kiếm dữ liệu
-- Chế độ tối/sáng</p>
-<p><strong>Stack:</strong> React 18+, Vite, Tailwind CSS, Leaflet</p>
-<h3 id="greenmap-data">GreenMap-Data<a class="headerlink" href="#greenmap-data" title="Permanent link">&para;</a></h3>
-<p><strong>Repository:</strong> github.com/HouHackathon-CQP/GreenMap-Data</p>
-<p><strong>Chủ Động:</strong>
-- Cung cấp Jupyter notebooks
-- Phân tích dữ liệu AQI
-- Xử lý GeoJSON files
-- Tạo dữ liệu mô phỏng
-- EDA (Exploratory Data Analysis)
-- Dự báo và mô phỏng</p>
-<p><strong>Stack:</strong> Python, Jupyter, Pandas, GeoPandas, Shapely</p>
-<h3 id="greenmap-documents">GreenMap-Documents<a class="headerlink" href="#greenmap-documents" title="Permanent link">&para;</a></h3>
-<p><strong>Repository:</strong> github.com/HouHackathon-CQP/GreenMap-Documents</p>
-<p><strong>Chủ Động:</strong>
-- Cung cấp tài liệu toàn diện
-- Hướng dẫn cài đặt
-- Hướng dẫn người dùng
-- Tài liệu API
-- Hướng dẫn đóng góp</p>
-<p><strong>Stack:</strong> MkDocs, Material Theme</p>
-<h2 id="kien-truc-tong-the">Kiến Trúc Tổng Thể<a class="headerlink" href="#kien-truc-tong-the" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>┌─────────────────────────────────────────────────────────────┐
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>│                      Người Dùng                              │
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>│                (Web Browser - GreenMap-Frontend)             │
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>└──────────────────────────┬──────────────────────────────────┘
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>                           │ HTTP Request
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>                           ↓
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>┌──────────────────────────────────────────────────────────────┐
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>│               GreenMap-Backend API                           │
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>│                (Python/FastAPI)                              │
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>│  ┌──────────────────────────────────────────────────────┐    │
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>│  │ - Auth (OAuth2, JWT)                               │    │
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>│  │ - Locations, Sensors, Reports endpoints            │    │
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>│  │ - AQI Agent (updates realtime)                      │    │
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>│  │ - Weather Agent (updates realtime)                  │    │
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>│  │ - Context Broker Integration (Orion-LD)            │    │
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>│  │ - OSM Data Import                                   │    │
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>│  └──────────────────────────────────────────────────────┘    │
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>└──────┬───────────────────┬──────────────────────────┬────────┘
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>       │                   │                          │
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>       ↓                   ↓                          ↓
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>   PostgreSQL           MongoDB                  Orion-LD
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>   (Relational)       (Documents)            (Context Broker)
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>   (Users, Reports)   (Sensor Data)          (NGSI-LD Data)
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>                                                      ↑
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>                                                      │
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>                    ┌─────────────────────────────────┘
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>                    │
-<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>                    ↓
-<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>       ┌────────────────────────────┐
-<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>       │  GreenMap-Data              │
-<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>       │  (Jupyter/Pandas/GeoPandas) │
-<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>       │  - Data Analysis            │
-<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>       │  - GeoJSON Processing       │
-<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>       │  - Simulation Data          │
-<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>       │  - EDA Notebooks            │
-<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>       └────────────────────────────┘
-<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>                    │
-<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>                    ↑
-<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>       ┌────────────────────────────┐
-<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>       │  Data Sources               │
-<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>       │  - Sensors                  │
-<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>       │  - OpenStreetMap            │
-<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>       │  - Weather APIs             │
-<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>       │  - CSV/GeoJSON Files        │
-<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>       └────────────────────────────┘
-</code></pre></div>
-<h2 id="cong-nghe-stack">Công Nghệ Stack<a class="headerlink" href="#cong-nghe-stack" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Lớp</th>
-<th>Công Nghệ</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Frontend</strong></td>
-<td>React, TypeScript, Tailwind CSS, Vite, Leaflet</td>
-</tr>
-<tr>
-<td><strong>Backend</strong></td>
-<td>Python, FastAPI, SQLAlchemy, Pydantic</td>
-</tr>
-<tr>
-<td><strong>Database</strong></td>
-<td>PostgreSQL, MongoDB</td>
-</tr>
-<tr>
-<td><strong>Context Broker</strong></td>
-<td>Orion-LD (NGSI-LD)</td>
-</tr>
-<tr>
-<td><strong>Data Processing</strong></td>
-<td>Jupyter, Pandas, GeoPandas</td>
-</tr>
-<tr>
-<td><strong>DevOps</strong></td>
-<td>Docker, Docker Compose</td>
-</tr>
-<tr>
-<td><strong>Documentation</strong></td>
-<td>MkDocs, Material Theme</td>
-</tr>
-</tbody>
-</table>
-<h2 id="team-credits">Team &amp; Credits<a class="headerlink" href="#team-credits" title="Permanent link">&para;</a></h2>
-<p><strong>Phát triển bởi:</strong> HouHackathon-CQP participants</p>
-<p><strong>Giấy Phép:</strong> MIT License</p>
-<h2 id="lien-he-lien-ket">Liên Hệ &amp; Liên Kết<a class="headerlink" href="#lien-he-lien-ket" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>GitHub:</strong> github.com/HouHackathon-CQP</li>
-<li><strong>Issues:</strong> Report bugs trên GitHub</li>
-<li><strong>Discussions:</strong> Thảo luận trên GitHub</li>
-<li><strong>Documentation:</strong> Xem tài liệu tại đây</li>
-</ul>
+<p>GreenMap là hệ sinh thái quản lý dữ liệu môi trường đô thị thông minh, được phát triển cho cuộc thi <strong>HouHackathon 2024</strong>. Chúng tôi giải quyết vấn đề dữ liệu môi trường phân tán bằng một nền tầng tập trung duy nhất.</p>
 <hr />
-<p><strong>Cảm ơn bạn đã quan tâm đến GreenMap! 🌍💚</strong></p>
-<p>Để bắt đầu, xem <a href="../getting-started/installation/">Hướng Dẫn Cài Đặt</a>.</p>
+<h2 id="tam-nhin-su-menh">Tầm Nhìn &amp; Sứ Mệnh<a class="headerlink" href="#tam-nhin-su-menh" title="Permanent link">&para;</a></h2>
+<div class="mission-vision">
+
+### Tầm Nhìn
+
+Trở thành nền tảng giám sát môi trường đô thị hàng đầu tại Việt Nam, giúp các thành phố xây dựng hệ sinh thái xanh, bền vững thông qua dữ liệu minh bạch và công nghệ tiên tiến.
+
+### Sứ Mệnh
+
+**Trao quyền cho cộng đồng** thực hiện hành động vì môi trường thông qua:
+
+- **Minh bạch dữ liệu** - Mọi người đều có quyền tiếp cận thông tin môi trường realtime
+- **Công nghệ mở** - Open source, APIs công khai, chuẩn FIWARE NGSI-LD
+- **Tham gia cộng đồng** - Người dân có thể báo cáo vấn đề môi trường qua Mobile App
+- **Ra quyết định dựa trên dữ liệu** - Cung cấp insights cho quản lý đô thị
+
+</div>
+
+<hr />
+<h2 id="van-e-chung-toi-giai-quyet">Vấn Đề Chúng Tôi Giải Quyết<a class="headerlink" href="#van-e-chung-toi-giai-quyet" title="Permanent link">&para;</a></h2>
+<h3 id="hien-trang">Hiện Trạng<a class="headerlink" href="#hien-trang" title="Permanent link">&para;</a></h3>
+<div class="problem-list">
+
+**Dữ liệu môi trường phân tán:**
+- Thông tin AQI từ nhiều nguồn khác nhau
+- Không có nền tảng tập trung
+- Người dân khó tiếp cận dữ liệu chính xác
+
+**Thiếu sự tham gia của cộng đồng:**
+- Không có kênh báo cáo vấn đề môi trường hiệu quả
+- Phản ánh của người dân không được xử lý kịp thời
+- Thiếu minh bạch trong quy trình giải quyết
+
+**Quản lý hạ tầng xanh không hiệu quả:**
+- Dữ liệu công viên, trạm sạc, xe đạp không được số hóa
+- Khó theo dõi trạng thái và bảo trì
+- Không tận dụng được dữ liệu để tối ưu
+
+</div>
+
+<h3 id="giai-phap-greenmap">Giải Pháp GreenMap<a class="headerlink" href="#giai-phap-greenmap" title="Permanent link">&para;</a></h3>
+<div class="solution-grid">
+
+**Nền tảng tập trung**
+Tích hợp dữ liệu từ OpenAQ, OpenWeatherMap, OpenStreetMap và SUMO simulation vào một hệ thống duy nhất.
+
+**Mobile App cho người dân**
+Ứng dụng Android cho phép báo cáo vấn đề môi trường với hình ảnh, vị trí GPS và theo dõi tiến độ xử lý.
+
+**Web Portal cho quản trị viên**
+Giao diện quản lý với bản đồ tương tác, dashboard realtime và công cụ xử lý báo cáo.
+
+**APIs mở & chuẩn NGSI-LD**
+REST APIs công khai và tích hợp Orion-LD Context Broker theo chuẩn FIWARE, cho phép mở rộng và tích hợp dễ dàng.
+
+</div>
+
+<hr />
+<h2 id="cong-nghe-kien-truc">Công Nghệ &amp; Kiến Trúc<a class="headerlink" href="#cong-nghe-kien-truc" title="Permanent link">&para;</a></h2>
+<h3 id="tech-stack">Tech Stack<a class="headerlink" href="#tech-stack" title="Permanent link">&para;</a></h3>
+<div class="tech-overview">
+
+**Backend:**
+- FastAPI (Python) - REST API server
+- PostgreSQL + PostGIS - Spatial database
+- Orion-LD Context Broker - NGSI-LD standard
+- APScheduler - Background workers
+
+**Frontend:**
+- React 18 + Vite - Modern UI
+- MapLibre GL JS - Interactive maps
+- Tailwind CSS - Styling
+- TanStack Query - Data fetching
+
+**Mobile:**
+- Kotlin + Jetpack Compose - Android native
+- MVI Architecture - Unidirectional data flow
+- Ktor Client - HTTP requests
+- Coil - Image loading
+
+**Data:**
+- OpenStreetMap Overpass API
+- OpenAQ API - Air quality
+- OpenWeatherMap API
+- SUMO Traffic Simulation
+
+**Infrastructure:**
+- Docker & Docker Compose
+- GitHub Actions - CI/CD
+- Nginx - Reverse proxy
+
+</div>
+
+<hr />
+<h2 id="team">Team<a class="headerlink" href="#team" title="Permanent link">&para;</a></h2>
+<p>GreenMap được phát triển bởi đội ngũ <strong>Chúng Quản Phú</strong> tại HouHackathon 2024.</p>
+<div class="team-about">
+
+**Nguyễn Bá Phú** - *Team Lead & Backend Developer*  
+Backend architecture & API development, Database design & optimization, NGSI-LD Context Broker integration  
+GitHub: [@nguyenbaphu](https://github.com/nguyenbaphu)
+
+**Vũ Tiến Quân** - *Frontend Developer*  
+React web portal development, MapLibre GL JS integration, UI/UX design & implementation  
+GitHub: [@tienbienquang1422](https://github.com/tienbienquang1422)
+
+**Hoàng Mạnh Cường** - *Mobile Developer & Data Engineer*  
+Android app development (Kotlin + Compose), Data pipeline & ETL scripts, SUMO traffic simulation integration  
+GitHub: [@manhhcuong1503](https://github.com/manhhcuong1503)
+
+</div>
+
+<hr />
+<h2 id="tinh-nang-noi-bat">Tính Năng Nổi Bật<a class="headerlink" href="#tinh-nang-noi-bat" title="Permanent link">&para;</a></h2>
+<div class="features-list">
+
+**Giám sát Môi trường Realtime**  
+AQI tracking từ OpenAQ, Weather data updates mỗi 30 phút, Dashboard với biểu đồ xu hướng, Cảnh báo khi AQI vượt ngưỡng nguy hiểm
+
+**Bản Đồ Tương Tác**  
+MapLibre GL JS với multiple layers, Hiển thị công viên, trạm sạc, điểm cho thuê xe đạp, Heatmap mật độ báo cáo, Search địa điểm với geocoder
+
+**Báo Cáo Từ Cộng Đồng**  
+Mobile app cho người dân, Upload hình ảnh + GPS location, Theo dõi trạng thái xử lý, Push notifications khi có cập nhật
+
+**NGSI-LD Standard**  
+Tích hợp Orion-LD Context Broker, Tuân thủ chuẩn FIWARE, IoT-ready architecture, Scalable & extensible
+
+**AI-Powered Insights**  
+Gemini AI phân tích xu hướng ô nhiễm, Đề xuất giải pháp giảm AQI, Tóm tắt báo cáo tự động, Dự đoán chất lượng không khí
+
+**Open Source & APIs**  
+Public REST APIs, Comprehensive documentation, Docker deployment, GitHub repositories
+
+</div>
+
+<hr />
+<h2 id="roadmap">Roadmap<a class="headerlink" href="#roadmap" title="Permanent link">&para;</a></h2>
+<h3 id="a-hoan-thanh-v10">Đã Hoàn Thành (v1.0)<a class="headerlink" href="#a-hoan-thanh-v10" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Backend API với FastAPI + PostgreSQL + PostGIS</li>
+<li>Web Portal với React + MapLibre</li>
+<li>Mobile App Android với Kotlin + Compose</li>
+<li>Data Pipeline từ OpenAQ, Weather, OSM</li>
+<li>NGSI-LD Context Broker integration</li>
+<li>Background workers cho AQI &amp; Weather</li>
+<li>JWT authentication &amp; authorization</li>
+<li>CRUD operations cho Parks, Charging Stations, Bicycle Rentals</li>
+<li>Report management system</li>
+<li>Interactive maps với multiple layers</li>
+</ul>
+<h3 id="ke-hoach-tuong-lai">Kế Hoạch Tương Lai<a class="headerlink" href="#ke-hoach-tuong-lai" title="Permanent link">&para;</a></h3>
+<p><strong>v1.1 (Q1 2025)</strong>
+- iOS App (Swift + SwiftUI)
+- Push notifications cho mobile
+- Export reports to PDF
+- Admin dashboard analytics</p>
+<p><strong>v1.2 (Q2 2025)</strong>
+- Machine Learning models cho AQI prediction
+- Real IoT sensors integration
+- Webhooks API
+- Multi-language support (English, Vietnamese)</p>
+<p><strong>v2.0 (Q3 2025)</strong>
+- Microservices architecture
+- Kubernetes deployment
+- Real-time collaboration features
+- GraphQL API
+- Advanced analytics &amp; reporting</p>
+<hr />
+<h2 id="open-source">Open Source<a class="headerlink" href="#open-source" title="Permanent link">&para;</a></h2>
+<p>GreenMap là dự án <strong>open source</strong>, được phát triển công khai trên GitHub:</p>
+<p><strong>Repositories:</strong>
+- <a href="https://github.com/HouHackathon-CQP/GreenMap-Backend">GreenMap-Backend</a> - FastAPI backend
+- <a href="https://github.com/HouHackathon-CQP/GreenMap-Frontend">GreenMap-Frontend</a> - React web portal
+- <a href="https://github.com/HouHackathon-CQP/GreenMap-Mobile-App">GreenMap-Mobile-App</a> - Android app
+- <a href="https://github.com/HouHackathon-CQP/GreenMap-Data">GreenMap-Data</a> - Data pipeline</p>
+<p><strong>License:</strong> MIT License</p>
+<p><strong>Contributing:</strong> Chúng tôi hoan nghênh mọi đóng góp! Xem <a href="contributing/">Contributing Guidelines</a> để biết thêm chi tiết.</p>
+<hr />
+<h2 id="lien-he">Liên Hệ<a class="headerlink" href="#lien-he" title="Permanent link">&para;</a></h2>
+<p><strong>Email:</strong> contact@greenmap.vn<br />
+<strong>GitHub Organization:</strong> <a href="https://github.com/HouHackathon-CQP">@HouHackathon-CQP</a><br />
+<strong>Documentation:</strong> https://docs.greenmap.vn  </p>
+<p><strong>HouHackathon 2024</strong> - Team: Chúng Quản Phú</p>
+<hr />
+<h2 id="acknowledgments">Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permanent link">&para;</a></h2>
+<p>Cảm ơn các công nghệ và dịch vụ mã nguồn mở:</p>
+<ul>
+<li>OpenAQ for air quality data</li>
+<li>OpenWeatherMap for weather data</li>
+<li>OpenStreetMap for geographic data</li>
+<li>FIWARE Foundation for NGSI-LD standard</li>
+<li>MapLibre for mapping library</li>
+<li>FastAPI, React, Kotlin communities</li>
+</ul>
 
 
 
@@ -1894,31 +1963,20 @@
       
         <footer class="md-footer">
   
+    
+  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2024 HouHackathon-CQP Team. All rights reserved.
+      Copyright &copy; 2025 <a href="https://github.com/HouHackathon-CQP">HouHackathon-CQP</a> - Licensed under Apache 2.0
     </div>
   
   
     Made with
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
       Material for MkDocs
-    </a>
-  
-</div>
-      
-        
-<div class="md-social">
-  
-    
-    
-    
-    
-    <a href="https://github.com/HouHackathon-CQP/GreenMap" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
     </a>
   
 </div>
@@ -1936,13 +1994,13 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\u0110\u00e3 sao ch\u00e9p", "clipboard.copy": "Sao ch\u00e9p v\u00e0o b\u1ed9 nh\u1edb t\u1ea1m", "search.result.more.one": "1 t\u1eeb kh\u00e1c trong trang", "search.result.more.other": "# t\u1eeb kh\u00e1c trong trang", "search.result.none": "Kh\u00f4ng t\u00ecm th\u1ea5y t\u00e0i li\u1ec7u li\u00ean quan", "search.result.one": "1 t\u00e0i li\u1ec7u li\u00ean quan", "search.result.other": "# t\u00e0i li\u1ec7u li\u00ean quan", "search.result.placeholder": "Nh\u1eadp \u0111\u1ec3 b\u1eaft \u0111\u1ea7u t\u00ecm ki\u1ebfm", "search.result.term.missing": "Kh\u00f4ng", "select.version": "Ch\u1ecdn phi\u00ean b\u1ea3n"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.tabs.link", "content.code.copy", "content.code.annotation", "content.tooltips"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\u0110\u00e3 sao ch\u00e9p", "clipboard.copy": "Sao ch\u00e9p v\u00e0o b\u1ed9 nh\u1edb t\u1ea1m", "search.result.more.one": "1 t\u1eeb kh\u00e1c trong trang", "search.result.more.other": "# t\u1eeb kh\u00e1c trong trang", "search.result.none": "Kh\u00f4ng t\u00ecm th\u1ea5y t\u00e0i li\u1ec7u li\u00ean quan", "search.result.one": "1 t\u00e0i li\u1ec7u li\u00ean quan", "search.result.other": "# t\u00e0i li\u1ec7u li\u00ean quan", "search.result.placeholder": "Nh\u1eadp \u0111\u1ec3 b\u1eaft \u0111\u1ea7u t\u00ecm ki\u1ebfm", "search.result.term.missing": "Kh\u00f4ng", "select.version": "Ch\u1ecdn phi\u00ean b\u1ea3n"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
+        <script src="../javascripts/extra.js"></script>
+      
     
-  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-document$.subscribe(() => { lightbox.reload() });
-</script></body>
+  </body>
 </html>
