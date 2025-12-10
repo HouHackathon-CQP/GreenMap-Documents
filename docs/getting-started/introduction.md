@@ -1,208 +1,65 @@
+<!-- /*Copyright 2025 HouHackathon-CQP
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License. */ -->
+
 # Giới Thiệu GreenMap
 
-## GreenMap Là Gì?
+## GreenMap là gì?
 
-**GreenMap** là một hệ thống thông minh để cảnh báo chất lượng không khí và môi trường dựa trên vị trí, được phát triển cho HouHackathon 2024.
+**GreenMap** (Bản Đồ Xanh Hà Nội) là một hệ sinh thái phần mềm mã nguồn mở được phát triển nhằm giám sát và quản lý môi trường đô thị thông minh. Dự án được xây dựng với mục tiêu tạo ra một nền tảng tích hợp, nơi dữ liệu từ nhiều nguồn khác nhau được kết nối và trực quan hóa để hỗ trợ việc ra quyết định.
 
-GreenMap gồm 4 repository độc lập nhưng kết nối với nhau:
+## Tại sao cần GreenMap?
 
-1. **GreenMap-Backend** - REST API và xử lý dữ liệu
-2. **GreenMap-Frontend** - Ứng dụng web React
-3. **GreenMap-Data** - Jupyter notebooks và xử lý dữ liệu
-4. **GreenMap-Documents** - Tài liệu và hướng dẫn
+Hà Nội đang đối mặt với nhiều thách thức về môi trường đô thị:
 
-## Cách GreenMap Hoạt Động
+- :material-air-purifier: **Ô nhiễm không khí** - Chỉ số AQI thường xuyên ở mức không tốt cho sức khỏe
+- :material-car-multiple: **Tắc nghẽn giao thông** - Ảnh hưởng đến chất lượng cuộc sống
+- :material-tree: **Thiếu không gian xanh** - Cần tối ưu hóa việc sử dụng các tiện ích công cộng
+- :material-database-off: **Dữ liệu phân tán** - Khó khăn trong việc tổng hợp và phân tích
 
-```
-┌─────────────────────────────────────────────────────────┐
-│                   GreenMap System                       │
-├─────────────────────────────────────────────────────────┤
-│                                                         │
-│  ┌──────────────────────────────────────────────────┐  │
-│  │         GreenMap-Frontend (React)                │  │
-│  │  - Bản đồ tương tác                             │  │
-│  │  - Thông tin chất lượng không khí               │  │
-│  │  - Thống kê và dự báo                           │  │
-│  └────────────────┬─────────────────────────────────┘  │
-│                   │ (HTTP Requests)                    │
-│  ┌────────────────▼─────────────────────────────────┐  │
-│  │      GreenMap-Backend (Python/FastAPI)           │  │
-│  │  - REST API endpoints                           │  │
-│  │  - Xử lý dữ liệu realtime                       │  │
-│  │  - AQI & Weather agents                         │  │
-│  │  - OAuth2 authentication                        │  │
-│  └────────────────┬─────────────────────────────────┘  │
-│                   │                                    │
-│  ┌────────────────┴─────────────────────────────────┐  │
-│  │  GreenMap-Data (Jupyter/Pandas/GeoPandas)       │  │
-│  │  - Xử lý GeoJSON data                           │  │
-│  │  - Phân tích dữ liệu không khí                  │  │
-│  │  - Mô phỏng và dự báo                           │  │
-│  └────────────────┬─────────────────────────────────┘  │
-│                   │ (PostgreSQL, MongoDB, Orion-LD)    │
-│  ┌────────────────▼─────────────────────────────────┐  │
-│  │         Databases & Services                     │  │
-│  │  - PostgreSQL (relational data)                 │  │
-│  │  - MongoDB (document store)                     │  │
-│  │  - Orion-LD (NGSI-LD API context broker)        │  │
-│  └─────────────────────────────────────────────────┘  │
-│                                                         │
-│  ┌─────────────────────────────────────────────────┐  │
-│  │      GreenMap-Documents (MkDocs)                │  │
-│  │  - Tài liệu này                                │  │
-│  │  - Hướng dẫn installation & usage               │  │
-│  │  - API reference                               │  │
-│  └─────────────────────────────────────────────────┘  │
-│                                                         │
-└─────────────────────────────────────────────────────────┘
-```
+GreenMap giải quyết các vấn đề này bằng cách:
 
-## Tính Năng Chính
+1. **Tập trung dữ liệu**: Thu thập và chuẩn hóa dữ liệu từ nhiều nguồn khác nhau
+2. **Trực quan hóa**: Hiển thị dữ liệu trên bản đồ tương tác dễ hiểu
+3. **Cảnh báo sớm**: Thông báo khi có vấn đề về môi trường
+4. **Tham gia cộng đồng**: Cho phép người dân đóng góp thông tin
 
-### 📊 Giám Sát Chất Lượng Không Khí
-- Cập nhật dữ liệu AQI realtime từ các sensors
-- Dữ liệu thời tiết tích hợp
-- Cảnh báo tự động khi AQI vượt ngưỡng
+## Đối tượng sử dụng
 
-### 🗺️ Bản Đồ Tương Tác
-- Hiển thị vị trí sensors trên bản đồ
-- Thông tin chi tiết từng điểm (tooltip)
-- Tìm kiếm vị trí gần đó
-- Chế độ tối/sáng
+<div class="feature-grid">
+  <div class="feature-card">
+    <span class="icon">🏛️</span>
+    <h3>Cơ Quan Quản Lý</h3>
+    <p>Sử dụng Admin Portal để giám sát toàn diện và ra quyết định dựa trên dữ liệu.</p>
+  </div>
+  <div class="feature-card">
+    <span class="icon">👥</span>
+    <h3>Người Dân</h3>
+    <p>Sử dụng Mobile App để theo dõi môi trường xung quanh và gửi phản ánh.</p>
+  </div>
+  <div class="feature-card">
+    <span class="icon">👨‍💻</span>
+    <h3>Nhà Phát Triển</h3>
+    <p>Tích hợp dữ liệu qua API chuẩn NGSI-LD để xây dựng ứng dụng mới.</p>
+  </div>
+</div>
 
-### 📍 Các Loại Dữ Liệu
-- **Trạm xe đạp** - Vị trí bicycle rental
-- **Trạm sạc** - Charging stations cho phương tiện điện
-- **Công viên** - Green areas và indoor space
-- **Điểm du lịch** - Tourist attractions
-- **Sensors** - Cảm biến chất lượng không khí
+## Các thành phần chính
 
-### 👥 Quản Lý Người Dùng
-- Đăng ký / Đăng nhập
-- Quản lý profile
-- Theo dõi lịch sử báo cáo
-- Các báo cáo từ cộng đồng
-
-### 🔐 Bảo Mật
-- OAuth2 authentication
-- JWT tokens
-- Role-based access control
-
-## Các Thành Phần Chính
-
-### 1. GreenMap-Backend
-Xử lý tất cả logic business:
-- API REST endpoints
-- Database queries
-- Data aggregation
-- Realtime agents (AQI, Weather)
-- OpenStreetMap integration
-
-**Stack:** Python, FastAPI, PostgreSQL, MongoDB, Orion-LD
-
-**Repository:** github.com/HouHackathon-CQP/GreenMap-Backend
-
-### 2. GreenMap-Frontend
-Giao diện người dùng web:
-- Bản đồ tương tác (Leaflet)
-- Dashboard thống kê
-- Quản lý hồ sơ người dùng
-- Báo cáo realtime
-
-**Stack:** React, Tailwind CSS, Vite, Leaflet
-
-**Repository:** github.com/HouHackathon-CQP/GreenMap-Frontend
-
-### 3. GreenMap-Data
-Xử lý và phân tích dữ liệu:
-- Jupyter notebooks để EDA
-- GeoJSON data processing
-- Dữ liệu mô phỏng
-- Phân tích không khí chuyên sâu
-
-**Stack:** Python, Jupyter, Pandas, GeoPandas
-
-**Repository:** github.com/HouHackathon-CQP/GreenMap-Data
-
-### 4. GreenMap-Documents
-Tài liệu hoàn chỉnh:
-- Installation guide
-- User guide
-- API reference
-- Contributing guidelines
-
-**Stack:** MkDocs, Material Theme
-
-**Repository:** github.com/HouHackathon-CQP/GreenMap-Documents
-
-## Kiến Trúc Dữ Liệu
-
-### Data Flow
-```
-Sensors & OpenStreetMap
-        ↓
-   GreenMap-Backend
-        ↓
-  PostgreSQL / MongoDB / Orion-LD
-        ↓
-   GreenMap-Frontend
-        ↓
-    Users
-```
-
-### GeoJSON Format
-Dữ liệu địa lý sử dụng GeoJSON standard:
-```json
-{
-  "type": "Feature",
-  "geometry": {
-    "type": "Point",
-    "coordinates": [106.6296, 10.7769]
-  },
-  "properties": {
-    "name": "Sensor A",
-    "aqi": 45,
-    "location": "District 1"
-  }
-}
-```
-
-## Công Nghệ Sử Dụng
-
-| Phần | Công Nghệ |
-|-----|-----------|
-| **Backend** | Python 3.10+, FastAPI, SQLAlchemy |
-| **Frontend** | React 18+, Tailwind CSS, Leaflet |
-| **Database** | PostgreSQL, MongoDB, Orion-LD |
-| **Data** | Jupyter, Pandas, GeoPandas, Shapely |
-| **DevOps** | Docker, Docker Compose |
-| **Docs** | MkDocs, Material Theme |
-
-## Bắt Đầu
-
-### Cài Đặt Nhanh (5 phút)
-Xem [Hướng Dẫn Cài Đặt](installation.md) để thiết lập tất cả components.
-
-### Chạy Lần Đầu
-Xem [Hướng Dẫn Bắt Đầu Nhanh](quick-start.md) để run toàn bộ hệ thống.
-
-### Tài Liệu Thêm
-- [Hướng Dẫn Người Dùng](../user-guide/overview.md) - Cách sử dụng GreenMap
-- [Tài Liệu API](../api-reference/overview.md) - API endpoints
-- [Đóng Góp](../contributing/guidelines.md) - Cách contribute
-
-## Liên Hệ & Hỗ Trợ
-
-- **Docs:** Xem tài liệu tại đây
-- **Issues:** Báo cáo bugs trên GitHub
-- **Discussions:** Thảo luận trên GitHub
-- **Email:** [Your Email]
-
-## Giấy Phép
-
-GreenMap được phân phối dưới giấy phép MIT.
-
----
-
-**Sẵn sàng bắt đầu? 🚀**
-Hãy truy cập [Hướng Dẫn Cài Đặt](installation.md) ngay!
+| Thành phần | Mô tả | Công nghệ |
+|------------|-------|-----------|
+| **Backend API** | Core service xử lý nghiệp vụ và xác thực | FastAPI, PostgreSQL |
+| **Context Broker** | Quản lý dữ liệu ngữ cảnh IoT chuẩn NGSI-LD | Orion-LD, MongoDB |
+| **Admin Portal** | Giao diện web cho quản trị viên | React, Vite, MapLibre |
+| **Mobile App** | Ứng dụng di động cho người dân | Kotlin, Jetpack Compose |
+| **Data Pipeline** | Thu thập và xử lý dữ liệu từ nhiều nguồn | Python, GeoJSON |

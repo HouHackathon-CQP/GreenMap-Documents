@@ -1,90 +1,166 @@
-site_name: Tài Liệu GreenMap
-site_description: Tài liệu cho dự án GreenMap - Bản Đồ Xanh Hà Nội
+# Copyright 2025 HouHackathon-CQP
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+site_name: GreenMap Docs
+site_description: Tài liệu kỹ thuật toàn diện cho hệ sinh thái GreenMap - Bản Đồ Xanh Hà Nội
 site_author: Đội HouHackathon-CQP
 site_url: https://houhackathon-cqp.github.io/GreenMap-Documents/
 
+# Repository
+repo_name: HouHackathon-CQP
+repo_url: https://github.com/HouHackathon-CQP
+edit_uri: ""
+
+# Copyright Footer
+copyright: Copyright &copy; 2025 <a href="https://github.com/HouHackathon-CQP">HouHackathon-CQP</a> - Licensed under Apache 2.0
+
+# Theme Configuration
 theme:
   name: material
+  #custom_dir: overrides
   language: vi
+  logo: assets/logo.png
+  favicon: assets/logo.png
+  icon:
+    repo: fontawesome/brands/github
+  
+  # Color Palette - Ưu tiên Dark Mode (Slate) để khớp với design React
   palette:
-    # Chế độ sáng
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: green
-      accent: teal
-      toggle:
-        icon: material/brightness-7
-        name: Chuyển sang chế độ tối
-    # Chế độ tối
+    # Chế độ Tối (Mặc định)
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: green
       accent: teal
       toggle:
-        icon: material/brightness-4
+        icon: material/weather-night
         name: Chuyển sang chế độ sáng
-  features:
-    - navigation.tabs
-    - navigation.sections
-    - navigation.expand
-    - navigation.top
-    - search.suggest
-    - search.highlight
-    - content.tabs.link
-    - content.code.annotation
-    - content.code.copy
+    # Chế độ Sáng (Dự phòng)
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: green
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Chuyển sang chế độ tối
+
+  # Fonts - Sử dụng Inter cho hiện đại
   font:
-    text: Roboto
-    code: Roboto Mono
+    text: Inter
+    code: JetBrains Mono
 
-nav:
-  - Trang Chủ: index.md
-  - Về GreenMap: about.md
-  - Bắt Đầu:
-    - Giới Thiệu: getting-started/introduction.md
-    - Hướng Dẫn Cài Đặt: getting-started/installation.md
-    - Hướng Dẫn Bắt Đầu Nhanh: getting-started/quick-start.md
-  - Hướng Dẫn Người Dùng:
-    - Tổng Quan: user-guide/overview.md
-    - Các Tính Năng: user-guide/features.md
-    - Hướng Dẫn Bản Đồ: user-guide/map-guide.md
-    - Quản Lý Tài Khoản: user-guide/accounts.md
-    - Báo Cáo Sự Cố: user-guide/reports.md
-    - Cài Đặt: user-guide/settings.md
-    - Câu Hỏi Thường Gặp: user-guide/faq.md
-  - Tài Liệu API:
-    - Tổng Quan: api-reference/overview.md
-    - Các Điểm Cuối: api-reference/endpoints.md
-  - Đóng Góp:
-    - Hướng Dẫn Đóng Góp: contributing/guidelines.md
-    - Quy Tắc Ứng Xử: contributing/code-of-conduct.md
+  # Features
+  features:
+    - navigation.instant        # Load trang không cần refresh (SPA feel)
+    - navigation.tracking       # Highlight mục lục khi cuộn
+    - navigation.tabs           # Menu ngang
+    - navigation.tabs.sticky    # Menu dính khi cuộn
+    - navigation.sections       # Gom nhóm menu con
+    - navigation.expand         # Mở rộng menu
+    - navigation.top            # Nút back to top
+    - navigation.footer         # Footer điều hướng
+    - toc.follow                # Mục lục chạy theo nội dung
+    - search.suggest            # Gợi ý tìm kiếm
+    - search.highlight          # Highlight kết quả tìm kiếm
+    - search.share              # Chia sẻ kết quả
+    - content.tabs.link         # Link trực tiếp đến tab
+    - content.code.copy         # Nút copy code
+    - content.code.annotation   # Chú thích trong code block
+    - content.tooltips          # Tooltips
 
-plugins:
-  - search:
-      lang: vi
-  - glightbox
+# Custom CSS & JS
+extra_css:
+  - stylesheets/greenmap.css  # File CSS chính chúng ta sẽ design
 
+extra_javascript:
+  - javascripts/extra.js
+
+# Markdown Extensions
 markdown_extensions:
-  - pymdownx.highlight:
-      anchor_linenums: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.superfences
   - admonition
-  - pymdownx.details
-  - pymdownx.tabbed:
-      alternate_style: true
+  - abbr
   - attr_list
+  - def_list
+  - footnotes
+  - meta
   - md_in_html
   - tables
   - toc:
       permalink: true
       toc_depth: 3
+  
+  # Code Highlighting
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/HouHackathon-CQP/GreenMap
-      name: GitHub
+  # Tabbed Content
+  - pymdownx.tabbed:
+      alternate_style: true
+  
+  # Icons & Emojis
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  
+  # Others
+  - pymdownx.details
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.mark
+  - pymdownx.keys
 
-copyright: Copyright &copy; 2024 HouHackathon-CQP Team. All rights reserved.
+# Navigation Structure
+nav:
+  - Trang Chủ: index.md
+  - Bắt Đầu:
+    - getting-started/index.md
+    - Giới Thiệu: getting-started/introduction.md
+    - Tính Năng: getting-started/features.md
+    - Yêu Cầu Hệ Thống: getting-started/system-requirements.md
+    - Kiến Trúc Tổng Quan: getting-started/architecture.md
+    - Hướng Dẫn Cài Đặt: getting-started/installation.md
+  - Hướng Dẫn Sử Dụng:
+    - user-guide/index.md
+    - Tổng Quan Giao Diện: user-guide/overview.md
+    - Bản Đồ Tương Tác: user-guide/map-guide.md
+    - Quản Lý Báo Cáo: user-guide/reports.md
+    - Quản Lý Hạ Tầng: user-guide/infrastructure.md
+    - Cài Đặt Tài Khoản: user-guide/settings.md
+    - FAQ: user-guide/faq.md
+  - Tài Liệu Kỹ Thuật:
+    - developer-guide/index.md
+    - Backend Service: developer-guide/backend.md
+    - Frontend Portal: developer-guide/frontend.md
+    - Mobile App: developer-guide/mobile.md
+    - Data Pipeline: developer-guide/data.md
+  - API Reference:
+    - api-reference/index.md
+    - REST API: api-reference/rest-api.md
+    - NGSI-LD API: api-reference/ngsi-ld.md
+    - Authentication: api-reference/authentication.md
+    - Endpoints: api-reference/endpoints.md
+  - Chính Sách:
+    - policies/index.md
+    - Giấy Phép: policies/license.md
+    - Bảo Mật: policies/security.md
+    - Đóng Góp: policies/contributing.md
+    - Quy Tắc Ứng Xử: policies/code-of-conduct.md

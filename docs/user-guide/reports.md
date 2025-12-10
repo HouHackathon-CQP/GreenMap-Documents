@@ -1,169 +1,116 @@
-# Tạo & Quản Lý Báo Cáo
+<!-- /*Copyright 2025 HouHackathon-CQP
 
-## Tạo Báo Cáo Mới
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
 
-### Bước 1: Truy Cập Tính Năng Báo Cáo
+     http://www.apache.org/licenses/LICENSE-2.0
 
-Trên bản đồ, bạn sẽ thấy biểu tượng **Report** (báo cáo). Cách để tạo báo cáo:
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License. */ -->
 
-1. **Từ Bản Đồ**: Nhấp vào điểm trên bản đồ → **Create Report**
-2. **Từ Menu**: Nhấp **New Report** ở sidebar
-3. **Nhanh**: Nhấp biểu tượng báo cáo sau khi chọn vị trí
+# Quản Lý Báo Cáo
 
-### Bước 2: Chọn Vị Trí
+Hệ thống báo cáo cho phép tiếp nhận và xử lý phản ánh từ người dân về các sự cố môi trường.
 
-Bạn có thể:
-- **Sử Dụng Vị Trí Hiện Tại**: Tự động lấy vị trí GPS của bạn
-- **Chọn Trên Bản Đồ**: Nhấp để chọn vị trí
-- **Nhập Địa Chỉ**: Gõ địa chỉ cụ thể
-- **Tọa Độ**: Nhập lat/lng trực tiếp
+## Quy Trình Xử Lý
 
-### Bước 3: Điền Thông Tin Báo Cáo
-
-Biểu mẫu báo cáo bao gồm:
-
-#### Tiêu Đề (Bắt Buộc)
-```
-Ví dụ: "Ô nhiễm không khí cao ở Bến Thành"
-```
-
-#### Mô Tả Chi Tiết (Bắt Buộc)
-```
-Ví dụ: "Có mùi xăng dầu rõ ràng, khí thải từ xe cộ quá nhiều"
+```mermaid
+graph LR
+    A[Người dân gửi báo cáo] --> B[PENDING]
+    B --> C{Admin duyệt}
+    C -->|Hợp lệ| D[APPROVED]
+    C -->|Không hợp lệ| E[REJECTED]
+    D --> F[Chuyển đơn vị xử lý]
 ```
 
-#### Loại Vấn Đề (Bắt Buộc)
+## Giao Diện Quản Lý
 
-| Loại | Ví Dụ |
-|------|-------|
-| Ô Nhiễm Không Khí | Khí thải, mùi hôi |
-| Rác Thải | Rác nằm vương vãi, xả thải bất hợp pháp |
-| Tiếng Ồn | Tiếng ồn từ xây dựng, giao thông |
-| Nước Thải | Xả nước bẩn, ô nhiễm nước |
-| Cây Xanh | Cây chết, công viên bị bỏ hoang |
-| Khác | Các vấn đề khác |
+### Tabs Trạng Thái
 
-#### Mức Độ Nghiêm Trọng (Bắt Buộc)
+Báo cáo được phân loại theo 3 trạng thái:
 
-| Mức | Mô Tả |
-|-----|-------|
-| **Thấp** | Vấn đề nhỏ, không gây nguy hiểm |
-| **Trung Bình** | Vấn đề rõ ràng, cần xử lý |
-| **Cao** | Vấn đề nghiêm trọng, gây nguy hiểm |
-
-#### Hình Ảnh (Tùy Chọn)
-
-1. Nhấp **Add Images** hoặc **Tải Lên Ảnh**
-2. Chọn 1-5 ảnh từ máy tính
-3. Ảnh sẽ được hiển thị dưới biểu mẫu
-
-**Gợi Ý**: Ảnh càng rõ ràng, báo cáo càng được xử lý nhanh
-
-#### Thông Tin Liên Hệ (Tùy Chọn)
-
-- **Tên Người Báo Cáo**: Công khai hay ẩn danh
-- **Email**: Nhận cập nhật
-- **Số Điện Thoại**: Liên hệ trực tiếp (nếu cần)
-
-### Bước 4: Gửi Báo Cáo
-
-1. Kiểm tra lại thông tin
-2. Nhấp **Submit Report** hoặc **Gửi Báo Cáo**
-3. Báo cáo được ghi nhận
-
-## Xem Báo Cáo Của Bạn
+| Tab | Trạng thái | Mô tả |
+|-----|------------|-------|
+| 📋 Chờ xử lý | `PENDING` | Báo cáo mới, chưa được duyệt |
+| ✅ Đã duyệt | `APPROVED` | Báo cáo hợp lệ, đã xác nhận |
+| ❌ Từ chối | `REJECTED` | Báo cáo spam hoặc không hợp lệ |
 
 ### Danh Sách Báo Cáo
 
-1. Nhấp **My Reports** ở sidebar
-2. Xem tất cả báo cáo của bạn:
-   - **Status**: Trạng thái hiện tại
-   - **Date**: Ngày tạo
-   - **Location**: Vị trí báo cáo
-   - **Views**: Số lượt xem
+Mỗi báo cáo hiển thị:
+
+- **ID**: Mã định danh duy nhất
+- **Tiêu đề**: Tóm tắt sự cố
+- **Người gửi**: Tên/Email người báo cáo
+- **Thời gian**: Ngày giờ tạo báo cáo
+- **Vị trí**: Tọa độ GPS
 
 ### Chi Tiết Báo Cáo
 
-Nhấp vào báo cáo để xem:
-- **Báo Cáo Gốc**: Thông tin bạn đã cung cấp
-- **Bình Luận**: Phản hồi từ cộng đồng
-- **Cập Nhật**: Xử lý từ quản lý
-- **Vị Trí Bản Đồ**: Hiển thị trên bản đồ
+Click vào một báo cáo để xem chi tiết:
 
-## Theo Dõi Trạng Thái
+```
+┌─────────────────────────────────────────┐
+│ Báo cáo #12345                    [X]  │
+├─────────────────────────────────────────┤
+│ 📷 [Hình ảnh hiện trường]              │
+├─────────────────────────────────────────┤
+│ Tiêu đề: Rác thải chưa được thu gom    │
+│ Mô tả: Bãi rác lớn tại góc đường...    │
+│ Vị trí: 21.0285, 105.8542              │
+│ Thời gian: 10/12/2025 14:30            │
+│ Người gửi: user@example.com            │
+├─────────────────────────────────────────┤
+│ 🗺️ [Bản đồ vị trí mini]               │
+├─────────────────────────────────────────┤
+│  [Duyệt]  [Từ chối]                    │
+└─────────────────────────────────────────┘
+```
 
-### Các Trạng Thái
+## Thao Tác
 
-| Trạng Thái | Ý Nghĩa |
-|-----------|---------|
-| **Pending** | Chờ xử lý |
-| **Acknowledged** | Đã nhận, đang xem xét |
-| **In Progress** | Đang xử lý |
-| **Resolved** | Đã giải quyết |
-| **Closed** | Đóng |
+### Duyệt Báo Cáo
 
-### Nhận Thông Báo
+1. Click vào báo cáo trong danh sách `PENDING`
+2. Xem xét nội dung và hình ảnh
+3. Kiểm tra vị trí trên bản đồ
+4. Click **[Duyệt]** nếu hợp lệ
 
-Bạn sẽ nhận được thông báo khi:
-- Báo cáo được xác nhận
-- Có bình luận mới
-- Trạng thái thay đổi
-- Báo cáo được giải quyết
+!!! success "Sau khi duyệt"
+    - Báo cáo chuyển sang tab `APPROVED`
+    - Thông tin được lưu để chuyển đơn vị xử lý
+    - Người gửi nhận thông báo (nếu có)
 
-## Chỉnh Sửa Báo Cáo
+### Từ Chối Báo Cáo
 
-### Báo Cáo Chưa Xử Lý
+1. Click vào báo cáo trong danh sách `PENDING`
+2. Xác định lý do từ chối:
+   - Nội dung không rõ ràng
+   - Hình ảnh không liên quan
+   - Trùng lặp với báo cáo khác
+   - Spam hoặc quấy rối
+3. Click **[Từ chối]**
 
-Nếu báo cáo chưa được xác nhận, bạn có thể:
-1. Nhấp **Edit**
-2. Chỉnh sửa thông tin
-3. Nhấp **Save Changes**
+### Lọc và Tìm Kiếm
 
-### Báo Cáo Đang Xử Lý
+- **Tìm theo ID**: Nhập mã báo cáo
+- **Tìm theo từ khóa**: Tìm trong tiêu đề/mô tả
+- **Lọc theo thời gian**: Chọn khoảng ngày
+- **Lọc theo khu vực**: Chọn quận/huyện
 
-Nếu báo cáo đang được xử lý, bạn có thể:
-- **Thêm Bình Luận**: Cung cấp thông tin bổ sung
-- **Tải Ảnh Thêm**: Thêm bằng chứng
-- Không thể chỉnh sửa thông tin chính
+## Phân Loại Sự Cố
 
-## Xóa Báo Cáo
+Các loại sự cố thường gặp:
 
-### Điều Kiện Xóa
-
-Bạn chỉ có thể xóa báo cáo nếu:
-- Trạng thái là **Pending** (chưa xác nhận)
-- Hoặc **Đóng** (closed)
-
-### Quy Trình Xóa
-
-1. Mở báo cáo
-2. Nhấp **Delete** hoặc **Xóa Báo Cáo**
-3. Xác nhận xóa
-4. Báo cáo sẽ được xóa vĩnh viễn
-
-## Tương Tác Cộng Đồng
-
-### Xem Bình Luận
-
-Bình luận từ cộng đồng sẽ hiển thị dưới báo cáo:
-- **Người Dùng**: Ai đã bình luận
-- **Nội Dung**: Nội dung bình luận
-- **Thời Gian**: Khi nào bình luận
-
-### Trả Lời Bình Luận
-
-Bạn có thể trả lời:
-1. Nhấp **Reply** dưới bình luận
-2. Gõ nội dung trả lời
-3. Nhấp **Send** để gửi
-
-### Báo Cáo Bình Luận Không Phù Hợp
-
-Nếu có bình luận không phù hợp:
-1. Nhấp **Report** hoặc **⚠️** ở bình luận
-2. Chọn lý do (spam, xúc phạm, etc.)
-3. Gửi báo cáo
-
----
-
-Cần giúp? Xem [User Guide Overview](overview.md) hoặc [Features](features.md).
+| Loại | Icon | Mô tả |
+|------|------|-------|
+| Rác thải | 🗑️ | Rác chưa thu gom, xả rác bừa bãi |
+| Ô nhiễm | 💨 | Khói bụi, mùi hôi, tiếng ồn |
+| Cây xanh | 🌳 | Cây đổ, cành gãy, cần tỉa |
+| Ngập lụt | 🌊 | Đường ngập, thoát nước kém |
+| Hạ tầng | 🏗️ | Đường hư, biển báo hỏng |
+| Khác | ❓ | Các sự cố khác |

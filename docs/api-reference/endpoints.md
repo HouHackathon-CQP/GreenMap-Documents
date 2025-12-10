@@ -1,3 +1,18 @@
+<!-- /*Copyright 2025 HouHackathon-CQP
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License. */ -->
+
+<!--docs/api-reference/endpoints.md-->
 # Các Điểm Cuối API (Endpoints)
 
 **Lưu Ý:** GreenMap-Backend hiện đang trong giai đoạn phát triển. Danh sách endpoints dưới đây là dự kiến và có thể thay đổi.

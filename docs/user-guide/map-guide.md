@@ -1,123 +1,129 @@
-# Hướng Dẫn Sử Dụng Bản Đồ
+<!-- /*Copyright 2025 HouHackathon-CQP
 
-## Điều Hướng Bản Đồ
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
 
-### Phóng To/Thu Nhỏ
+     http://www.apache.org/licenses/LICENSE-2.0
 
-- **Nút +/-**: Nhấp để phóng to/thu nhỏ
-- **Scroll Wheel**: Cuộn chuột để zoom
-- **Double Click**: Nhấp đôi để phóng to tại điểm đó
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License. */ -->
 
-### Di Chuyển (Pan)
+# Bản Đồ Tương Tác
 
-- **Click & Drag**: Nhấp và kéo để di chuyển bản đồ
-- **Arrow Keys**: Sử dụng phím mũi tên để di chuyển
+Bản đồ là thành phần cốt lõi của GreenMap, cho phép trực quan hóa dữ liệu môi trường trên không gian địa lý.
 
-### Định Vị Vị Trí Hiện Tại
-
-Nhấp biểu tượng vị trí (GPS) để:
-- Tâm bản đồ vào vị trí hiện tại
-- Cấp phép truy cập vị trí (nếu cần)
-
-## Tương Tác Với Điểm Dữ Liệu
-
-### Xem Thông Tin Chi Tiết
-
-1. Nhấp vào bất kỳ điểm nào trên bản đồ
-2. Popup hiển thị thông tin:
-   - **Name**: Tên vị trí
-   - **Type**: Loại (Sensor, Bike, etc.)
-   - **Location**: Tọa độ
-   - **Additional Info**: Dữ liệu cụ thể
-
-### Sensor Thông Tin
+## Giao Diện Bản Đồ
 
 ```
-Sensor Name: District 1 Sensor
-AQI: 45 (Good)
-Temperature: 28°C
-Humidity: 65%
-Wind Speed: 5 m/s
-Last Update: 2024-01-15 10:30 AM
+┌─────────────────────────────────────────────────────┐
+│  Layer Controls  │        Map View        │ Legend │
+│  ┌───────────┐   │                        │        │
+│  │ 💨 AQI    │   │    [Interactive Map]   │ 🟢 Tốt │
+│  │ 🌧️ Rain   │   │                        │ 🟡 TB  │
+│  │ 🚗 Traffic│   │         📍 📍          │ 🟠 Kém │
+│  │ 🌳 Parks  │   │       📍    📍         │ 🔴 Xấu │
+│  │ ⚡ Charge │   │    📍        📍        │        │
+│  │ 🚴 Bikes  │   │                        │        │
+│  │ 📸 Tourist│   │                        │        │
+│  └───────────┘   │                        │        │
+├──────────────────┴────────────────────────┴────────┤
+│                   Location Details Panel           │
+└────────────────────────────────────────────────────┘
 ```
 
-## Lọc Dữ Liệu
+## Các Lớp Dữ Liệu (Layers)
 
-### Sử Dụng Sidebar
+### 💨 AQI Layer (Chất lượng không khí)
 
-Sidebar bên trái cung cấp các bộ lọc:
+Hiển thị các trạm quan trắc với màu sắc theo thang đo QCVN:
 
-- **Layers**: Bật/tắt lớp dữ liệu
-- **Date Range**: Chọn khoảng thời gian
-- **AQI Level**: Lọc theo mức AQI
-- **Custom Filters**: Bộ lọc tùy chỉnh
+| Màu | Mức độ | AQI | Ý nghĩa |
+|-----|--------|-----|---------|
+| 🟢 | Tốt | 0-50 | An toàn cho mọi người |
+| 🟡 | Trung bình | 51-100 | Chấp nhận được |
+| 🟠 | Kém | 101-150 | Nhạy cảm với nhóm yếu |
+| 🔴 | Xấu | 151-200 | Ảnh hưởng sức khỏe |
+| 🟣 | Rất xấu | 201-300 | Cảnh báo sức khỏe |
+| 🟤 | Nguy hại | >300 | Khẩn cấp |
 
-### Áp Dụng Lọc
+**Cách sử dụng:**
+1. Click vào marker để xem chi tiết AQI
+2. Popup hiển thị: Tên trạm, AQI, PM2.5, PM10, thời gian cập nhật
 
-1. Chọn các tiêu chí lọc
-2. Nhấp **Apply Filters**
-3. Bản đồ cập nhật để hiển thị dữ liệu được lọc
+### 🌧️ Weather Layer (Thời tiết)
 
-## Tìm Kiếm Vị Trí
+Hiển thị thông tin thời tiết tại các vị trí:
 
-### Search Bar
+- Nhiệt độ hiện tại (°C)
+- Độ ẩm (%)
+- Tốc độ gió (m/s)
+- Lượng mưa (mm)
 
-Tìm kiếm vị trí bằng cách:
-- Gõ tên vị trí
-- Gõ địa chỉ
-- Gõ ID sensor
+### 🚗 Traffic Layer (Giao thông)
 
-### Kết Quả Tìm Kiếm
+Mật độ giao thông theo thời gian thực:
 
-Kết quả hiển thị:
-- Tên vị trí
-- Loại (Sensor, Location, etc.)
-- Khoảng cách từ bạn
-- Nhấp để tâm bản đồ
+- 🟢 **Xanh**: Thông thoáng
+- 🟠 **Cam**: Đông đúc
+- 🔴 **Đỏ**: Tắc nghẽn
 
-## Các Lớp Bản Đồ
+### 🌳 Parks Layer (Công viên)
 
-### Lớp Mặc Định
+Vị trí các công viên và không gian xanh:
 
-- **OpenStreetMap**: Bản đồ nền cơ sở
-- **Satellite**: Ảnh vệ tinh
-- **Terrain**: Bản đồ địa hình
+- Tên công viên
+- Diện tích
+- Địa chỉ
 
-### Lớp Dữ Liệu
+### ⚡ Charging Stations (Trạm sạc)
 
-- **🟢 Sensors**: Hiển thị sensors
-- **🚲 Bicycles**: Trạm xe đạp
-- **🔌 Charging**: Trạm sạc
-- **🌳 Parks**: Công viên
-- **🏛️ Attractions**: Điểm du lịch
+Trạm sạc xe điện:
 
-## Công Cụ Đo Lường (Tùy Chọn)
+- Nhà cung cấp (VinFast, E-Station...)
+- Số cổng sạc
+- Trạng thái hoạt động
 
-Nếu có sẵn:
-- **Measure Distance**: Đo khoảng cách giữa 2 điểm
-- **Measure Area**: Đo diện tích
+### 🚴 Bicycle Rental (Thuê xe đạp)
 
-## Chia Sẻ Vị Trí
+Điểm thuê xe đạp công cộng:
 
-### Sao Chép Link
+- Tên trạm
+- Số xe khả dụng
+- Địa chỉ
 
-1. Điều hướng bản đồ đến vị trí muốn chia sẻ
-2. Nhấp **Share** → **Copy Link**
-3. Chia sẻ link với người khác
+### 📸 Tourist Attractions (Du lịch)
 
-### Tạo Marker
+Điểm tham quan:
 
-Nhấp chuột phải để tạo marker tại vị trí:
-- Lưu vị trí yêu thích
-- Thêm ghi chú
-- Chia sẻ với bạn bè
+- Tên địa điểm
+- Loại hình (Đền, chùa, di tích...)
+- Mô tả ngắn
 
-## Chế Độ Tối/Sáng
+## Điều Khiển Bản Đồ
 
-Nhấp biểu tượng ở góc trên để:
-- Chuyển sang chế độ tối (bảo vệ mắt)
-- Chuyển sang chế độ sáng (mặc định)
+### Zoom & Pan
 
----
+- **Scroll** để zoom in/out
+- **Drag** để di chuyển bản đồ
+- **Double-click** để zoom vào điểm
 
-Để biết thêm, xem [Features](features.md) hoặc [User Guide](overview.md).
+### Công Cụ
+
+| Nút | Chức năng |
+|-----|-----------|
+| 🔍+ | Zoom in |
+| 🔍- | Zoom out |
+| 📍 | Định vị vị trí hiện tại |
+| 🧭 | Reset về góc nhìn mặc định |
+| 🎚️ | Bộ lọc bán kính (1km - 10km) |
+
+## Tips
+
+!!! tip "Mẹo sử dụng"
+    - Bật/tắt các layer bằng cách click vào tên layer trong panel bên trái
+    - Sử dụng bộ lọc bán kính để tìm tiện ích gần vị trí cụ thể
+    - Click và giữ để xem thông tin chi tiết của nhiều marker cùng lúc

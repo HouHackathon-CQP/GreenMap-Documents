@@ -1,206 +1,85 @@
-# Các Câu Hỏi Thường Gặp (FAQ)
+<!-- /*Copyright 2025 HouHackathon-CQP
 
-## Câu Hỏi Chung
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
 
-### GreenMap là gì?
-GreenMap là hệ thống giám sát chất lượng không khí và quản lý dữ liệu môi trường với bản đồ tương tác.
+     http://www.apache.org/licenses/LICENSE-2.0
 
-### GreenMap có miễn phí không?
-Có, GreenMap hoàn toàn miễn phí và mã nguồn mở (MIT License).
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License. */ -->
 
-### Tôi có thể đóng góp vào GreenMap không?
-Có! Xem [Contributing Guidelines](../contributing/guidelines.md) để biết cách đóng góp.
-
-### GreenMap bảo vệ dữ liệu cá nhân của tôi như thế nào?
-Chúng tôi:
-- Mã hóa mật khẩu (bcrypt)
-- Sử dụng HTTPS
-- Không chia sẻ dữ liệu với bên thứ 3
-- Tuân thủ quy định bảo vệ dữ liệu
-
----
+# Câu Hỏi Thường Gặp (FAQ)
 
 ## Tài Khoản & Đăng Nhập
 
-### Quên mật khẩu, làm thế nào?
-1. Nhấp "Forgot Password?" ở trang login
-2. Nhập email của bạn
-3. Kiểm tra hộp thư email
-4. Nhấp link đặt lại mật khẩu
-5. Nhập mật khẩu mới
+??? question "Tôi quên mật khẩu, làm sao để lấy lại?"
+    Hiện tại hệ thống chưa hỗ trợ tính năng quên mật khẩu tự động. Vui lòng liên hệ quản trị viên để được reset mật khẩu.
 
-### Tôi có thể sử dụng email khác không?
-Hiện tại không hỗ trợ thay đổi email sau khi đăng ký. Bạn phải tạo tài khoản mới.
+??? question "Làm sao để tạo tài khoản Admin mới?"
+    Chỉ có Super Admin mới có quyền tạo tài khoản Admin. Vào menu **Người dùng** → **Thêm mới** → Chọn vai trò **Admin**.
 
-### Tôi có thể sử dụng tên người dùng (username) thay vì email không?
-Hiện tại GreenMap chỉ hỗ trợ đăng nhập bằng email.
+??? question "Tôi có thể đăng nhập từ nhiều thiết bị không?"
+    Có, bạn có thể đăng nhập từ nhiều thiết bị cùng lúc. Token JWT có thời hạn 30 phút (mặc định).
 
-### Tôi đã bị khóa tài khoản, làm thế nào?
-Nếu tài khoản bị khóa (sau 5 lần đăng nhập sai):
-- Chờ 15 phút trước khi thử lại
-- Hoặc sử dụng "Forgot Password" để đặt lại
+## Bản Đồ
 
----
+??? question "Bản đồ không hiển thị, chỉ thấy màu xám?"
+    Nguyên nhân có thể là:
+    
+    1. **Thiếu API Key**: Kiểm tra biến `VITE_MAPTILER_KEY` trong file `.env`
+    2. **API Key hết hạn**: Đăng nhập [MapTiler](https://www.maptiler.com/) để kiểm tra
+    3. **Lỗi mạng**: Kiểm tra kết nối Internet
 
-## Bản Đồ & Dữ Liệu
+??? question "Dữ liệu AQI không cập nhật?"
+    Kiểm tra các agent có đang chạy không:
+    ```bash
+    # Kiểm tra AQI Agent
+    python aqi_agent.py
+    ```
+    Nếu lỗi, kiểm tra API key của OpenAQ trong file `.env`.
 
-### Dữ liệu bản đồ được cập nhật bao thường?
-- **Sensors (AQI)**: Mỗi 5-10 phút
-- **Weather**: Mỗi 30 phút
-- **Other Data (Bikes, Parks)**: Mỗi ngày
-- **User Reports**: Thời gian thực
-
-### Tại sao một số điểm không hiển thị?
-Có thể là:
-- Lớp dữ liệu bị tắt (kiểm tra sidebar)
-- Không có dữ liệu trong khu vực
-- Bộ lọc loại trừ chúng (kiểm tra bộ lọc)
-
-### Tôi có thể tải dữ liệu không?
-Có, bạn có thể:
-- Export báo cáo của bạn (Settings → Export)
-- Sử dụng API (xem [API Documentation](../api-reference/overview.md))
-
-### Làm thế nào để cập nhật dữ liệu?
-Tùy vào loại dữ liệu:
-- **Sensors**: Cập nhật tự động từ APIs
-- **User Reports**: Cập nhật khi bạn gửi báo cáo
-- **GeoJSON Data**: Liên hệ team để cập nhật
-
----
+??? question "Làm sao để thêm layer mới?"
+    Cần chỉnh sửa source code Frontend. Tham khảo tài liệu [Developer Guide](../developer-guide/) để biết cách thêm layer.
 
 ## Báo Cáo
 
-### Tôi có thể xóa báo cáo của tôi không?
-Bạn có thể xóa báo cáo nếu:
-- Trạng thái là "Pending" (chưa được xác nhận)
-- Hoặc "Closed" (đã đóng)
+??? question "Có giới hạn số lượng báo cáo không?"
+    Không có giới hạn. Tuy nhiên, hệ thống có cơ chế rate limiting để tránh spam (tối đa 10 báo cáo/phút/người dùng).
 
-Nếu báo cáo đang được xử lý, bạn không thể xóa.
+??? question "Hình ảnh báo cáo được lưu ở đâu?"
+    Hình ảnh được lưu trữ trên server trong thư mục `/uploads/reports/`. Trong production nên dùng cloud storage (S3, GCS).
 
-### Tôi có thể chỉnh sửa báo cáo không?
-- **Pending**: Có thể chỉnh sửa toàn bộ
-- **In Progress**: Có thể thêm bình luận/ảnh
-- **Resolved/Closed**: Chỉ xem được
+??? question "Tôi có thể xuất danh sách báo cáo không?"
+    Chức năng export đang được phát triển. Tạm thời có thể sử dụng API endpoint để lấy dữ liệu JSON.
 
-### Báo cáo của tôi được hiển thị công khai không?
-Điều này phụ thuộc vào cài đặt quyền riêng tư của bạn:
-- Nếu "Public": Bất cứ ai có thể xem
-- Nếu "Anonymous": Không hiển thị tên bạn
-- Kiểm tra [Settings](settings.md) để thay đổi
+## Kỹ Thuật
 
-### Báo cáo của tôi bị nhầm lẫn/spam, làm thế nào?
-1. Mở báo cáo
-2. Nhấp **Report as Inappropriate**
-3. Chọn lý do (spam, sai địa điểm, etc.)
-4. Gửi
+??? question "Hệ thống hỗ trợ bao nhiêu người dùng đồng thời?"
+    Với cấu hình mặc định (Docker Compose), hệ thống có thể xử lý ~100 concurrent users. Để scale up, cần triển khai với Kubernetes.
 
-### Tôi có thể báo cáo bình luận không phù hợp không?
-Có, nhấp **Report** hoặc **⚠️** ở bình luận, chọn lý do và gửi.
+??? question "Dữ liệu được backup như thế nào?"
+    Cần tự thiết lập backup cho PostgreSQL và MongoDB. Khuyến nghị sử dụng `pg_dump` và `mongodump` với cron job hàng ngày.
 
----
+??? question "Làm sao để deploy lên production?"
+    Tham khảo tài liệu [Developer Guide > Deployment](../developer-guide/) để biết cách triển khai với Docker Swarm hoặc Kubernetes.
 
-## Cài Đặt & Thông Báo
+## Mobile App
 
-### Tôi không nhận được thông báo, làm thế nào?
-Kiểm tra:
-1. Thông báo được bật trong Settings → Notifications
-2. Bạn cho phép browser/ứng dụng gửi thông báo
-3. Email notification đã được enable
-4. Email filter (check spam folder)
+??? question "App có trên iOS không?"
+    Hiện tại chỉ có phiên bản Android. iOS đang trong kế hoạch phát triển.
 
-### Làm thế nào để tắt tất cả thông báo?
-Settings → Notifications → Tắt tất cả các toggle
+??? question "Làm sao để test app trên thiết bị thật?"
+    1. Build APK: `./gradlew assembleDebug`
+    2. Cài đặt file `.apk` lên điện thoại
+    3. Đảm bảo điện thoại và server cùng mạng WiFi
 
-### Tôi có thể thay đổi email không?
-Hiện tại không hỗ trợ thay đổi email trong Settings. Liên hệ support để hỗ trợ.
+## Liên Hệ Hỗ Trợ
 
-### Làm thế nào để thay đổi ngôn ngữ?
-Settings → General → Language → Chọn ngôn ngữ
+Nếu không tìm thấy câu trả lời, vui lòng:
 
----
-
-## Vấn Đề & Xử Lý Sự Cố
-
-### Trang không tải, làm thế nào?
-1. Làm tươi (F5) hoặc Ctrl+Shift+R
-2. Xóa cache (Settings → Clear Cache)
-3. Thử browser khác
-4. Kiểm tra kết nối internet
-
-### Bản đồ bị lỗi/không hiển thị đúng
-1. Làm tươi trang
-2. Thử browser khác
-3. Kiểm tra cài đặt bản đồ
-4. Nếu vẫn lỗi, báo cáo issue trên GitHub
-
-### Không thể upload ảnh
-- Ảnh quá lớn (tối đa 5MB/ảnh)
-- Định dạng không hỗ trợ (hỗ trợ: JPG, PNG, GIF)
-- Kết nối internet quá chậm
-
-### Ứng dụng chạy chậm
-1. Tắt một số lớp dữ liệu không cần
-2. Giảm zoom level
-3. Xóa cache
-4. Thử lite mode (nếu có)
-
-### Lỗi CORS hoặc 401 Unauthorized
-- Đăng xuất rồi đăng nhập lại
-- Token hết hạn, cần làm tươi
-- Liên hệ support nếu vẫn không được
-
----
-
-## API & Developer
-
-### Tôi có thể sử dụng API không?
-Có! Xem [API Documentation](../api-reference/overview.md)
-
-### Tôi cần API key, làm thế nào?
-1. Settings → Advanced → API Keys
-2. Tạo key mới
-3. Sử dụng trong requests
-
-### API có rate limit không?
-Có:
-- Public: 100 requests/hour
-- Authenticated: 1000 requests/hour
-
-### Tôi có thể tích hợp dữ liệu GreenMap vào app của tôi không?
-Có, bạn có thể:
-- Sử dụng REST API
-- Sử dụng data export (JSON/CSV)
-
----
-
-## Liên Hệ & Hỗ Trợ
-
-### Tôi tìm thấy bug, làm thế nào?
-1. Tạo issue trên GitHub: github.com/HouHackathon-CQP
-2. Mô tả chi tiết:
-   - Bạn đang làm gì
-   - Lỗi là gì
-   - Screenshot/logs
-
-### Tôi có câu hỏi/đề xuất
-1. **GitHub Discussions**: Thảo luận trên GitHub
-2. **Email**: Gửi email cho team
-3. **Issues**: Tạo feature request issue
-
-### Tôi muốn báo cáo lỗi bảo mật
-**Không** tạo public issue!
-- Email: security@greenmap.example.com
-- Mô tả chi tiết lỗi
-- Không chia sẻ công khai cho đến khi được fix
-
----
-
-Không tìm thấy câu trả lời? Hãy:
-- Xem [User Guide](overview.md)
-- [Contact Support](../contributing/guidelines.md)
-- Tạo GitHub Issue
-
----
-
-**Cảm ơn bạn đã sử dụng GreenMap! 🌍**
+- 📧 Email: support@greenmap.hanoi
+- 💬 GitHub Issues: [Tạo issue mới](https://github.com/HouHackathon-CQP/GreenMap-Backend/issues)
