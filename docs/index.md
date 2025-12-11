@@ -248,9 +248,7 @@ hide:
 
 Chúng tôi là những sinh viên công nghệ, code bằng đam mê và mang trong mình tình yêu lớn với Hà Nội.
 
-</div>
-
-<table>
+<table align="center">
   <tr>
     <td align="center">
       <a href="https://github.com/kedokato-dev">

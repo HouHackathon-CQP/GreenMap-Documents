@@ -131,6 +131,7 @@ markdown_extensions:
 # Navigation Structure
 nav:
   - Trang Chủ: index.md
+  - Về Chúng Tôi: about.md
   - Bắt Đầu:
     - getting-started/index.md
     - Giới Thiệu: getting-started/introduction.md

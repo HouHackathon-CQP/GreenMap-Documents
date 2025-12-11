@@ -95,7 +95,7 @@ REST APIs công khai và tích hợp Orion-LD Context Broker theo chuẩn FIWARE
 - APScheduler - Background workers
 
 **Frontend:**
-- React 18 + Vite - Modern UI
+- React 19 + Vite 7.2 - Modern UI
 - MapLibre GL JS - Interactive maps
 - Tailwind CSS - Styling
 - TanStack Query - Data fetching

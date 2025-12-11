@@ -25,41 +25,88 @@ http://localhost:8000/docs
 
 ## Endpoints Hiện Có
 
-### Xác Thực (Authentication)
+### 🔐 Xác Thực (Authentication)
 
-- `POST /api/auth/register` - Đăng ký người dùng mới
-- `POST /api/auth/login` - Đăng nhập
-- `POST /api/auth/logout` - Đăng xuất
-- `GET /api/auth/me` - Lấy thông tin người dùng hiện tại
-- `PUT /api/auth/profile` - Cập nhật profile
+- `POST /auth/register` - Đăng ký người dùng mới
+- `POST /auth/login` - Đăng nhập (trả về access token)
+- `GET /auth/me` - Lấy thông tin người dùng hiện tại
 
-### Địa Điểm (Locations)
+### 👥 Người Dùng (Users)
 
-- `GET /api/locations` - Lấy danh sách địa điểm
-- `GET /api/locations/{id}` - Lấy chi tiết địa điểm
-- `POST /api/locations` - Tạo địa điểm mới
-- `PUT /api/locations/{id}` - Cập nhật địa điểm
-- `DELETE /api/locations/{id}` - Xóa địa điểm
+- `GET /users` - Lấy danh sách người dùng (Admin)
+- `GET /users/me` - Lấy thông tin user hiện tại
+- `PUT /users/{user_id}` - Cập nhật thông tin user
+- `DELETE /users/{user_id}` - Xóa user (Admin)
 
-### Cảm Biến (Sensors)
+### 📍 Địa Điểm (Locations)
 
-- `GET /api/sensors` - Lấy tất cả sensors
-- `GET /api/sensors/{id}` - Chi tiết sensor
-- `GET /api/sensors/{id}/aqi` - Dữ liệu AQI hiện tại
-- `GET /api/sensors/{id}/history` - Lịch sử AQI
+- `GET /locations` - Lấy danh sách địa điểm (hỗ trợ filter theo `location_type`)
+- `GET /locations/{id}` - Lấy chi tiết địa điểm
+- `POST /locations` - Tạo địa điểm mới (Admin)
+- `PUT /locations/{id}` - Cập nhật địa điểm (Admin)
+- `DELETE /locations/{id}` - Xóa địa điểm (Admin)
 
-### Báo Cáo (Reports)
+**Location Types:**
+- `CHARGING_STATION` - Trạm sạc xe điện
+- `PUBLIC_PARK` - Công viên công cộng
+- `BICYCLE_RENTAL` - Điểm thuê xe đạp
+- `TOURIST_ATTRACTION` - Điểm tham quan du lịch
 
-- `GET /api/reports` - Danh sách báo cáo
-- `POST /api/reports` - Tạo báo cáo mới
-- `GET /api/reports/{id}` - Chi tiết báo cáo
-- `PUT /api/reports/{id}` - Cập nhật báo cáo
-- `DELETE /api/reports/{id}` - Xóa báo cáo
+### 🌫️ Chất Lượng Không Khí (AQI)
 
-### Thời Tiết (Weather)
+- `GET /aqi/hanoi?limit=100` - Lấy dữ liệu AQI từ Orion-LD Context Broker
 
-- `GET /api/weather` - Dữ liệu thời tiết hiện tại
-- `GET /api/weather/forecast` - Dự báo thời tiết
+### 🌤️ Thời Tiết (Weather)
+
+- `GET /weather/hanoi?limit=100` - Lấy dữ liệu thời tiết từ Orion-LD
+
+### 🚗 Giao Thông (Traffic)
+
+- `GET /traffic/segments` - Lấy dữ liệu các đoạn đường (GeoJSON)
+- `GET /traffic/live` - Lấy dữ liệu giao thông real-time
+
+### 📢 Báo Cáo (Reports)
+
+- `GET /reports` - Danh sách báo cáo (hỗ trợ filter theo `status`)
+- `GET /reports/{id}` - Chi tiết báo cáo
+- `POST /reports` - Tạo báo cáo mới
+- `PUT /reports/{id}` - Cập nhật trạng thái báo cáo (Admin)
+- `DELETE /reports/{id}` - Xóa báo cáo
+
+**Report Status:**
+- `PENDING` - Chờ xử lý
+- `APPROVED` - Đã duyệt
+- `REJECTED` - Đã từ chối
+
+### 📰 Tin Tức (News)
+
+- `GET /news/hanoimoi?limit=20` - Lấy tin tức môi trường từ báo Hà Nội Mới (RSS)
+
+### 🔔 Thông Báo (Notifications)
+
+- `POST /notifications/register` - Đăng ký device token (Mobile)
+- `DELETE /notifications/register/{token}` - Hủy đăng ký token
+- `GET /notifications/tokens` - Danh sách device tokens (Admin)
+- `POST /notifications/send` - Gửi push notification (Admin)
+- `POST /notifications/send/topic` - Gửi theo topic (Admin)
+- `GET /notifications/history` - Xem lịch sử notifications (Admin)
+- `GET /notifications/history/{id}` - Chi tiết lịch sử
+- `DELETE /notifications/cleanup` - Dọn dẹp lịch sử cũ (Admin)
+
+### 🤖 AI Insights
+
+- `POST /ai/weather-insights?lat=21.0285&lon=105.8542` - Phân tích thời tiết & AQI bằng AI
+- `POST /ai/weather-insights?provider=gemini` - Chọn AI provider (gemini/groq/auto)
+- `GET /ai/weather-insights/history?limit=10` - Xem lịch sử phân tích AI
+
+### 📤 Uploads
+
+- `POST /upload/image` - Upload ảnh (multipart/form-data)
+
+### ⚙️ System
+
+- `GET /` - Health check
+- `GET /health` - System health status
 
 ## Cách Xem Tài Liệu Chi Tiết
 

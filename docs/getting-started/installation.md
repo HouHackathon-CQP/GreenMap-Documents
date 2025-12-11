@@ -16,167 +16,327 @@
 
 Hướng dẫn chi tiết cài đặt từng thành phần của hệ thống GreenMap.
 
-## Cài Đặt Nhanh (Docker)
+---
 
-Cách nhanh nhất để chạy toàn bộ hệ thống:
+## Yêu Cầu Tiên Quyết
+
+Đảm bảo máy bạn đã cài đặt các công cụ sau:
+
+- **Docker Desktop** (bắt buộc cho backend)
+- **Python 3.10+**
+- **Node.js 18+** (cho frontend)
+- **Android Studio Hedgehog+** (cho mobile)
+- **Git**
+
+---
+
+## 🔧 Backend Setup
+
+### 1. Clone Repository
 
 ```bash
-# 1. Clone Backend repository
 git clone https://github.com/HouHackathon-CQP/GreenMap-Backend.git
 cd GreenMap-Backend
-
-# 2. Tạo file .env từ template
-cp env.example .env
-# Chỉnh sửa .env với các giá trị phù hợp
-
-# 3. Khởi động với Docker Compose
-docker-compose up -d
-
-# 4. Kiểm tra trạng thái
-docker-compose ps
 ```
 
-!!! success "Kết quả"
-    Sau khi hoàn tất, các service sẽ chạy tại:
-    
-    - **Backend API**: `http://localhost:8000`
-    - **API Docs**: `http://localhost:8000/docs`
-    - **Orion-LD**: `http://localhost:1026`
+### 2. Tạo Virtual Environment
 
----
+**Windows:**
+```bash
+python -m venv .venv
+.\.venv\Scripts\activate
+```
 
-## Cài Đặt Chi Tiết
+**macOS/Linux:**
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
 
-### Backend Service
-
-=== "Windows"
-
-    ```powershell
-    # 1. Clone repository
-    git clone https://github.com/HouHackathon-CQP/GreenMap-Backend.git
-    cd GreenMap-Backend
-
-    # 2. Tạo môi trường ảo
-    python -m venv .venv
-    .\.venv\Scripts\activate
-
-    # 3. Cài đặt dependencies
-    pip install -r requirements.txt
-
-    # 4. Cấu hình môi trường
-    cp env.example .env
-    # Chỉnh sửa .env
-
-    # 5. Khởi động Docker (DB + Broker)
-    docker-compose up -d postgres mongo orion
-
-    # 6. Chạy migrations và init data
-    python setup_project.py
-
-    # 7. Khởi động server
-    uvicorn app.main:app --reload
-    ```
-
-=== "macOS/Linux"
-
-    ```bash
-    # 1. Clone repository
-    git clone https://github.com/HouHackathon-CQP/GreenMap-Backend.git
-    cd GreenMap-Backend
-
-    # 2. Tạo môi trường ảo
-    python3 -m venv .venv
-    source .venv/bin/activate
-
-    # 3. Cài đặt dependencies
-    pip install -r requirements.txt
-
-    # 4. Cấu hình môi trường
-    cp env.example .env
-    # Chỉnh sửa .env
-
-    # 5. Khởi động Docker (DB + Broker)
-    docker-compose up -d postgres mongo orion
-
-    # 6. Chạy migrations và init data
-    python setup_project.py
-
-    # 7. Khởi động server
-    uvicorn app.main:app --reload
-    ```
-
-### Frontend Portal
+### 3. Cài Đặt Dependencies
 
 ```bash
-# 1. Clone repository
-git clone https://github.com/HouHackathon-CQP/GreenMap-Frontend.git
-cd GreenMap-Frontend
-
-# 2. Cài đặt dependencies
-npm install
-
-# 3. Cấu hình môi trường
-# Tạo file .env với nội dung:
-# VITE_API_URL=http://localhost:8000
-# VITE_MAPTILER_KEY=your_maptiler_key
-
-# 4. Khởi động development server
-npm run dev
+pip install -r requirements.txt
 ```
 
-!!! info "MapTiler API Key"
-    Để sử dụng bản đồ, bạn cần đăng ký tài khoản miễn phí tại [MapTiler](https://www.maptiler.com/) để lấy API Key.
+### 4. Cấu Hình Environment
 
-### Mobile App
+Tạo file `.env` tại thư mục gốc:
 
-1. **Mở Android Studio** và chọn "Open" → Chọn thư mục `GreenMap-Mobile-App`
-
-2. **Tạo file `local.properties`** trong thư mục gốc:
-   ```properties
-   sdk.dir=/path/to/Android/sdk
-   MAPTILER_API_KEY=your_maptiler_key
-   API_BASE_URL=http://10.0.2.2:8000/
-   ```
-
-3. **Sync Gradle** và chờ download dependencies
-
-4. **Chạy ứng dụng** trên Emulator hoặc thiết bị thật
-
----
-
-## Cấu Hình Môi Trường (.env)
-
-Tạo file `.env` với các biến sau:
-
-```ini
-# Database
-DATABASE_URL="postgresql+asyncpg://admin:password@localhost:5432/greenmap_db"
-
-# Security
-SECRET_KEY="your-super-secret-key-at-least-32-characters"
+```env
+# Database & Authentication
+DATABASE_URL="postgresql+asyncpg://admin:mysecretpassword@127.0.0.1:5432/greenmap_db"
+SECRET_KEY="your_secret_key_here_64_chars"
 ALGORITHM="HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES=30
 
+# CORS Configuration
+CORS_ORIGINS="http://localhost:3000"
+
 # Admin Account
 FIRST_SUPERUSER="admin@greenmap.hanoi"
-FIRST_SUPERUSER_PASSWORD="your-admin-password"
-
-# Context Broker
-ORION_BROKER_URL="http://localhost:1026"
+FIRST_SUPERUSER_PASSWORD="123456"
 
 # External APIs
-OPENAQ_API_KEY="your-openaq-key"
+OPENAQ_API_KEY="your_openaq_api_key"
+ORION_BROKER_URL="http://localhost:1026"
+
+# NGSI-LD config
+NGSI_CONTEXT_URL=https://raw.githubusercontent.com/smart-data-models/dataModel.Environment/master/context.jsonld
+NGSI_TYPE_AQI=https://smartdatamodels.org/dataModel.Environment/AirQualityObserved
+NGSI_TYPE_WEATHER=https://smartdatamodels.org/dataModel.Environment/WeatherObserved
+
+# Firebase push notification
+FIREBASE_CREDENTIALS_FILE="/path/to/firebase-service-account.json"
+FIREBASE_DEFAULT_TOPIC="greenmap-daily"
+
+# Daily notification schedule (local server time)
+DAILY_PUSH_HOUR=7
+DAILY_PUSH_MINUTE=0
+DAILY_PUSH_TITLE="Bản đồ Xanh - Cập nhật môi trường mỗi ngày"
+DAILY_PUSH_BODY="Mở ứng dụng để xem dự báo thời tiết và chất lượng không khí hôm nay."
+
+# AI APIs (Optional)
+GEMINI_API_KEY="your_gemini_api_key"
+GROQ_API_KEY="your_groq_api_key"
+```
+
+### 5. Khởi Động Docker
+
+```bash
+docker-compose up -d
+```
+
+⏳ **Chờ 10-15 giây** để các container khởi động hoàn toàn.
+
+### 6. Khởi Tạo Dữ Liệu
+
+Chạy lệnh sau để tự động khởi tạo:
+
+```bash
+python setup_project.py
+```
+
+Hoặc chạy từng bước (dễ debug hơn):
+
+```bash
+# Nối file dữ liệu JSON
+python Data/merge_json.py
+
+# Tạo tất cả bảng database
+python init_db.py
+
+# Đăng ký thiết bị cảm biến
+python seed_sensor.py
+
+# Nạp dữ liệu bản đồ
+python import_osm.py 
+python sync_to_orion.py
+
+# Xử lý dữ liệu giao thông
+python process_simulation.py
+```
+
+### 7. Chạy Backend
+
+Mở **4 terminal riêng biệt**:
+
+**Terminal 1: API Backend**
+```bash
+python main.py
+```
+- Server URL: http://127.0.0.1:8000
+- API Docs: http://127.0.0.1:8000/docs
+
+**Terminal 2: AQI Agent** (Cập nhật dữ liệu realtime)
+```bash
+python aqi_agent.py
+```
+
+**Terminal 3: Weather Agent** (Cập nhật dữ liệu realtime)
+```bash
+python weather_agent.py
+```
+
+**Terminal 4: Daily Notification Job** (Firebase push)
+```bash
+python notification_job.py
+```
+
+!!! success "Backend đã sẵn sàng"
+    Truy cập http://localhost:8000/docs để xem API documentation
+
+---
+
+## 🎨 Frontend Setup
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/HouHackathon-CQP/GreenMap-Frontend.git
+cd GreenMap-Frontend
+```
+
+### 2. Cài Đặt Dependencies
+
+```bash
+npm install
+```
+
+### 3. Cấu Hình Environment
+
+Tạo file `.env` tại thư mục gốc:
+
+```env
+VITE_API_BASE_URL=http://localhost:8000
+```
+
+### 4. Khởi Chạy
+
+```bash
+npm run dev
+```
+
+Truy cập: **http://localhost:5173** 🎉
+
+**Tài khoản admin mặc định:**
+- Email: `admin@greenmap.hanoi`
+- Password: `123456`
+
+---
+
+## 📱 Mobile App Setup
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/HouHackathon-CQP/GreenMap-Mobile-App.git
+```
+
+### 2. Mở Bằng Android Studio
+
+Chọn **File → Open** → Chọn thư mục `GreenMap-Mobile-App`
+
+### 3. Cấu Hình local.properties
+
+Tạo file `local.properties` trong thư mục gốc:
+
+```properties
+sdk.dir=C:\\Users\\YourName\\AppData\\Local\\Android\\sdk
+MAPTILER_API_KEY=your_maptiler_key_here
+API_BASE_URL=http://10.0.2.2:8000/
+```
+
+!!! tip "Emulator IP"
+    Sử dụng `10.0.2.2` để truy cập localhost từ Android Emulator
+
+### 4. Sync & Build
+
+1. Chọn **File → Sync Project with Gradle Files**
+2. Chờ Gradle download dependencies
+3. Chọn **Run → Run 'app'**
+
+---
+
+## 📊 Data Processing Setup
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/HouHackathon-CQP/GreenMap-Data.git
+cd GreenMap-Data
+```
+
+### 2. Tạo Virtual Environment
+
+```bash
+python -m venv .venv
+.\.venv\Scripts\activate  # Windows
+# source .venv/bin/activate  # macOS/Linux
+```
+
+### 3. Cài Đặt Dependencies
+
+```bash
+pip install jupyter geopandas pandas shapely matplotlib
+```
+
+### 4. Khởi Động Jupyter
+
+```bash
+jupyter notebook
+```
+
+Mở file: `data_collection.ipynb`
+
+---
+
+## ✅ Xác Minh Cài Đặt
+
+Sau khi cài đặt, kiểm tra các endpoint sau:
+
+| Service | URL | Expected Response |
+|---------|-----|-------------------|
+| **Backend API** | http://localhost:8000 | `{"message": "GreenMap API"}` |
+| **API Docs** | http://localhost:8000/docs | Swagger UI |
+| **Orion-LD** | http://localhost:1026/version | Version info JSON |
+| **Frontend** | http://localhost:5173 | Login page |
+| **PostgreSQL** | localhost:5432 | Connected via psql |
+| **MongoDB** | localhost:27017 | Connected via mongo shell |
+
+### Test API Endpoints
+
+```bash
+# Backend health check
+curl http://localhost:8000/
+
+# Get AQI data
+curl http://localhost:8000/aqi/hanoi?limit=10
+
+# Get weather data
+curl http://localhost:8000/weather/hanoi?limit=10
+
+# Get locations
+curl http://localhost:8000/locations?location_type=PUBLIC_PARK&limit=10
+
+# Get news
+curl http://localhost:8000/news/hanoimoi?limit=20
+
+# Get traffic segments
+curl http://localhost:8000/traffic/segments
+
+# Orion-LD entities
+curl http://localhost:1026/ngsi-ld/v1/entities?limit=10
 ```
 
 ---
 
-## Xác Minh Cài Đặt
+## 🐳 Docker Services
 
-Sau khi cài đặt, kiểm tra các endpoint sau:
+Các container được khởi động bởi `docker-compose up -d`:
 
-| Service | URL | Expected |
-|---------|-----|----------|
-| Backend Health | `http://localhost:8000/api/system/health` | `{"status": "healthy"}` |
-| API Docs | `http://localhost:8000/docs` | Swagger UI |
-| Orion Version | `http://localhost:1026/version` | Version info JSON |
-| Frontend | `http://localhost:5173` | Login page |
+| Service | Port | Description |
+|---------|------|-------------|
+| **PostgreSQL** | 5432 | Database chính |
+| **MongoDB** | 27017 | Context Broker database |
+| **Orion-LD** | 1026 | FIWARE Context Broker |
+
+### Quản lý Docker
+
+```bash
+# Xem logs
+docker-compose logs -f
+
+# Xem trạng thái
+docker-compose ps
+
+# Dừng services
+docker-compose down
+
+# Xóa volumes (reset data)
+docker-compose down -v
+
+# Rebuild images
+docker-compose build --no-cache
+docker-compose up -d
+```
