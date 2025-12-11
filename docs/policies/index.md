@@ -20,7 +20,7 @@ Các chính sách và quy định liên quan đến việc sử dụng và đón
   <a href="license/" class="feature-card">
     <span class="icon">📄</span>
     <h3>Giấy Phép</h3>
-    <p>Điều khoản sử dụng mã nguồn (MIT License)</p>
+    <p>Điều khoản sử dụng mã nguồn (Apache 2.0 License)</p>
   </a>
   <a href="security/" class="feature-card">
     <span class="icon">🔒</span>

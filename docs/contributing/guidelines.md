@@ -284,7 +284,7 @@ Xem [Code of Conduct](code-of-conduct.md) để chi tiết.
 
 ## Điều Khoản Giấy Phép
 
-Bằng cách đóng góp, bạn đồng ý rằng đóng góp của bạn sẽ được cấp phép dưới giấy phép MIT.
+Bằng cách đóng góp, bạn đồng ý rằng đóng góp của bạn sẽ được cấp phép dưới giấy phép Apache 2.0.
 
 ---
 
