@@ -145,6 +145,8 @@ Sau đó sử dụng token trong header:
 Authorization: Bearer YOUR_TOKEN
 ```
 
+**Lưu ý:** Backend không sử dụng prefix `/api/` hay `/api/v1/`. Tất cả endpoints đều truy cập trực tiếp như `/auth/login`, `/reports`, `/locations`, v.v.
+
 ## Lỗi Thường Gặp
 
 | Mã | Ý Nghĩa |

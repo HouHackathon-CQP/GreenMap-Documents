@@ -37,7 +37,7 @@ GreenMap sử dụng **JWT (JSON Web Tokens)** để xác thực người dùng.
 #### Login Endpoint
 
 ```http
-POST /api/v1/auth/login
+POST /auth/login
 Content-Type: application/x-www-form-urlencoded
 
 username=admin@greenmap.vn
@@ -59,14 +59,14 @@ password=your_password
 Gửi token trong header `Authorization`:
 
 ```http
-GET /api/v1/reports
+GET /reports
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 ```
 
 #### Register User
 
 ```http
-POST /api/v1/auth/register
+POST /auth/register
 Content-Type: application/json
 
 {
@@ -80,7 +80,7 @@ Content-Type: application/json
 #### Refresh Token
 
 ```http
-POST /api/v1/auth/refresh
+POST /auth/refresh
 Authorization: Bearer <current_token>
 ```
 
@@ -93,7 +93,7 @@ Authorization: Bearer <current_token>
 #### List Reports
 
 ```http
-GET /api/v1/reports?skip=0&limit=20&status=pending
+GET /reports?skip=0&limit=20&status=pending
 Authorization: Bearer <token>
 ```
 
@@ -137,14 +137,14 @@ Authorization: Bearer <token>
 #### Get Report Detail
 
 ```http
-GET /api/v1/reports/{report_id}
+GET /reports/{report_id}
 Authorization: Bearer <token>
 ```
 
 #### Create Report (Mobile App)
 
 ```http
-POST /api/v1/reports
+POST /reports
 Authorization: Bearer <token>
 Content-Type: multipart/form-data
 
@@ -161,7 +161,7 @@ Content-Type: multipart/form-data
 #### Update Report Status (Admin)
 
 ```http
-PATCH /api/v1/reports/{report_id}/status
+PATCH /reports/{report_id}/status
 Authorization: Bearer <admin_token>
 Content-Type: application/json
 
@@ -186,7 +186,7 @@ pending → in_progress → completed
 **List Parks:**
 
 ```http
-GET /api/v1/parks?skip=0&limit=50
+GET /locations?location_type=PUBLIC_PARK&skip=0&limit=50
 ```
 
 **Response:**
@@ -214,7 +214,7 @@ GET /api/v1/parks?skip=0&limit=50
 **Create Park (Admin):**
 
 ```http
-POST /api/v1/parks
+POST /locations
 Authorization: Bearer <admin_token>
 Content-Type: application/json
 
@@ -233,7 +233,7 @@ Content-Type: application/json
 #### Charging Stations - Trạm Sạc
 
 ```http
-GET /api/v1/charging-stations
+GET /locations?location_type=CHARGING_STATION
 ```
 
 **Response:**
@@ -261,7 +261,7 @@ GET /api/v1/charging-stations
 #### Bicycle Rentals - Cho Thuê Xe Đạp
 
 ```http
-GET /api/v1/bicycle-rentals
+GET /locations?location_type=BICYCLE_RENTAL
 ```
 
 ---
@@ -271,7 +271,7 @@ GET /api/v1/bicycle-rentals
 #### Air Quality Index (AQI)
 
 ```http
-GET /api/v1/aqi/current
+GET /aqi/hanoi?limit=100
 ```
 
 **Response:**
@@ -296,13 +296,13 @@ GET /api/v1/aqi/current
 **Historical Data:**
 
 ```http
-GET /api/v1/aqi/history?days=7
+GET /aqi/hanoi?limit=168
 ```
 
 #### Weather Data
 
 ```http
-GET /api/v1/weather/current
+GET /weather/hanoi?limit=1
 ```
 
 **Response:**
@@ -326,7 +326,7 @@ GET /api/v1/weather/current
 **Forecast:**
 
 ```http
-GET /api/v1/weather/forecast?days=5
+GET /weather/hanoi?limit=120
 ```
 
 ---
@@ -467,7 +467,7 @@ BASE_URL = "http://localhost:8000"
 
 # Login
 response = httpx.post(
-    f"{BASE_URL}/api/v1/auth/login",
+    f"{BASE_URL}/auth/login",
     data={"username": "admin@greenmap.vn", "password": "password"}
 )
 token = response.json()["access_token"]
@@ -475,7 +475,7 @@ token = response.json()["access_token"]
 # Get reports
 headers = {"Authorization": f"Bearer {token}"}
 reports = httpx.get(
-    f"{BASE_URL}/api/v1/reports",
+    f"{BASE_URL}/reports",
     headers=headers,
     params={"status": "pending", "limit": 10}
 ).json()
@@ -489,7 +489,7 @@ print(reports)
 const BASE_URL = 'http://localhost:8000';
 
 // Login
-const loginResponse = await fetch(`${BASE_URL}/api/v1/auth/login`, {
+const loginResponse = await fetch(`${BASE_URL}/auth/login`, {
   method: 'POST',
   headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
   body: new URLSearchParams({
@@ -502,7 +502,7 @@ const { access_token } = await loginResponse.json();
 
 // Get reports
 const reportsResponse = await fetch(
-  `${BASE_URL}/api/v1/reports?status=pending&limit=10`,
+  `${BASE_URL}/reports?status=pending&limit=10`,
   {
     headers: { 'Authorization': `Bearer ${access_token}` }
   }
@@ -524,7 +524,7 @@ val client = HttpClient()
 val baseUrl = "http://localhost:8000"
 
 // Login
-val loginResponse: HttpResponse = client.post("$baseUrl/api/v1/auth/login") {
+val loginResponse: HttpResponse = client.post("$baseUrl/auth/login") {
     contentType(ContentType.Application.FormUrlEncoded)
     setBody("username=admin@greenmap.vn&password=password")
 }
@@ -532,7 +532,7 @@ val loginResponse: HttpResponse = client.post("$baseUrl/api/v1/auth/login") {
 val token = loginResponse.body<LoginResponse>().accessToken
 
 // Get reports
-val reports: ReportsResponse = client.get("$baseUrl/api/v1/reports") {
+val reports: ReportsResponse = client.get("$baseUrl/reports") {
     header("Authorization", "Bearer $token")
     parameter("status", "pending")
     parameter("limit", 10)
@@ -549,7 +549,7 @@ Tất cả list endpoints đều hỗ trợ pagination:
 
 **Request:**
 ```http
-GET /api/v1/reports?skip=20&limit=10
+GET /reports?skip=20&limit=10
 ```
 
 **Response:**
@@ -575,7 +575,7 @@ GET /api/v1/reports?skip=20&limit=10
 ### Get News from Hà Nội Mới
 
 ```http
-GET /api/v1/news/hanoimoi?limit=20
+GET /news/hanoimoi?limit=20
 ```
 
 **Query Parameters:**
