@@ -603,7 +603,7 @@ GET /news/hanoimoi?limit=20
 ### Get Traffic Segments (GeoJSON)
 
 ```http
-GET /api/v1/traffic/segments
+GET /traffic/segments
 ```
 
 **Response:**
@@ -631,7 +631,7 @@ GET /api/v1/traffic/segments
 ### Get Live Traffic Status
 
 ```http
-GET /api/v1/traffic/live
+GET /traffic/live
 ```
 
 **Response:**
@@ -661,7 +661,7 @@ GET /api/v1/traffic/live
 ### Generate AI Weather Insights
 
 ```http
-POST /api/v1/ai/weather-insights?lat=21.0285&lon=105.8542&provider=auto
+POST /ai/weather-insights?lat=21.0285&lon=105.8542&provider=auto
 Authorization: Bearer <token>
 Content-Type: application/json
 ```
@@ -696,7 +696,7 @@ Content-Type: application/json
 ### Get AI Insights History
 
 ```http
-GET /api/v1/ai/weather-insights/history?skip=0&limit=20
+GET /ai/weather-insights/history?skip=0&limit=20
 Authorization: Bearer <token>
 ```
 
@@ -723,7 +723,7 @@ Authorization: Bearer <token>
 ### Send Notification to All Devices
 
 ```http
-POST /api/v1/notifications/send
+POST /notifications/send
 Authorization: Bearer <admin_token>
 Content-Type: application/json
 
@@ -755,7 +755,7 @@ Content-Type: application/json
 ### Send Notification to Topic
 
 ```http
-POST /api/v1/notifications/send/topic
+POST /notifications/send/topic
 Authorization: Bearer <admin_token>
 Content-Type: application/json
 
@@ -771,14 +771,14 @@ Content-Type: application/json
 ### Get Notification History
 
 ```http
-GET /api/v1/notifications/history?skip=0&limit=20
+GET /notifications/history?skip=0&limit=20
 Authorization: Bearer <admin_token>
 ```
 
 ### Get Registered Device Tokens
 
 ```http
-GET /api/v1/notifications/tokens
+GET /notifications/tokens
 Authorization: Bearer <admin_token>
 ```
 
@@ -798,7 +798,7 @@ Authorization: Bearer <admin_token>
 ### Cleanup Old Notifications
 
 ```http
-DELETE /api/v1/notifications/cleanup?days=30
+DELETE /notifications/history/cleanup?days=90
 Authorization: Bearer <admin_token>
 ```
 
@@ -808,12 +808,7 @@ Authorization: Bearer <admin_token>
 
 **Filter by multiple fields:**
 ```http
-GET /api/v1/reports?status=pending&category=waste&created_after=2024-12-01
-```
-
-**Sort results:**
-```http
-GET /api/v1/reports?sort_by=created_at&order=desc
+GET /reports?status=pending&limit=&skip=
 ```
 
 ---

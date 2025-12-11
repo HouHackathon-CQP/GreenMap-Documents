@@ -21,7 +21,7 @@
 Đăng nhập và lấy access token.
 
 ```http
-POST /api/v1/login/access-token
+POST /login/access-token
 Content-Type: application/x-www-form-urlencoded
 ```
 
@@ -45,7 +45,7 @@ username=admin@greenmap.hanoi&password=yourpassword
 ### Get Current User
 
 ```http
-GET /api/v1/users/me
+GET /users/me
 Authorization: Bearer <token>
 ```
 
@@ -63,7 +63,7 @@ Authorization: Bearer <token>
 ### Create User
 
 ```http
-POST /api/v1/users/
+POST /users/
 Authorization: Bearer <admin_token>
 Content-Type: application/json
 ```
@@ -81,7 +81,7 @@ Content-Type: application/json
 ### List Users (Admin only)
 
 ```http
-GET /api/v1/users/?skip=0&limit=20
+GET /users/?skip=0&limit=20
 Authorization: Bearer <admin_token>
 ```
 
@@ -92,7 +92,7 @@ Authorization: Bearer <admin_token>
 ### Create Report
 
 ```http
-POST /api/v1/reports/
+POST /reports/
 Authorization: Bearer <token>
 Content-Type: multipart/form-data
 ```
@@ -123,7 +123,7 @@ image: [file]
 ### List Reports
 
 ```http
-GET /api/v1/reports/?status=PENDING&skip=0&limit=20
+GET /reports/?status=PENDING&skip=0&limit=20
 Authorization: Bearer <token>
 ```
 
@@ -138,7 +138,7 @@ Authorization: Bearer <token>
 ### Update Report Status
 
 ```http
-PUT /api/v1/reports/{id}
+PUT /reports/{id}
 Authorization: Bearer <admin_token>
 Content-Type: application/json
 ```
@@ -157,7 +157,7 @@ Content-Type: application/json
 ### List Locations
 
 ```http
-GET /api/v1/locations/?type=park
+GET /locations/?type=park
 Authorization: Bearer <token>
 ```
 
@@ -173,7 +173,7 @@ Authorization: Bearer <token>
 ### Create Location
 
 ```http
-POST /api/v1/locations/
+POST /locations/
 Authorization: Bearer <admin_token>
 Content-Type: application/json
 ```
@@ -196,14 +196,14 @@ Content-Type: application/json
 ### Update Location
 
 ```http
-PUT /api/v1/locations/{id}
+PUT /locations/{id}
 Authorization: Bearer <admin_token>
 ```
 
 ### Delete Location
 
 ```http
-DELETE /api/v1/locations/{id}
+DELETE /locations/{id}
 Authorization: Bearer <admin_token>
 ```
 
@@ -214,7 +214,7 @@ Authorization: Bearer <admin_token>
 ### Health Check
 
 ```http
-GET /api/system/health
+GET /system/health
 ```
 
 **Response:**

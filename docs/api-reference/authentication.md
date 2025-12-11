@@ -70,7 +70,7 @@ Header.Payload.Signature
 ### Login
 
 ```http
-POST /api/v1/login/access-token
+POST /login
 Content-Type: application/x-www-form-urlencoded
 
 username=admin@greenmap.hanoi&password=yourpassword
@@ -96,7 +96,7 @@ username=admin@greenmap.hanoi&password=yourpassword
 Thêm header `Authorization` với prefix `Bearer`:
 
 ```http
-GET /api/v1/users/me
+GET /users/me
 Authorization: Bearer eyJhbGciOiJIUzI1NiIs...
 ```
 
@@ -130,7 +130,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIs...
 from fastapi import Depends, HTTPException
 from fastapi.security import OAuth2PasswordBearer
 
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/v1/login/access-token")
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/login")
 
 async def get_current_user(token: str = Depends(oauth2_scheme)):
     try:
@@ -157,7 +157,7 @@ async def require_admin(current_user = Depends(get_current_user)):
 ```javascript
 // Store token
 const login = async (email, password) => {
-  const response = await api.post('/api/v1/login/access-token', 
+  const response = await api.post('/login', 
     new URLSearchParams({ username: email, password })
   );
   localStorage.setItem('token', response.data.access_token);

@@ -53,7 +53,7 @@ app/
 ### Authentication
 
 ```http
-POST /api/v1/login/access-token
+POST /login/access-token
 Content-Type: application/x-www-form-urlencoded
 
 username=admin@greenmap.hanoi&password=yourpassword
@@ -71,17 +71,17 @@ username=admin@greenmap.hanoi&password=yourpassword
 
 | Method | Endpoint | Mô tả |
 |--------|----------|-------|
-| `GET` | `/api/v1/users/me` | Lấy thông tin user hiện tại |
-| `POST` | `/api/v1/users/` | Tạo user mới |
-| `GET` | `/api/v1/users/` | Lấy danh sách users (Admin) |
+| `GET` | `/users/me` | Lấy thông tin user hiện tại |
+| `POST` | `/users/` | Tạo user mới |
+| `GET` | `/users/` | Lấy danh sách users (Admin) |
 
 ### Reports
 
 | Method | Endpoint | Mô tả |
 |--------|----------|-------|
-| `POST` | `/api/v1/reports/` | Tạo báo cáo mới |
-| `GET` | `/api/v1/reports/` | Lấy danh sách báo cáo |
-| `PUT` | `/api/v1/reports/{id}` | Cập nhật trạng thái |
+| `POST` | `/reports/` | Tạo báo cáo mới |
+| `GET` | `/reports/` | Lấy danh sách báo cáo |
+| `PUT` | `/reports/{id}` | Cập nhật trạng thái |
 
 ### Context Broker (Proxy)
 

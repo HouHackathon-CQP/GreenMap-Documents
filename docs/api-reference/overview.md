@@ -40,7 +40,7 @@ API sử dụng **OAuth2 và JWT tokens**:
 ### 1. Đăng Nhập (Lấy Token)
 
 ```bash
-POST /api/login
+POST /login
 Content-Type: application/json
 
 {
@@ -67,7 +67,7 @@ Response:
 Bao gồm token trong header:
 
 ```http
-GET /api/locations
+GET /locations
 Authorization: Bearer eyJhbGciOiJIUzI1NiIs...
 ```
 
@@ -116,52 +116,52 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIs...
 
 ### Tài Khoản & Xác Thực
 
-- `POST /api/auth/register` - Đăng ký người dùng mới
-- `POST /api/auth/login` - Đăng nhập
-- `POST /api/auth/logout` - Đăng xuất
-- `GET /api/auth/me` - Lấy thông tin người dùng hiện tại
-- `PUT /api/auth/profile` - Cập nhật profile
+- `POST /auth/register` - Đăng ký người dùng mới
+- `POST /auth/login` - Đăng nhập
+- `POST /auth/logout` - Đăng xuất
+- `GET /auth/me` - Lấy thông tin người dùng hiện tại
+- `PUT /auth/profile` - Cập nhật profile
 
 ### Locations (Địa điểm)
 
-- `GET /api/locations` - Lấy danh sách địa điểm
-- `GET /api/locations/{id}` - Lấy chi tiết địa điểm
-- `POST /api/locations` - Tạo địa điểm mới
-- `PUT /api/locations/{id}` - Cập nhật địa điểm
-- `DELETE /api/locations/{id}` - Xóa địa điểm
+- `GET /locations` - Lấy danh sách địa điểm
+- `GET /locations/{id}` - Lấy chi tiết địa điểm
+- `POST /locations` - Tạo địa điểm mới
+- `PUT /locations/{id}` - Cập nhật địa điểm
+- `DELETE /locations/{id}` - Xóa địa điểm
 
 ### Sensors (Cảm Biến)
 
-- `GET /api/sensors` - Lấy tất cả sensors
-- `GET /api/sensors/{id}` - Chi tiết sensor
-- `GET /api/sensors/{id}/aqi` - Dữ liệu AQI hiện tại
-- `GET /api/sensors/{id}/history` - Lịch sử AQI
+- `GET /sensors` - Lấy tất cả sensors
+- `GET /sensors/{id}` - Chi tiết sensor
+- `GET /sensors/{id}/aqi` - Dữ liệu AQI hiện tại
+- `GET /sensors/{id}/history` - Lịch sử AQI
 
 ### Reports (Báo Cáo)
 
-- `GET /api/reports` - Danh sách báo cáo
-- `POST /api/reports` - Tạo báo cáo mới
-- `GET /api/reports/{id}` - Chi tiết báo cáo
-- `PUT /api/reports/{id}` - Cập nhật báo cáo
-- `DELETE /api/reports/{id}` - Xóa báo cáo
+- `GET /reports` - Danh sách báo cáo
+- `POST /reports` - Tạo báo cáo mới
+- `GET /reports/{id}` - Chi tiết báo cáo
+- `PUT /reports/{id}` - Cập nhật báo cáo
+- `DELETE /reports/{id}` - Xóa báo cáo
 
 ### Weather (Thời Tiết)
 
-- `GET /api/weather` - Dữ liệu thời tiết hiện tại
-- `GET /api/weather/forecast` - Dự báo thời tiết
+- `GET /weather` - Dữ liệu thời tiết hiện tại
+- `GET /weather/forecast` - Dự báo thời tiết
 
 ### Context Broker (Orion-LD)
 
-- `GET /api/context/entities` - Lấy các entities
-- `GET /api/context/entities/{id}` - Chi tiết entity
-- `POST /api/context/entities` - Tạo entity mới
+- `GET /context/entities` - Lấy các entities
+- `GET /context/entities/{id}` - Chi tiết entity
+- `POST /context/entities` - Tạo entity mới
 
 ## Ví Dụ Sử Dụng
 
 ### Lấy Danh Sách Sensors
 
 ```bash
-curl -X GET "http://localhost:8000/api/sensors" \
+curl -X GET "http://localhost:8000/sensors" \
   -H "Authorization: Bearer YOUR_TOKEN"
 ```
 
@@ -187,7 +187,7 @@ Response:
 ### Tạo Báo Cáo
 
 ```bash
-curl -X POST "http://localhost:8000/api/reports" \
+curl -X POST "http://localhost:8000/reports" \
   -H "Authorization: Bearer YOUR_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{
@@ -229,7 +229,7 @@ Giao diện Swagger cho phép bạn:
 Các endpoints danh sách hỗ trợ pagination:
 
 ```bash
-GET /api/sensors?page=1&limit=10&sort=name&order=asc
+GET /sensors?page=1&limit=10&sort=name&order=asc
 ```
 
 Query Parameters:

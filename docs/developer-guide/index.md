@@ -279,7 +279,7 @@ def test_create_park(admin_token_headers):
         "longitude": 105.8456
     }
     response = client.post(
-        "/api/v1/parks/",
+        "/parks/",
         json=data,
         headers=admin_token_headers
     )

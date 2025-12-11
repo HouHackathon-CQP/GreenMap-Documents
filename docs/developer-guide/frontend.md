@@ -175,9 +175,9 @@ api.interceptors.request.use((config) => {
 });
 
 export const reportService = {
-  getAll: (params) => api.get('/api/v1/reports/', { params }),
-  create: (data) => api.post('/api/v1/reports/', data),
-  update: (id, data) => api.put(`/api/v1/reports/${id}`, data)
+  getAll: (params) => api.get('/reports/', { params }),
+  create: (data) => api.post('/reports/', data),
+  update: (id, data) => api.put(`/reports/${id}`, data)
 };
 ```
 
