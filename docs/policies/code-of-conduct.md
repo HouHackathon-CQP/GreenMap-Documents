@@ -75,7 +75,7 @@ Các ví dụ về việc đại diện cho một dự án hoặc cộng đồng
 
 Các trường hợp hành vi lạm dụng, quấy rối, hoặc hành vi không được chấp nhận khác có thể được báo cáo bằng cách liên hệ đội ngũ dự án tại:
 
-**Email:** conduct@greenmap.vn
+**Email:** conduct@myhou.io.vn
 
 Tất cả các khiếu nại sẽ được xem xét và điều tra và sẽ dẫn đến một phản hồi được coi là cần thiết và phù hợp với hoàn cảnh. Đội ngũ dự án có nghĩa vụ duy trì tính bảo mật đối với người báo cáo sự việc.
 
@@ -143,8 +143,8 @@ Tùy thuộc vào mức độ vi phạm, các maintainer có thể thực hiện
 - Discussions - Thảo luận, Q&A
 
 **Email:**
-- Technical support: support@greenmap.vn
-- Code of Conduct: conduct@greenmap.vn
+- Technical support: support@myhou.io.vn
+- Code of Conduct: conduct@myhou.io.vn
 
 ### Cách Nhận Giúp Đỡ
 
@@ -211,4 +211,4 @@ Quy Tắc Ứng Xử này có thể được cập nhật theo thời gian. Mọ
 
 **Phiên bản hiện tại:** 1.0.0  
 **Ngày cập nhật:** 11/12/2024  
-**Liên hệ:** conduct@greenmap.vn
+**Liên hệ:** conduct@myhou.io.vn

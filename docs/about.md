@@ -233,7 +233,7 @@ GreenMap là dự án **open source**, được phát triển công khai trên G
 
 **Email:** thocodeanhquan@gmail.com  
 **GitHub Organization:** [@HouHackathon-CQP](https://github.com/HouHackathon-CQP)  
-**Documentation:** https://greenmap-documents.vercel.app  
+**Documentation:** https://greenmap.myhou.io.vn/docs  
 
 **HouHackathon 2024** - Team: HouHackathon-CQP
 

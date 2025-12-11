@@ -23,8 +23,8 @@ Tài liệu tham khảo đầy đủ về các API của hệ thống GreenMap. 
 | Môi trường | REST API | Context Broker |
 |------------|----------|----------------|
 | **Development** | `http://localhost:8000` | `http://localhost:1026` |
-| **Staging** | `https://api-staging.greenmap.vn` | `https://orion-staging.greenmap.vn` |
-| **Production** | `https://api.greenmap.vn` | `https://orion.greenmap.vn` |
+| **Staging** | `https://api-staging.myhou.io.vn` | `https://orion-staging.myhou.io.vn` |
+| **Production** | `https://backend.myhou.io.vn` | `https://orion.myhou.io.vn` |
 
 ---
 
@@ -40,7 +40,7 @@ GreenMap sử dụng **JWT (JSON Web Tokens)** để xác thực người dùng.
 POST /auth/login
 Content-Type: application/x-www-form-urlencoded
 
-username=admin@greenmap.vn
+username=admin@myhou.io.vn
 password=your_password
 ```
 
@@ -118,7 +118,7 @@ Authorization: Bearer <token>
       "latitude": 21.0285,
       "longitude": 105.8542,
       "address": "Hoàn Kiếm, Hà Nội",
-      "images": ["https://storage.greenmap.vn/reports/123/img1.jpg"],
+      "images": ["https://storage.myhou.io.vn/reports/123/img1.jpg"],
       "created_by": {
         "id": 456,
         "full_name": "Nguyễn Văn A",
@@ -204,7 +204,7 @@ GET /locations?location_type=PUBLIC_PARK&skip=0&limit=50
       "description": "Công viên lớn nhất quận Hai Bà Trưng",
       "amenities": ["playground", "jogging_track", "restroom"],
       "opening_hours": "05:00 - 22:00",
-      "images": ["https://storage.greenmap.vn/parks/1/img1.jpg"]
+      "images": ["https://storage.myhou.io.vn/parks/1/img1.jpg"]
     }
   ],
   "total": 45
@@ -468,7 +468,7 @@ BASE_URL = "http://localhost:8000"
 # Login
 response = httpx.post(
     f"{BASE_URL}/auth/login",
-    data={"username": "admin@greenmap.vn", "password": "password"}
+    data={"username": "admin@myhou.io.vn", "password": "password"}
 )
 token = response.json()["access_token"]
 
@@ -493,7 +493,7 @@ const loginResponse = await fetch(`${BASE_URL}/auth/login`, {
   method: 'POST',
   headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
   body: new URLSearchParams({
-    username: 'admin@greenmap.vn',
+    username: 'admin@myhou.io.vn',
     password: 'password'
   })
 });
@@ -526,7 +526,7 @@ val baseUrl = "http://localhost:8000"
 // Login
 val loginResponse: HttpResponse = client.post("$baseUrl/auth/login") {
     contentType(ContentType.Application.FormUrlEncoded)
-    setBody("username=admin@greenmap.vn&password=password")
+    setBody("username=admin@myhou.io.vn&password=password")
 }
 
 val token = loginResponse.body<LoginResponse>().accessToken
@@ -834,6 +834,6 @@ Các breaking changes sẽ được release ở version mới (v2, v3...) và ma
 
 ## Support
 
-- **API Documentation:** [https://api.greenmap.vn/docs](https://api.greenmap.vn/docs)
+- **API Documentation:** [https://backend.myhou.io.vn/docs](https://backend.myhou.io.vn/docs)
 - **GitHub Issues:** [https://github.com/HouHackathon-CQP/GreenMap-Backend/issues](https://github.com/HouHackathon-CQP/GreenMap-Backend/issues)
-- **Email:** api-support@greenmap.vn
+- **Email:** api-support@myhou.io.vn

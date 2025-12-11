@@ -232,4 +232,4 @@ Nếu gặp vấn đề trong quá trình cài đặt:
 
 - Xem [FAQ](../user-guide/faq/) cho các câu hỏi thường gặp
 - Tạo issue trên [GitHub](https://github.com/HouHackathon-CQP)
-- Liên hệ team qua email: support@greenmap.vn
+- Liên hệ team qua email: support@myhou.io.vn
