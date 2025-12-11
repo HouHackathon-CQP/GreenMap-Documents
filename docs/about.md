@@ -97,8 +97,8 @@ REST APIs công khai và tích hợp Orion-LD Context Broker theo chuẩn FIWARE
 **Frontend:**
 - React 19 + Vite 7.2 - Modern UI
 - MapLibre GL JS - Interactive maps
-- Tailwind CSS - Styling
-- TanStack Query - Data fetching
+- TailwindCSS + Tailwind Animate - Styling
+- Recharts - Data visualization
 
 **Mobile:**
 - Kotlin + Jetpack Compose - Android native
@@ -127,17 +127,17 @@ GreenMap được phát triển bởi đội ngũ **Chúng Quản Phú** tại H
 
 <div class="team-about">
 
-**Nguyễn Bá Phú** - *Team Lead & Backend Developer*  
-Backend architecture & API development, Database design & optimization, NGSI-LD Context Broker integration  
-GitHub: [@nguyenbaphu](https://github.com/nguyenbaphu)
+**Trần Anh Quân** - *Team Lead & Full-stack Developer*  
+Project management, Backend architecture & API development, AI integration (Gemini & Groq), Traffic simulation  
+GitHub: [@kedokato-dev](https://github.com/kedokato-dev)
 
-**Vũ Tiến Quân** - *Frontend Developer*  
-React web portal development, MapLibre GL JS integration, UI/UX design & implementation  
-GitHub: [@tienbienquang1422](https://github.com/tienbienquang1422)
+**Trần Trọng Chiến** - *Backend Specialist & System Architect*  
+Database design & optimization, NGSI-LD Context Broker integration, Background workers, Push notifications (FCM)  
+GitHub: [@blueMonkey23](https://github.com/blueMonkey23)
 
-**Hoàng Mạnh Cường** - *Mobile Developer & Data Engineer*  
-Android app development (Kotlin + Compose), Data pipeline & ETL scripts, SUMO traffic simulation integration  
-GitHub: [@manhhcuong1503](https://github.com/manhhcuong1503)
+**Nguyễn Hà Phương** - *Frontend Developer & Data Visualization*  
+React web portal development, MapLibre GL JS integration, UI/UX design, News Feed & Notification Center  
+GitHub: [@ourstorycomic](https://github.com/ourstorycomic)
 
 </div>
 
@@ -160,10 +160,16 @@ Mobile app cho người dân, Upload hình ảnh + GPS location, Theo dõi trạ
 Tích hợp Orion-LD Context Broker, Tuân thủ chuẩn FIWARE, IoT-ready architecture, Scalable & extensible
 
 **AI-Powered Insights**  
-Gemini AI phân tích xu hướng ô nhiễm, Đề xuất giải pháp giảm AQI, Tóm tắt báo cáo tự động, Dự đoán chất lượng không khí
+Google Gemini & Groq AI phân tích thời tiết & AQI, Đưa ra lời khuyên cá nhân hóa, Multi-provider auto-switching, Lưu trữ lịch sử phân tích
+
+**Real-time Traffic Map**  
+Dữ liệu giao thông thực tế từ Kaggle (Ngã Tư Sở), Mô phỏng SUMO, Color-coded theo mức độ tắc nghẽn, Cập nhật mỗi 10 giây
+
+**News Feed & Push Notifications**  
+RSS feed từ báo Hà Nội Mới, Firebase Cloud Messaging (FCM), Targeted & topic-based notifications, Device token management
 
 **Open Source & APIs**  
-Public REST APIs, Comprehensive documentation, Docker deployment, GitHub repositories
+Public REST APIs (no /api/v1 prefix), Comprehensive documentation, Docker deployment, GitHub repositories
 
 </div>
 
@@ -217,7 +223,7 @@ GreenMap là dự án **open source**, được phát triển công khai trên G
 - [GreenMap-Mobile-App](https://github.com/HouHackathon-CQP/GreenMap-Mobile-App) - Android app
 - [GreenMap-Data](https://github.com/HouHackathon-CQP/GreenMap-Data) - Data pipeline
 
-**License:** MIT License
+**License:** Apache License 2.0
 
 **Contributing:** Chúng tôi hoan nghênh mọi đóng góp! Xem [Contributing Guidelines](contributing/) để biết thêm chi tiết.
 
@@ -225,11 +231,11 @@ GreenMap là dự án **open source**, được phát triển công khai trên G
 
 ## Liên Hệ
 
-**Email:** contact@greenmap.vn  
+**Email:** thocodeanhquan@gmail.com  
 **GitHub Organization:** [@HouHackathon-CQP](https://github.com/HouHackathon-CQP)  
-**Documentation:** https://docs.greenmap.vn  
+**Documentation:** https://greenmap-documents.vercel.app  
 
-**HouHackathon 2024** - Team: Chúng Quản Phú
+**HouHackathon 2024** - Team: HouHackathon-CQP
 
 ---
 
