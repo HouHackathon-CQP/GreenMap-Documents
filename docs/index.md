@@ -51,16 +51,16 @@ hide:
     <div class="stat-desc">Web Portal · Android App</div>
   </div>
   <div class="stat-card">
-    <div class="stat-icon">⚡</div>
+    <div class="stat-icon">⏱️</div>
     <div class="stat-number">24/7</div>
     <div class="stat-label">Real-time</div>
     <div class="stat-desc">AQI · Weather · Traffic</div>
   </div>
   <div class="stat-card">
-    <div class="stat-icon">🤖</div>
-    <div class="stat-number">AI</div>
-    <div class="stat-label">Smart Insights</div>
-    <div class="stat-desc">Gemini · Groq · Analysis</div>
+    <div class="stat-icon">📊</div>
+    <div class="stat-number">500+</div>
+    <div class="stat-label">Data Points</div>
+    <div class="stat-desc">Parks · EV Stations · Locations</div>
   </div>
 </div>
 
@@ -79,7 +79,7 @@ hide:
       <li><strong>JWT Auth</strong> - Role-based access control</li>
       <li><strong>Orion-LD</strong> - FIWARE Context Broker sync</li>
       <li><strong>Background Jobs</strong> - AQI, Weather, Traffic agents</li>
-      <li><strong>AI Integration</strong> - Gemini & Groq insights</li>
+      <li><strong>Smart Analysis</strong> - Weather & AQI insights</li>
     </ul>
     <a href="developer-guide/#backend-development" class="feature-link">Xem chi tiết →</a>
   </div>
@@ -185,20 +185,14 @@ hide:
   <div class="data-source">
     <div class="data-icon">🚦</div>
     <h4>Kaggle Dataset</h4>
-    <p>Dữ liệu giao thông thực tế Ngã Tư Sở</p>
-    <span class="data-update">Historical data</span>
-  </div>
-  <div class="data-source">
-    <div class="data-icon">🤖</div>
-    <h4>AI Analysis</h4>
-    <p>Gemini & Groq cho weather insights</p>
-    <span class="data-update">On-demand</span>
+    <p>Dữ liệu giao thông Ngã Tư Sở</p>
+    <span class="data-update">Real traffic data</span>
   </div>
   <div class="data-source">
     <div class="data-icon">📰</div>
-    <h4>Hà Nội Mới RSS</h4>
+    <h4>Hà Nội Mới</h4>
     <p>Tin tức môi trường</p>
-    <span class="data-update">Real-time</span>
+    <span class="data-update">RSS feed</span>
   </div>
 </div>
 
@@ -231,26 +225,64 @@ hide:
 
 <div class="features-highlight">
   <div class="feature-item">
-    <span class="feature-badge">✨ NEW</span>
-    <h4>AI Weather Insights</h4>
-    <p>Phân tích thời tiết + AQI bằng Gemini/Groq, tự động sinh lời khuyên hoạt động ngoài trời</p>
+    <h4>🌤️ Weather Analysis</h4>
+    <p>Phân tích thời tiết và chất lượng không khí, đưa ra lời khuyên hoạt động ngoài trời</p>
   </div>
   <div class="feature-item">
-    <span class="feature-badge">✨ NEW</span>
-    <h4>Real-time Traffic Map</h4>
-    <p>Hiển thị giao thông thời gian thực từ SUMO simulation, màu sắc theo mức độ ùn tắc</p>
+    <h4>🚗 Traffic Monitoring</h4>
+    <p>Hiển thị giao thông thời gian thực từ dữ liệu Kaggle, màu sắc theo mức độ tắc nghẽn</p>
   </div>
   <div class="feature-item">
-    <span class="feature-badge">✨ NEW</span>
-    <h4>Push Notifications</h4>
-    <p>Gửi thông báo đến mobile app qua Firebase, hỗ trợ topic & device tokens</p>
+    <h4>🔔 Push Notifications</h4>
+    <p>Gửi thông báo cảnh báo đến mobile app qua Firebase Cloud Messaging</p>
   </div>
   <div class="feature-item">
-    <span class="feature-badge">✨ NEW</span>
-    <h4>News Feed</h4>
-    <p>Tin tức môi trường từ Hà Nội Mới, tự động cập nhật qua RSS feed</p>
+    <h4>📰 News Feed</h4>
+    <p>Cập nhật tin tức môi trường từ báo Hà Nội Mới qua RSS</p>
   </div>
 </div>
+
+## 👥 Đội Ngũ Phát Triển
+
+<div align="center">
+
+Chúng tôi là những sinh viên công nghệ, code bằng đam mê và mang trong mình tình yêu lớn với Hà Nội.
+
+</div>
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/kedokato-dev">
+        <img src="https://avatars.githubusercontent.com/u/125746822?v=4" width="120px;" style="border-radius: 50%"/><br>
+        <sub><b>Trần Anh Quân</b></sub>
+      </a><br>
+      <small><i>Team Lead</i></small>
+    </td>
+    <td align="center">
+      <a href="https://github.com/blueMonkey23">
+        <img src="https://avatars.githubusercontent.com/u/168514215?v=4" width="120px;" style="border-radius: 50%"/><br>
+        <sub><b>Trần Trọng Chiến</b></sub>
+      </a><br>
+      <small><i>Backend Specialist & System Architect</i></small>
+    </td>
+    <td align="center">
+      <a href="https://github.com/ourstorycomic">
+        <img src="https://avatars.githubusercontent.com/u/100331812?v=4" width="120px;" style="border-radius: 50%"/><br>
+        <sub><b>Nguyễn Hà Phương</b></sub>
+      </a><br>
+      <small><i>Frontend Developer & Data Viz</i></small>
+    </td>
+  </tr>
+</table>
+
+<div align="center">
+
+**Trường Đại học Mở Hà Nội (HOU) - Khoa Công nghệ thông tin**
+
+</div>
+
+---
 
 <div class="cta-section">
   <h2>🚀 Sẵn Sàng Bắt Đầu?</h2>
