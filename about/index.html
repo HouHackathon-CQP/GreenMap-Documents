@@ -2078,8 +2078,8 @@ REST APIs công khai và tích hợp Orion-LD Context Broker theo chuẩn FIWARE
 **Frontend:**
 - React 19 + Vite 7.2 - Modern UI
 - MapLibre GL JS - Interactive maps
-- Tailwind CSS - Styling
-- TanStack Query - Data fetching
+- TailwindCSS + Tailwind Animate - Styling
+- Recharts - Data visualization
 
 **Mobile:**
 - Kotlin + Jetpack Compose - Android native
@@ -2105,17 +2105,17 @@ REST APIs công khai và tích hợp Orion-LD Context Broker theo chuẩn FIWARE
 <p>GreenMap được phát triển bởi đội ngũ <strong>Chúng Quản Phú</strong> tại HouHackathon 2024.</p>
 <div class="team-about">
 
-**Nguyễn Bá Phú** - *Team Lead & Backend Developer*  
-Backend architecture & API development, Database design & optimization, NGSI-LD Context Broker integration  
-GitHub: [@nguyenbaphu](https://github.com/nguyenbaphu)
+**Trần Anh Quân** - *Team Lead & Full-stack Developer*  
+Project management, Backend architecture & API development, AI integration (Gemini & Groq), Traffic simulation  
+GitHub: [@kedokato-dev](https://github.com/kedokato-dev)
 
-**Vũ Tiến Quân** - *Frontend Developer*  
-React web portal development, MapLibre GL JS integration, UI/UX design & implementation  
-GitHub: [@tienbienquang1422](https://github.com/tienbienquang1422)
+**Trần Trọng Chiến** - *Backend Specialist & System Architect*  
+Database design & optimization, NGSI-LD Context Broker integration, Background workers, Push notifications (FCM)  
+GitHub: [@blueMonkey23](https://github.com/blueMonkey23)
 
-**Hoàng Mạnh Cường** - *Mobile Developer & Data Engineer*  
-Android app development (Kotlin + Compose), Data pipeline & ETL scripts, SUMO traffic simulation integration  
-GitHub: [@manhhcuong1503](https://github.com/manhhcuong1503)
+**Nguyễn Hà Phương** - *Frontend Developer & Data Visualization*  
+React web portal development, MapLibre GL JS integration, UI/UX design, News Feed & Notification Center  
+GitHub: [@ourstorycomic](https://github.com/ourstorycomic)
 
 </div>
 
@@ -2136,10 +2136,16 @@ Mobile app cho người dân, Upload hình ảnh + GPS location, Theo dõi trạ
 Tích hợp Orion-LD Context Broker, Tuân thủ chuẩn FIWARE, IoT-ready architecture, Scalable & extensible
 
 **AI-Powered Insights**  
-Gemini AI phân tích xu hướng ô nhiễm, Đề xuất giải pháp giảm AQI, Tóm tắt báo cáo tự động, Dự đoán chất lượng không khí
+Google Gemini & Groq AI phân tích thời tiết & AQI, Đưa ra lời khuyên cá nhân hóa, Multi-provider auto-switching, Lưu trữ lịch sử phân tích
+
+**Real-time Traffic Map**  
+Dữ liệu giao thông thực tế từ Kaggle (Ngã Tư Sở), Mô phỏng SUMO, Color-coded theo mức độ tắc nghẽn, Cập nhật mỗi 10 giây
+
+**News Feed & Push Notifications**  
+RSS feed từ báo Hà Nội Mới, Firebase Cloud Messaging (FCM), Targeted & topic-based notifications, Device token management
 
 **Open Source & APIs**  
-Public REST APIs, Comprehensive documentation, Docker deployment, GitHub repositories
+Public REST APIs (no /api/v1 prefix), Comprehensive documentation, Docker deployment, GitHub repositories
 
 </div>
 
@@ -2183,14 +2189,14 @@ Public REST APIs, Comprehensive documentation, Docker deployment, GitHub reposit
 - <a href="https://github.com/HouHackathon-CQP/GreenMap-Frontend">GreenMap-Frontend</a> - React web portal
 - <a href="https://github.com/HouHackathon-CQP/GreenMap-Mobile-App">GreenMap-Mobile-App</a> - Android app
 - <a href="https://github.com/HouHackathon-CQP/GreenMap-Data">GreenMap-Data</a> - Data pipeline</p>
-<p><strong>License:</strong> MIT License</p>
+<p><strong>License:</strong> Apache License 2.0</p>
 <p><strong>Contributing:</strong> Chúng tôi hoan nghênh mọi đóng góp! Xem <a href="contributing/">Contributing Guidelines</a> để biết thêm chi tiết.</p>
 <hr />
 <h2 id="lien-he">Liên Hệ<a class="headerlink" href="#lien-he" title="Permanent link">&para;</a></h2>
-<p><strong>Email:</strong> contact@greenmap.vn<br />
+<p><strong>Email:</strong> thocodeanhquan@gmail.com<br />
 <strong>GitHub Organization:</strong> <a href="https://github.com/HouHackathon-CQP">@HouHackathon-CQP</a><br />
-<strong>Documentation:</strong> https://docs.greenmap.vn  </p>
-<p><strong>HouHackathon 2024</strong> - Team: Chúng Quản Phú</p>
+<strong>Documentation:</strong> https://greenmap-documents.vercel.app  </p>
+<p><strong>HouHackathon 2024</strong> - Team: HouHackathon-CQP</p>
 <hr />
 <h2 id="acknowledgments">Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permanent link">&para;</a></h2>
 <p>Cảm ơn các công nghệ và dịch vụ mã nguồn mở:</p>
