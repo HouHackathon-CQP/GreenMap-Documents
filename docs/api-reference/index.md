@@ -48,9 +48,12 @@ password=your_password
 
 ```json
 {
-  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+  "access_token": "string",
   "token_type": "bearer",
-  "expires_in": 3600
+  "id": 0,
+  "email": "string",
+  "full_name": "string",
+  "role": "ADMIN"
 }
 ```
 
@@ -108,29 +111,15 @@ Authorization: Bearer <token>
 
 ```json
 {
-  "items": [
-    {
-      "id": 123,
-      "title": "Rác thải tràn lan",
-      "description": "Nhiều rác thải chưa được thu gom",
-      "category": "waste",
-      "status": "pending",
-      "latitude": 21.0285,
-      "longitude": 105.8542,
-      "address": "Hoàn Kiếm, Hà Nội",
-      "images": ["https://storage.myhou.io.vn/reports/123/img1.jpg"],
-      "created_by": {
-        "id": 456,
-        "full_name": "Nguyễn Văn A",
-        "phone": "0901234567"
-      },
-      "created_at": "2024-12-10T10:30:00Z",
-      "updated_at": "2024-12-10T10:30:00Z"
-    }
-  ],
-  "total": 150,
-  "skip": 0,
-  "limit": 20
+  "title": "string",
+  "description": "string",
+  "latitude": 0,
+  "longitude": 0,
+  "image_url": "string",
+  "id": 0,
+  "user_id": 0,
+  "status": "PENDING",
+  "created_at": "string"
 }
 ```
 
@@ -193,21 +182,14 @@ GET /locations?location_type=PUBLIC_PARK&skip=0&limit=50
 
 ```json
 {
-  "items": [
-    {
-      "id": 1,
-      "name": "Công viên Thống Nhất",
-      "address": "Hai Bà Trưng, Hà Nội",
-      "area_sqm": 50000,
-      "latitude": 21.0167,
-      "longitude": 105.8456,
-      "description": "Công viên lớn nhất quận Hai Bà Trưng",
-      "amenities": ["playground", "jogging_track", "restroom"],
-      "opening_hours": "05:00 - 22:00",
-      "images": ["https://storage.myhou.io.vn/parks/1/img1.jpg"]
-    }
-  ],
-  "total": 45
+  "name": "string",
+  "location_type": "CHARGING_STATION",
+  "description": "string",
+  "id": 0,
+  "data_source": "string",
+  "is_active": true,
+  "latitude": 0,
+  "longitude": 0
 }
 ```
 
@@ -240,21 +222,14 @@ GET /locations?location_type=CHARGING_STATION
 
 ```json
 {
-  "items": [
-    {
-      "id": 1,
-      "name": "VinFast Station Hà Đông",
-      "address": "Hà Đông, Hà Nội",
-      "latitude": 20.9716,
-      "longitude": 105.7746,
-      "total_ports": 8,
-      "available_ports": 5,
-      "port_types": ["Type 2", "CCS"],
-      "power_kw": 150,
-      "pricing": "5000 VND/kWh",
-      "status": "operational"
-    }
-  ]
+  "name": "string",
+  "location_type": "CHARGING_STATION",
+  "description": "string",
+  "id": 0,
+  "data_source": "string",
+  "is_active": true,
+  "latitude": 0,
+  "longitude": 0
 }
 ```
 
@@ -278,18 +253,19 @@ GET /aqi/hanoi?limit=100
 
 ```json
 {
-  "city": "Hanoi",
-  "aqi": 85,
-  "level": "Moderate",
-  "color": "#FFFF00",
-  "pm25": 35.5,
-  "pm10": 65.2,
-  "o3": 45.0,
-  "no2": 25.3,
-  "so2": 15.1,
-  "co": 0.8,
-  "measured_at": "2024-12-10T14:00:00Z",
-  "source": "OpenAQ"
+      "@context": "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      "id": "urn:ngsi-ld:AirQualityObserved:Hanoi:AnKhánh:7772012",
+      "type": "https://smartdatamodels.org/dataModel.Environment/AirQualityObserved",
+      "location": {
+        "type": "GeoProperty",
+        "value": {
+          "type": "Point",
+          "coordinates": [
+            105.7181,
+            21.0024
+          ]
+        }
+      }
 }
 ```
 
@@ -306,27 +282,74 @@ GET /weather/hanoi?limit=1
 ```
 
 **Response:**
-
 ```json
 {
-  "temperature": 28.5,
-  "feels_like": 30.2,
-  "humidity": 75,
-  "pressure": 1013,
-  "wind_speed": 3.5,
-  "wind_direction": 180,
-  "clouds": 45,
-  "weather": "Clouds",
-  "description": "scattered clouds",
-  "icon": "03d",
-  "measured_at": "2024-12-10T14:00:00Z"
-}
+      "@context": "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      "id": "urn:ngsi-ld:WeatherObserved:Hanoi:BaDinh",
+      "type": "https://smartdatamodels.org/dataModel.Environment/WeatherObserved",
+      "https://smartdatamodels.org/address": {
+        "addressLocality": "Hanoi",
+        "addressRegion": "Ba Đình",
+        "addressCountry": "VN"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          105.8372,
+          21.0341
+        ]
+      },
+      "https://smartdatamodels.org/dataModel.Environment/temperature": 21.1,
+      "https://smartdatamodels.org/dataModel.Environment/relativeHumidity": 0.85,
+      "https://smartdatamodels.org/dataModel.Environment/weatherType": "Âm u",
+      "https://smartdatamodels.org/dataModel.Environment/windSpeed": 3.7,
+      "https://smartdatamodels.org/dateObserved": "2025-12-11T10:15"
+    }
 ```
 
 **Forecast:**
 
 ```http
 GET /weather/hanoi?limit=120
+```
+
+**Response:**
+```json
+"data": {
+    "current": {
+      "temp": 21.1,
+      "humidity": 85,
+      "wind_speed": 3.7,
+      "desc": "Âm u",
+      "time": "2025-12-11T10:15"
+    },
+    "hourly_24h": [
+      {
+        "time": "2025-12-11T11:00",
+        "temp": 21.6,
+        "rain_prob": 5,
+        "desc": "Âm u"
+      },
+      {
+        "time": "2025-12-11T12:00",
+        "temp": 22.1,
+        "rain_prob": 5,
+        "desc": "Âm u"
+      },
+      {
+        "time": "2025-12-11T13:00",
+        "temp": 22.4,
+        "rain_prob": 3,
+        "desc": "Âm u"
+      },
+      {
+        "time": "2025-12-11T14:00",
+        "temp": 22.1,
+        "rain_prob": 3,
+        "desc": "Âm u"
+      }
+    ]
+}
 ```
 
 ---
@@ -587,11 +610,12 @@ GET /news/hanoimoi?limit=20
 ```json
 [
   {
-    "title": "Hà Nội tăng cường trồng cây xanh",
-    "link": "https://hanoimoi.com.vn/...",
-    "description": "Thành phố Hà Nội đặt mục tiêu trồng 1 triệu cây xanh...",
-    "published": "2024-12-15T08:30:00+07:00",
-    "author": "Hà Nội Mới"
+    "title": "string",
+    "link": "string",
+    "description": "string",
+    "published_at": "2025-12-11T03:26:54.934Z",
+    "image_url": "string",
+    "source": "vnexpress"
   }
 ]
 ```
@@ -610,22 +634,26 @@ GET /traffic/segments
 
 ```json
 {
-  "type": "FeatureCollection",
-  "features": [
-    {
       "type": "Feature",
-      "id": "123",
+      "id": "28958235#7_0",
       "geometry": {
         "type": "LineString",
-        "coordinates": [[105.8542, 21.0285], [105.8550, 21.0290]]
+        "coordinates": [
+          [
+            105.825079,
+            20.999466
+          ],
+          [
+            105.825288,
+            20.999379
+          ]
+        ]
       },
       "properties": {
-        "id": "123",
-        "name": "Đoạn đường 123"
+        "id": "28958235#7_0",
+        "name": "Đoạn đường 28958235#7_0"
       }
     }
-  ]
-}
 ```
 
 ### Get Live Traffic Status
@@ -638,13 +666,33 @@ GET /traffic/live
 
 ```json
 {
-  "time_real": 1234,
-  "time_query": 1230,
+    "time_real": 1564,
+  "time_query": 1560,
   "status": {
-    "123": "green",
-    "124": "yellow",
-    "125": "red"
-  }
+    "596710689#0_1": "red",
+    "600083145#2_0": "red",
+    "705794897_0": "red",
+    "848915392#0_0": "orange",
+    "35972592#3_0": "red",
+    "397649390#3_3": "red",
+    "397649390#3_1": "red",
+    "596710689#1_1": "red",
+    "-1266085189#0_0": "red",
+    "725772905#3_0": "red",
+    "1331204980#1_0": "red",
+    "709673461#1_0": "red",
+    "35972592#2_1": "red",
+    "708658353#1_2": "red",
+    "35978173_0": "red",
+    "711367567_1": "red",
+    "875229039_0": "red",
+    "848915392#0_1": "orange",
+    "711367569#1_1": "red",
+    "1014224394_0": "red",
+    "397649390#2_1": "red",
+    "1204912791#2_0": "green",
+    "848915394#6_0": "red"
+    }
 }
 ```
 
@@ -677,19 +725,17 @@ Content-Type: application/json
 
 ```json
 {
-  "id": 45,
-  "provider": "gemini",
-  "model": "gemini-1.5-flash",
-  "lat": 21.0285,
-  "lon": 105.8542,
-  "analysis": "📊 Phân tích Thời tiết & Chất lượng Không khí Hà Nội\n\n**Thời tiết hiện tại:**\n- Nhiệt độ: 25°C, cảm giác như 23°C\n- Độ ẩm: 65%, Gió: 12 km/h\n\n**Chất lượng không khí:**\n- AQI: 85 (Trung bình) - PM2.5: 28 µg/m³\n\n**Lời khuyên:**\n- ✅ Đi bộ, chạy bộ nhẹ: An toàn\n- ⚠️ Người nhạy cảm nên hạn chế hoạt động ngoài trời kéo dài",
+  "lat": 0,
+  "lon": 0,
+  "provider": "string",
+  "model": "string",
+  "analysis": "string",
   "context": {
-    "weather_current": {...},
-    "weather_forecast": {...},
-    "aqi": {...}
+    "additionalProp1": {}
   },
-  "user_id": 1,
-  "created_at": "2024-12-15T10:30:00Z"
+  "id": 0,
+  "user_id": 0,
+  "created_at": "2025-12-11T03:30:27.213Z"
 }
 ```
 
@@ -705,13 +751,17 @@ Authorization: Bearer <token>
 ```json
 [
   {
-    "id": 45,
-    "provider": "gemini",
-    "model": "gemini-1.5-flash",
-    "lat": 21.0285,
-    "lon": 105.8542,
-    "analysis": "...",
-    "created_at": "2024-12-15T10:30:00Z"
+    "lat": 0,
+    "lon": 0,
+    "provider": "string",
+    "model": "string",
+    "analysis": "string",
+    "context": {
+      "additionalProp1": {}
+    },
+    "id": 0,
+    "user_id": 0,
+    "created_at": "2025-12-11T03:30:27.150Z"
   }
 ]
 ```
@@ -785,14 +835,15 @@ Authorization: Bearer <admin_token>
 **Response:**
 
 ```json
-[
-  {
-    "id": 1,
-    "device_token": "fK7x...",
-    "user_id": 123,
-    "created_at": "2024-12-01T10:00:00Z"
-  }
-]
+{
+  "id": 0,
+  "token": "string",
+  "platform": "string",
+  "is_active": true,
+  "user_id": 0,
+  "last_sent_at": "2025-12-11T03:27:29.955Z",
+  "created_at": "2025-12-11T03:27:29.955Z"
+}
 ```
 
 ### Cleanup Old Notifications
@@ -837,3 +888,74 @@ Các breaking changes sẽ được release ở version mới (v2, v3...) và ma
 - **API Documentation:** [https://backend.myhou.io.vn/docs](https://backend.myhou.io.vn/docs)
 - **GitHub Issues:** [https://github.com/HouHackathon-CQP/GreenMap-Backend/issues](https://github.com/HouHackathon-CQP/GreenMap-Backend/issues)
 - **Email:** api-support@myhou.io.vn
+
+---
+
+## Users - Quản lý người dùng
+
+### List Users
+
+```http
+GET /users
+Authorization: Bearer <token>
+```
+
+**Response:**
+```json
+[
+  {
+    "email": "user@example.com",
+    "full_name": "string",
+    "id": 0,
+    "is_active": true,
+    "role": "ADMIN"
+  }
+]
+```
+
+---
+
+### AI Directions
+
+```http
+POST /ai/directions
+Authorization: Bearer <token>
+Content-Type: application/json
+```
+
+**Response:**
+```json
+{
+  "start": {
+    "name": "string",
+    "lat": 0,
+    "lon": 0
+  },
+  "destination": {
+    "name": "string",
+    "lat": 0,
+    "lon": 0
+  },
+  "via_pois": [
+    {
+      "name": "string",
+      "lat": 0,
+      "lon": 0,
+      "type": "string"
+    }
+  ],
+  "route": {
+    "distance": 0,
+    "duration": 0,
+    "geometry": {
+      "type": "string",
+      "coordinates": [
+        [
+          0
+        ]
+      ]
+    }
+  },
+  "summary": "string"
+}
+```
